@@ -1826,24 +1826,31 @@ input, select, textarea { font-family: inherit; }
   margin-bottom: 24px;
 }
 
+/* Stats container */
+.points-stats-container {
+  background: var(--card);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  padding: 20px;
+  margin-bottom: 16px;
+}
+
 /* Balance header */
 .points-balance {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 0;
+  gap: 12px;
   margin-bottom: 16px;
-  background: var(--card);
-  border-radius: var(--radius);
-  border: 1px solid var(--border);
-  overflow: hidden;
 }
 
 .points-balance-item {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  padding: 20px;
-  border-right: 1px solid var(--border);
+  padding: 16px;
+  background: var(--bg-secondary, #f4f5f7);
+  border-radius: 12px;
+  border: none;
 }
 
 .points-balance-item:last-child {
@@ -1890,8 +1897,8 @@ input, select, textarea { font-family: inherit; }
   padding: 16px 20px;
   background: #fef0ec;
   border: none;
-  border-radius: var(--radius);
-  margin-bottom: 28px;
+  border-radius: 12px;
+  margin-bottom: 0;
   cursor: pointer;
   transition: all 0.2s;
 }
@@ -2294,6 +2301,7 @@ input, select, textarea { font-family: inherit; }
 
   .points-balance {
     grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
     margin-bottom: 12px;
   }
 
@@ -2302,13 +2310,8 @@ input, select, textarea { font-family: inherit; }
     padding: 14px;
   }
 
-  .points-balance-item:nth-child(2) {
-    border-right: none;
-  }
-
-  .points-balance-item:nth-child(1),
-  .points-balance-item:nth-child(2) {
-    border-bottom: 1px solid var(--border);
+  .points-stats-container {
+    padding: 12px;
   }
 
   .points-balance-value {

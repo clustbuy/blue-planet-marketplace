@@ -201,42 +201,44 @@
           <!-- Buy now (standalone, no card wrapper) -->
           <button class="pc-btn-buy-now">Купить сейчас</button>
 
-          <!-- Card 3: Delivery & Return -->
-          <div class="pc-card">
-            <div class="pc-delivery-section">
-              <div class="pc-delivery-header">Доставка и возврат</div>
+          <!-- Card 3: Delivery & Return (layered) -->
+          <div class="pc-card pc-card--layered">
+            <div class="pc-card__front">
+              <div class="pc-delivery-section">
+                <div class="pc-delivery-header">Доставка и возврат</div>
 
-              <div class="pc-delivery-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                <div>
-                  <div class="pc-delivery-item__title">ул. Грузинский Вал, 26 стр. 1</div>
-                  <div class="pc-delivery-item__sub">Со склада Маркет, Московская Область</div>
+                <div class="pc-delivery-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  <div>
+                    <div class="pc-delivery-item__title">ул. Грузинский Вал, 26 стр. 1</div>
+                    <div class="pc-delivery-item__sub">Со склада Маркет, Московская Область</div>
+                  </div>
+                </div>
+
+                <div class="pc-delivery-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20"><rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8h4l3 4v4h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+                  <div class="pc-delivery-item__content">
+                    <div class="pc-delivery-item__title">Курьером Маркет</div>
+                    <div class="pc-delivery-item__sub">Завтра, 9 марта</div>
+                  </div>
+                  <span class="pc-delivery-item__price">+149 ₽</span>
+                </div>
+
+                <div class="pc-delivery-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  <div class="pc-delivery-item__content">
+                    <div class="pc-delivery-item__title">Пункты выдачи и постаматы</div>
+                    <div class="pc-delivery-item__sub">Завтра, 9 марта</div>
+                  </div>
+                  <span class="pc-delivery-item__price pc-delivery-item__price--free">Без доплат</span>
                 </div>
               </div>
+            </div>
 
-              <div class="pc-delivery-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20"><rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8h4l3 4v4h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
-                <div class="pc-delivery-item__content">
-                  <div class="pc-delivery-item__title">Курьером Маркет</div>
-                  <div class="pc-delivery-item__sub">Завтра, 9 марта</div>
-                </div>
-                <span class="pc-delivery-item__price">+149 ₽</span>
-              </div>
-
-              <div class="pc-delivery-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                <div class="pc-delivery-item__content">
-                  <div class="pc-delivery-item__title">Пункты выдачи и постаматы</div>
-                  <div class="pc-delivery-item__sub">Завтра, 9 марта</div>
-                </div>
-                <span class="pc-delivery-item__price pc-delivery-item__price--free">Без доплат</span>
-              </div>
-
-              <div class="pc-delivery-item pc-delivery-item--return">
+            <div class="pc-card__back">
+              <div class="pc-return-notice">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg>
-                <div class="pc-delivery-item__content">
-                  <span class="pc-delivery-item__title">Товар надлежащего качества обмену и возврату не подлежит</span>
-                </div>
+                <span class="pc-return-notice__text">Товар надлежащего качества обмену и возврату не подлежит</span>
                 <svg class="pc-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polyline points="9 18 15 12 9 6"/></svg>
               </div>
             </div>

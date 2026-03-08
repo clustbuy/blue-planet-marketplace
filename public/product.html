@@ -6,6 +6,7 @@
   <title>Беспроводные наушники Premium — Маркет</title>
   <meta name="description" content="Купить беспроводные наушники с шумоподавлением. Цена 5990 ₽. Доставка завтра.">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
   <link rel="icon" href="favicon.ico">
 </head>
 <body>
@@ -54,28 +55,36 @@
     </div>
 
     <div class="product-detail">
-      <!-- Gallery with vertical thumbnails -->
+      <!-- Gallery Ozon-style with Swiper -->
       <div class="product-gallery-wrap">
-        <div class="gallery-thumbs">
-          <div class="gallery-thumb active" data-full="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600&h=600&fit=crop">
-            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=100&h=100&fit=crop" alt="Фото 1">
-          </div>
-          <div class="gallery-thumb" data-full="https://images.unsplash.com/photo-1583394838336-acd977736f90?w=600&h=600&fit=crop">
-            <img src="https://images.unsplash.com/photo-1583394838336-acd977736f90?w=100&h=100&fit=crop" alt="Фото 2">
-          </div>
-          <div class="gallery-thumb" data-full="https://images.unsplash.com/photo-1484704849700-f032a568e944?w=600&h=600&fit=crop">
-            <img src="https://images.unsplash.com/photo-1484704849700-f032a568e944?w=100&h=100&fit=crop" alt="Фото 3">
-          </div>
-          <div class="gallery-thumb" data-full="https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=600&h=600&fit=crop">
-            <img src="https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=100&h=100&fit=crop" alt="Фото 4">
-          </div>
-          <div class="gallery-thumb" data-full="https://images.unsplash.com/photo-1590658268037-6bf12f032f55?w=600&h=600&fit=crop">
-            <img src="https://images.unsplash.com/photo-1590658268037-6bf12f032f55?w=100&h=100&fit=crop" alt="Фото 5">
+        <!-- Vertical thumbnails slider -->
+        <div class="gallery-thumbs-swiper-wrap">
+          <div class="swiper gallery-thumbs-swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=100&h=100&fit=crop" alt="Фото 1"></div>
+              <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1583394838336-acd977736f90?w=100&h=100&fit=crop" alt="Фото 2"></div>
+              <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1484704849700-f032a568e944?w=100&h=100&fit=crop" alt="Фото 3"></div>
+              <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=100&h=100&fit=crop" alt="Фото 4"></div>
+              <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1524678606370-a47ad25cb82a?w=100&h=100&fit=crop" alt="Фото 5"></div>
+            </div>
           </div>
         </div>
-        <div class="gallery-main">
-          <img id="galleryMainImg" src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600&h=600&fit=crop" alt="Беспроводные наушники">
-          <span class="product-card__badge" style="position:absolute;top:16px;left:16px">Хит продаж</span>
+        <!-- Main image slider -->
+        <div class="gallery-main-swiper-wrap">
+          <div class="swiper gallery-main-swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600&h=600&fit=crop" alt="Фото 1"></div>
+              <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1583394838336-acd977736f90?w=600&h=600&fit=crop" alt="Фото 2"></div>
+              <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1484704849700-f032a568e944?w=600&h=600&fit=crop" alt="Фото 3"></div>
+              <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=600&h=600&fit=crop" alt="Фото 4"></div>
+              <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1524678606370-a47ad25cb82a?w=600&h=600&fit=crop" alt="Фото 5"></div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+          <span class="product-card__badge" style="position:absolute;top:16px;left:16px;z-index:5">Хит продаж</span>
+          <!-- Pagination dots for mobile -->
+          <div class="gallery-pagination"></div>
         </div>
       </div>
 
@@ -273,6 +282,7 @@
     </div>
   </nav>
 
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

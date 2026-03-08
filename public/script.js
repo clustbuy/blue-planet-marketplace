@@ -163,13 +163,34 @@ function initGallery() {
 
   const isMobile = window.innerWidth < 768;
 
+  const prevBtn = document.querySelector('.thumbs-nav--prev');
+  const nextBtn = document.querySelector('.thumbs-nav--next');
+
   const thumbsSwiper = new Swiper(thumbsEl, {
     direction: isMobile ? 'horizontal' : 'vertical',
     spaceBetween: 8,
     slidesPerView: 'auto',
     freeMode: true,
     watchSlidesProgress: true,
+    navigation: (!isMobile && prevBtn && nextBtn) ? {
+      prevEl: prevBtn,
+      nextEl: nextBtn,
+    } : false,
+    on: {
+      init: function() { updateThumbsNav(this); },
+      resize: function() { updateThumbsNav(this); },
+      slidesLengthChange: function() { updateThumbsNav(this); },
+    },
   });
+
+  function updateThumbsNav(swiper) {
+    if (!prevBtn || !nextBtn || isMobile) return;
+    const wrapH = swiper.el.clientHeight;
+    const totalH = swiper.slides.length * (64 + 8) - 8;
+    const needNav = totalH > wrapH;
+    prevBtn.classList.toggle('visible', needNav);
+    nextBtn.classList.toggle('visible', needNav);
+  }
 
   const mainSwiper = new Swiper(mainEl, {
     spaceBetween: 0,

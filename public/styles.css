@@ -2199,52 +2199,91 @@ input, select, textarea { font-family: inherit; }
 }
 
 .points-faq-category {
-  margin-bottom: 32px;
+  margin-bottom: 24px;
+}
+
+.points-faq-category:last-child {
+  margin-bottom: 0;
 }
 
 .points-faq-category-title {
   font-size: 14px;
-  font-weight: 600;
-  color: var(--text);
-  margin-bottom: 12px;
+  font-weight: 400;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
 }
 
 .points-faq-item {
+  background: var(--bg-secondary, #f6f7f8);
+  border: none;
   margin-bottom: 0;
+}
+
+.points-faq-item:first-of-type {
+  border-radius: var(--radius) var(--radius) 0 0;
+}
+
+.points-faq-item:last-of-type {
+  border-radius: 0 0 var(--radius) var(--radius);
+}
+
+.points-faq-item:only-of-type {
+  border-radius: var(--radius);
+}
+
+.points-faq-item + .points-faq-item {
+  border-top: 1px solid var(--border);
 }
 
 .points-faq-item summary {
   font-size: 14px;
+  font-weight: 500;
   color: var(--text);
-  padding: 12px 0;
+  padding: 16px 20px;
   cursor: pointer;
-  padding-left: 20px;
   position: relative;
   user-select: none;
-  transition: color 0.2s;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
 }
 
-.points-faq-item summary:hover {
-  color: var(--primary);
+.points-faq-item summary::-webkit-details-marker {
+  display: none;
 }
 
-.points-faq-item summary::before {
-  content: '▸';
-  position: absolute;
-  left: 0;
+.points-faq-item summary::after {
+  content: '';
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%23737880' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
   transition: transform 0.2s;
 }
 
-.points-faq-item[open] summary::before {
-  transform: rotate(90deg);
+.points-faq-item[open] summary::after {
+  transform: rotate(180deg);
+}
+
+.points-faq-item summary:hover {
+  background: #eceef0;
 }
 
 .points-faq-item p {
-  font-size: 13px;
+  font-size: 14px;
   color: var(--text-secondary);
   line-height: 1.6;
-  padding: 0 0 16px 20px;
+  padding: 0 20px 16px;
   margin: 0;
+}
+
+.points-faq-item p a {
+  color: var(--primary);
+  text-decoration: underline;
 }
 
 /* Mobile responsive */

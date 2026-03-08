@@ -1294,3 +1294,136 @@ input, select, textarea { font-family: inherit; }
   }
   .acts-cell--date { text-align: left; }
 }
+
+/* ===== LEGAL DOCS PAGE (Сопроводительные документы) ===== */
+.ld-section-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.ld-edo-card {
+  margin-bottom: 28px;
+}
+.ld-edo-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+.ld-edo-company {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+.ld-edo-id {
+  font-size: 13px;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.ld-edo-dot {
+  color: var(--text-secondary);
+  font-size: 8px;
+}
+.ld-edo-delete {
+  background: none;
+  padding: 4px;
+  border-radius: 6px;
+  transition: background .15s;
+}
+.ld-edo-delete:hover { background: #f0f4f8; }
+
+.ld-edo-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #16a34a;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 20px;
+}
+
+.ld-date-range {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+.ld-date-input {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+  background: var(--card);
+  min-width: 180px;
+  cursor: pointer;
+  transition: border-color .15s;
+}
+.ld-date-input:hover { border-color: #94a3b8; }
+.ld-date-input__text {
+  font-size: 14px;
+  color: var(--text-secondary);
+  flex: 1;
+}
+.ld-date-sep {
+  color: var(--text-secondary);
+  font-size: 16px;
+}
+
+.ld-group {
+  margin-bottom: 28px;
+}
+.ld-group__month {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 0;
+}
+.ld-group__table {
+  background: var(--card);
+}
+.ld-doc-row {
+  display: grid;
+  grid-template-columns: 1.4fr 1.2fr 0.8fr 0.6fr;
+  align-items: center;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--border);
+}
+.ld-doc-row:last-child { border-bottom: none; }
+
+.ld-doc-cell { font-size: 14px; }
+.ld-doc-cell--order {
+  font-weight: 600;
+  color: var(--text);
+}
+.ld-doc-cell--date {
+  color: var(--text-secondary);
+}
+.ld-doc-cell--sum {
+  font-weight: 500;
+  color: var(--text);
+}
+.ld-doc-cell--download {
+  text-align: right;
+}
+
+@media (max-width: 767px) {
+  .ld-date-range { flex-direction: column; align-items: stretch; }
+  .ld-date-input { min-width: 0; }
+  .ld-date-sep { text-align: center; }
+  .ld-doc-row {
+    grid-template-columns: 1fr 1fr;
+    gap: 6px;
+    padding: 12px 0;
+  }
+  .ld-doc-cell--download { text-align: left; }
+}

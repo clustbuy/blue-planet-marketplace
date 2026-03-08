@@ -183,14 +183,30 @@ function initGallery() {
     },
   });
 
+  // Sync thumbs column height to main image height
+  function syncThumbsHeight() {
+    const mainWrap = document.querySelector('.gallery-main-swiper-wrap');
+    const thumbsWrap = document.querySelector('.gallery-thumbs-swiper-wrap');
+    if (!mainWrap || !thumbsWrap || isMobile) return;
+    const mainH = mainWrap.offsetHeight;
+    thumbsWrap.style.height = mainH + 'px';
+  }
+
   function updateThumbsNav(swiper) {
     if (!prevBtn || !nextBtn || isMobile) return;
+    syncThumbsHeight();
     const wrapH = swiper.el.clientHeight;
-    const totalH = swiper.slides.length * (64 + 8) - 8;
+    // Each thumb has 3:4 ratio; width=64px so height=64/0.75=85.33px + 8px gap
+    const slideH = 85.33 + 8;
+    const totalH = swiper.slides.length * slideH - 8;
     const needNav = totalH > wrapH;
     prevBtn.classList.toggle('visible', needNav);
     nextBtn.classList.toggle('visible', needNav);
   }
+
+  // Also sync on window resize
+  window.addEventListener('resize', syncThumbsHeight);
+  requestAnimationFrame(syncThumbsHeight);
 
   const mainSwiper = new Swiper(mainEl, {
     spaceBetween: 0,

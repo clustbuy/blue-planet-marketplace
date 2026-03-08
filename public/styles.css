@@ -937,8 +937,8 @@ input, select, textarea { font-family: inherit; }
   .products-grid { grid-template-columns: repeat(4, 1fr); }
   .categories-grid { grid-template-columns: repeat(4, 1fr); }
   .footer-grid { grid-template-columns: repeat(2, 1fr); }
-  .checkout-layout { flex-direction: column; }
-  .checkout-sidebar { width: 100%; }
+  .co-layout { flex-direction: column; }
+  .co-sidebar { width: 100%; }
   .catalog-dropdown__inner { min-height: 350px; }
 }
 

@@ -385,14 +385,15 @@ input, select, textarea { font-family: inherit; }
 /* Sale banner */
 .pc-sale-banner {
   display: flex; justify-content: space-between; align-items: center;
-  padding: 10px 16px; background: #fff4ec;
+  padding: 12px 16px; background: #fff;
 }
-.pc-sale-banner__left { display: flex; align-items: center; gap: 8px; }
-.pc-sale-banner__icon { font-size: 18px; }
-.pc-sale-banner__title { font-size: 13px; font-weight: 600; color: #f36; display: flex; align-items: center; gap: 2px; }
-.pc-sale-banner__stock { font-size: 11px; color: #9e9e9e; font-weight: 400; display: block; margin-top: 1px; }
-.pc-sale-banner__timer { font-size: 12px; color: #9e9e9e; white-space: nowrap; }
-.pc-chevron-inline { color: #f36; }
+.pc-sale-banner__left { display: flex; align-items: center; gap: 10px; }
+.pc-sale-banner__circle { flex-shrink: 0; width: 32px; height: 32px; }
+.pc-sale-banner__title { font-size: 14px; font-weight: 700; color: #1a1a1a; display: flex; align-items: center; gap: 3px; }
+.pc-sale-banner__stock { font-size: 12px; color: #cb11ab; font-weight: 600; display: block; margin-top: 1px; }
+.pc-sale-banner__stock-num { color: #cb11ab; font-weight: 700; }
+.pc-sale-banner__timer { font-size: 12px; color: #6b7280; white-space: nowrap; background: #f2f3f5; padding: 4px 10px; border-radius: 20px; }
+.pc-chevron-inline { color: #9e9e9e; }
 
 /* Price block */
 .pc-price-block { padding: 16px 16px 6px; }

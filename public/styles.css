@@ -564,6 +564,7 @@ input, select, textarea { font-family: inherit; }
 }
 .pc-qty-tiers__row:last-child { border-bottom: none; }
 .pc-qty-tiers__info { display: flex; flex-direction: column; gap: 2px; }
+.pc-qty-tiers__info > :first-child { display: flex; align-items: baseline; white-space: nowrap; }
 .pc-qty-tiers__price { font-size: 16px; font-weight: 700; color: #00a651; }
 .pc-qty-tiers__pct { font-size: 12px; font-weight: 600; color: #cb11ab; margin-left: 6px; }
 .pc-qty-tiers__old { font-size: 12px; color: #9ca3af; }

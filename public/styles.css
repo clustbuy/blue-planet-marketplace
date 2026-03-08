@@ -556,6 +556,25 @@ input, select, textarea { font-family: inherit; }
 .pc-btn-wholesale__text { font-size: 14px; font-weight: 600; color: #cb11ab; }
 .pc-btn-wholesale__sub { font-size: 12px; color: #cb11ab; opacity: 0.8; }
 
+/* Quantity tiers (price table before cart button) */
+.pc-qty-tiers { display: flex; flex-direction: column; gap: 0; }
+.pc-qty-tiers__row {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+.pc-qty-tiers__row:last-child { border-bottom: none; }
+.pc-qty-tiers__info { display: flex; flex-direction: column; gap: 2px; }
+.pc-qty-tiers__price { font-size: 16px; font-weight: 700; color: #00a651; }
+.pc-qty-tiers__pct { font-size: 12px; font-weight: 600; color: #cb11ab; margin-left: 6px; }
+.pc-qty-tiers__old { font-size: 12px; color: #9ca3af; }
+.pc-qty-tiers__old-price { text-decoration: line-through; margin-right: 4px; }
+.pc-qty-tiers__btn {
+  background: #e4f4ff; color: #005bff; border: none; border-radius: 20px;
+  padding: 8px 16px; font-size: 13px; font-weight: 500; cursor: pointer;
+  white-space: nowrap;
+}
+.pc-qty-tiers__btn:hover { background: #d0ebff; }
+
 
 .pc-delivery-section { padding: 16px; }
 .pc-delivery-header {

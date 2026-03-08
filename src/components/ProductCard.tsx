@@ -2,6 +2,7 @@ import { Star, Heart, ShoppingCart } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { useState, useCallback, useRef } from "react";
 
 export interface Product {
   id: number;
@@ -25,36 +26,92 @@ const formatPrice = (price: number) => {
 };
 
 const ProductCard = ({ product }: ProductCardProps) => {
+  const images = product.images?.length ? product.images : [product.image];
+  const [activeIndex, setActiveIndex] = useState(0);
+  const imageRef = useRef<HTMLDivElement>(null);
+
   const discount = product.oldPrice
     ? Math.round(((product.oldPrice - product.price) / product.oldPrice) * 100)
     : 0;
+
+  const handleMouseMove = useCallback(
+    (e: React.MouseEvent<HTMLDivElement>) => {
+      if (images.length <= 1 || !imageRef.current) return;
+      const rect = imageRef.current.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const ratio = x / rect.width;
+      const index = Math.min(Math.floor(ratio * images.length), images.length - 1);
+      setActiveIndex(index);
+    },
+    [images.length]
+  );
+
+  const handleMouseLeave = useCallback(() => {
+    setActiveIndex(0);
+  }, []);
 
   return (
     <Link
       to={`/product/${product.id}`}
       className="group bg-card rounded-xl border shadow-card hover:shadow-card-hover transition-all duration-200 overflow-hidden flex flex-col"
     >
-      {/* Image */}
-      <div className="relative aspect-square bg-secondary overflow-hidden">
+      {/* Image with hover gallery */}
+      <div
+        ref={imageRef}
+        className="relative aspect-square bg-secondary overflow-hidden"
+        onMouseMove={handleMouseMove}
+        onMouseLeave={handleMouseLeave}
+      >
         <img
-          src={product.image}
+          src={images[activeIndex]}
           alt={product.title}
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
         />
+
+        {/* Dot indicators */}
+        {images.length > 1 && (
+          <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1 opacity-0 group-hover:opacity-100 transition-opacity z-10">
+            {images.map((_, i) => (
+              <span
+                key={i}
+                className={`block rounded-full transition-all duration-150 ${
+                  i === activeIndex
+                    ? "w-4 h-1.5 bg-primary"
+                    : "w-1.5 h-1.5 bg-foreground/40"
+                }`}
+              />
+            ))}
+          </div>
+        )}
+
+        {/* Segment hover zones visual indicator */}
+        {images.length > 1 && (
+          <div className="absolute top-0 left-0 right-0 flex gap-0.5 px-2 pt-[calc(100%-3px)] opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-10">
+            {images.map((_, i) => (
+              <div
+                key={i}
+                className={`h-[3px] flex-1 rounded-full transition-colors duration-150 ${
+                  i === activeIndex ? "bg-primary" : "bg-foreground/20"
+                }`}
+              />
+            ))}
+          </div>
+        )}
+
         {product.badge && (
-          <Badge className="absolute top-2 left-2 bg-accent text-accent-foreground border-0 text-xs">
+          <Badge className="absolute top-2 left-2 bg-accent text-accent-foreground border-0 text-xs z-20">
             {product.badge}
           </Badge>
         )}
         {discount > 0 && (
-          <Badge className="absolute top-2 right-2 bg-destructive text-destructive-foreground border-0 text-xs">
+          <Badge className="absolute top-2 right-2 bg-destructive text-destructive-foreground border-0 text-xs z-20">
             -{discount}%
           </Badge>
         )}
         <Button
           variant="ghost"
           size="icon"
-          className="absolute bottom-2 right-2 bg-card/80 backdrop-blur-sm hover:bg-card opacity-0 group-hover:opacity-100 transition-opacity h-8 w-8"
+          className="absolute bottom-2 right-2 bg-card/80 backdrop-blur-sm hover:bg-card opacity-0 group-hover:opacity-100 transition-opacity h-8 w-8 z-20"
           onClick={(e) => { e.preventDefault(); }}
         >
           <Heart className="h-4 w-4" />

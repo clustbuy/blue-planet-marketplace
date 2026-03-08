@@ -287,6 +287,21 @@ function initCardGallery() {
   });
 }
 
+/* ===== Mobile Bottom Nav ===== */
+function initMobileBottomNav() {
+  const nav = document.querySelector('.mobile-bottom-nav');
+  if (!nav) return;
+  // Highlight active link based on current page
+  const path = window.location.pathname.split('/').pop() || 'home.html';
+  const links = nav.querySelectorAll('.mobile-bottom-nav__item');
+  links.forEach(link => {
+    const href = link.getAttribute('href');
+    if (href && path === href) {
+      link.classList.add('active');
+    }
+  });
+}
+
 /* ===== Init ===== */
 document.addEventListener('DOMContentLoaded', () => {
   initBannerCarousel();
@@ -302,4 +317,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initSearch();
   initMobileMenu();
   initCardGallery();
+  initMobileBottomNav();
 });

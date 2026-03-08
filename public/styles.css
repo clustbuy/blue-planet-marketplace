@@ -1962,28 +1962,32 @@ input, select, textarea { font-family: inherit; }
 .points-sellers-list {
   display: flex;
   flex-direction: column;
-  gap: 12px;
 }
 
 .points-seller-card {
-  background: #fff;
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  overflow: hidden;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--border);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.points-seller-card:last-child {
+  border-bottom: none;
+}
+
+.points-seller-card:hover {
+  background: #f8fafc;
 }
 
 .points-seller-header {
   display: flex;
   align-items: center;
   gap: 12px;
-  padding: 16px 20px;
-  background: #fff;
-  cursor: pointer;
-  transition: background 0.2s;
-}
-
-.points-seller-card:hover .points-seller-header {
-  background: #f8fafc;
+  flex-shrink: 0;
+  min-width: 200px;
 }
 
 .points-seller-logo {
@@ -2003,20 +2007,21 @@ input, select, textarea { font-family: inherit; }
   font-size: 14px;
   font-weight: 600;
   color: var(--text);
-  margin-bottom: 6px;
+  margin-bottom: 4px;
 }
 
 .points-seller-bonus {
   display: flex;
   align-items: center;
   gap: 4px;
-  font-size: 12px;
+  font-size: 13px;
   color: var(--text-secondary);
 }
 
 .points-seller-bonus svg {
-  width: 14px;
-  height: 14px;
+  width: 16px;
+  height: 16px;
+  color: #f90;
 }
 
 .points-seller-header > svg:last-child {
@@ -2033,10 +2038,11 @@ input, select, textarea { font-family: inherit; }
 
 .points-seller-products {
   display: flex;
-  gap: 8px;
-  padding: 0 20px 20px;
+  gap: 6px;
   overflow-x: auto;
   scrollbar-width: none;
+  flex: 1;
+  min-width: 0;
 }
 
 .points-seller-products::-webkit-scrollbar {
@@ -2044,8 +2050,8 @@ input, select, textarea { font-family: inherit; }
 }
 
 .points-seller-product {
-  width: 60px;
-  height: 60px;
+  width: 64px;
+  height: 80px;
   border-radius: 8px;
   object-fit: cover;
   flex-shrink: 0;
@@ -2268,9 +2274,15 @@ input, select, textarea { font-family: inherit; }
     font-size: 16px;
   }
 
+  .points-seller-card {
+    flex-wrap: wrap;
+    padding: 12px 0;
+  }
+
   .points-seller-header {
     gap: 10px;
-    padding: 12px 16px;
+    min-width: unset;
+    width: 100%;
   }
 
   .points-seller-logo {
@@ -2279,13 +2291,13 @@ input, select, textarea { font-family: inherit; }
   }
 
   .points-seller-products {
-    padding: 0 16px 16px;
     gap: 6px;
+    width: 100%;
   }
 
   .points-seller-product {
     width: 50px;
-    height: 50px;
+    height: 64px;
   }
 
   .points-history h2,

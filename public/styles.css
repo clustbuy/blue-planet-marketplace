@@ -486,8 +486,30 @@ input, select, textarea { font-family: inherit; }
   background: #005bff; color: #fff; transition: background 0.15s;
 }
 .pc-btn-cart:hover { background: #0050e6; }
+.pc-btn-cart--in {
+  background: #00a651; flex: 0 0 auto; padding: 12px 20px;
+}
+.pc-btn-cart--in:hover { background: #009347; }
 .pc-btn-cart__text { font-size: 16px; font-weight: 600; }
 .pc-btn-cart__sub { font-size: 11px; opacity: 0.75; margin-top: 1px; }
+
+/* Cart counter */
+.pc-cart-counter {
+  display: flex; align-items: center; gap: 0;
+  border: 1px solid #e8eaf0; border-radius: 16px; overflow: hidden;
+}
+.pc-cart-counter__btn {
+  width: 44px; height: 52px; display: flex; align-items: center; justify-content: center;
+  background: none; border: none; cursor: pointer; color: #005bff;
+  transition: background 0.15s;
+}
+.pc-cart-counter__btn:hover { background: #f2f3f5; }
+.pc-cart-counter__val {
+  width: 36px; text-align: center; font-size: 16px; font-weight: 600; color: #1a1a1a;
+}
+
+/* Fav button updated for in-cart state */
+.pc-btn-fav--active svg { fill: #005bff; stroke: #005bff; }
 .pc-btn-fav {
   width: 52px; display: flex; align-items: center; justify-content: center;
   border-radius: 16px; border: none; cursor: pointer;

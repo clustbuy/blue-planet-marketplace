@@ -225,12 +225,25 @@
 
               <!-- Cart + Favorite row -->
               <div class="pc-cart-row">
-                <button class="pc-btn-cart">
+                <button class="pc-btn-cart" id="pcCartBtn" onclick="toggleCart(this)">
                   <span class="pc-btn-cart__text">В корзину</span>
                   <span class="pc-btn-cart__sub">Доставим завтра</span>
                 </button>
-                <button class="pc-btn-fav">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" width="22" height="22"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                <div class="pc-cart-counter" id="pcCartCounter" style="display:none;">
+                  <button class="pc-cart-counter__btn" onclick="changeQty(-1)">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                  </button>
+                  <span class="pc-cart-counter__val" id="pcCartQty">1</span>
+                  <button class="pc-cart-counter__btn" onclick="changeQty(1)">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                  </button>
+                </div>
+                <button class="pc-btn-cart pc-btn-cart--in" id="pcCartInBtn" style="display:none;" onclick="goToCart()">
+                  <span class="pc-btn-cart__text">В корзине</span>
+                  <span class="pc-btn-cart__sub">Завтра</span>
+                </button>
+                <button class="pc-btn-fav" id="pcFavBtn">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="#005bff" stroke-width="2" width="22" height="22"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
                 </button>
               </div>
             </div>
@@ -536,5 +549,29 @@
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="script.js"></script>
+  <script>
+    var cartQty = 0;
+    function toggleCart(btn) {
+      cartQty = 1;
+      btn.style.display = 'none';
+      document.getElementById('pcCartCounter').style.display = 'flex';
+      document.getElementById('pcCartInBtn').style.display = 'flex';
+      document.getElementById('pcCartQty').textContent = cartQty;
+      // Change fav button stroke to blue
+      document.getElementById('pcFavBtn').querySelector('svg').setAttribute('stroke', '#005bff');
+    }
+    function changeQty(delta) {
+      cartQty = Math.max(0, cartQty + delta);
+      if (cartQty === 0) {
+        document.getElementById('pcCartCounter').style.display = 'none';
+        document.getElementById('pcCartInBtn').style.display = 'none';
+        document.getElementById('pcCartBtn').style.display = 'flex';
+        document.getElementById('pcFavBtn').querySelector('svg').setAttribute('stroke', '#fff');
+        return;
+      }
+      document.getElementById('pcCartQty').textContent = cartQty;
+    }
+    function goToCart() { window.location.href = '/cart.html'; }
+  </script>
 </body>
 </html>

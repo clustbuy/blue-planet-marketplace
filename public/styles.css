@@ -673,7 +673,7 @@ input, select, textarea { font-family: inherit; }
   .banner-title { font-size: 22px; }
   .banner-subtitle { font-size: 13px; }
   .banner-slide { padding: 0 24px; }
-  .product-detail { grid-template-columns: 1fr; }
+  .product-detail--3col { grid-template-columns: 1fr; }
   .product-gallery-wrap { flex-direction: column-reverse; }
   .gallery-thumbs-swiper-wrap { width: 100%; height: auto; }
   .gallery-thumbs-swiper { height: auto !important; max-height: none; }

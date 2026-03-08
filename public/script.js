@@ -243,6 +243,50 @@ function initMobileMenu() {
   toggle.addEventListener('click', () => nav.classList.toggle('nav-open'));
 }
 
+/* ===== Card Hover Gallery (Ozon-style) ===== */
+function initCardGallery() {
+  document.querySelectorAll('.product-card__img-wrap[data-images]').forEach(wrap => {
+    let images;
+    try { images = JSON.parse(wrap.dataset.images); } catch(e) { return; }
+    if (!images || images.length <= 1) return;
+
+    // Create segment indicators bar
+    const segments = document.createElement('div');
+    segments.className = 'card-gallery__segments';
+    images.forEach((_, i) => {
+      const seg = document.createElement('div');
+      seg.className = 'card-gallery__seg' + (i === 0 ? ' active' : '');
+      segments.appendChild(seg);
+    });
+    wrap.appendChild(segments);
+
+    const img = wrap.querySelector('.product-card__img');
+    let currentIndex = 0;
+
+    wrap.addEventListener('mousemove', (e) => {
+      const rect = wrap.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const ratio = x / rect.width;
+      const index = Math.min(Math.floor(ratio * images.length), images.length - 1);
+      if (index !== currentIndex) {
+        currentIndex = index;
+        img.src = images[index];
+        segments.querySelectorAll('.card-gallery__seg').forEach((s, i) => {
+          s.classList.toggle('active', i === index);
+        });
+      }
+    });
+
+    wrap.addEventListener('mouseleave', () => {
+      currentIndex = 0;
+      img.src = images[0];
+      segments.querySelectorAll('.card-gallery__seg').forEach((s, i) => {
+        s.classList.toggle('active', i === 0);
+      });
+    });
+  });
+}
+
 /* ===== Init ===== */
 document.addEventListener('DOMContentLoaded', () => {
   initBannerCarousel();
@@ -257,4 +301,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initPhoneMask();
   initSearch();
   initMobileMenu();
+  initCardGallery();
 });

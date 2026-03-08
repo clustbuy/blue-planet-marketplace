@@ -978,8 +978,7 @@ input, select, textarea { font-family: inherit; }
   .products-grid { grid-template-columns: repeat(4, 1fr); }
   .categories-grid { grid-template-columns: repeat(4, 1fr); }
   .footer-grid { grid-template-columns: repeat(2, 1fr); }
-  .co-layout { flex-direction: column; }
-  .co-sidebar { width: 100%; }
+  .co-sidebar { width: 300px; }
   .catalog-dropdown__inner { min-height: 350px; }
 }
 
@@ -992,6 +991,8 @@ input, select, textarea { font-family: inherit; }
 
 /* Mobile: < 768px — 2 columns products, 2 categories */
 @media (max-width: 767px) {
+  .co-layout { flex-direction: column; }
+  .co-sidebar { width: 100%; }
   .products-grid { grid-template-columns: repeat(2, 1fr); }
   .products-grid--4col { grid-template-columns: repeat(2, 1fr); }
   .categories-grid { grid-template-columns: repeat(2, 1fr); }

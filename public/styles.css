@@ -520,7 +520,43 @@ input, select, textarea { font-family: inherit; }
 }
 .pc-btn-buy-now:hover { background: #f2f6ff; border-radius: 12px; }
 
-/* Delivery section */
+/* Quantity discount */
+.pc-qty-discount { padding: 0; }
+.pc-qty-discount__header {
+  display: flex; align-items: center; gap: 8px;
+  padding: 12px 16px; cursor: pointer;
+}
+.pc-qty-discount__icon { flex-shrink: 0; }
+.pc-qty-discount__title { flex: 1; font-size: 14px; font-weight: 500; color: var(--text-primary, #1a1a1a); }
+.pc-qty-discount__header .pc-chevron { color: #b0b0b0; }
+.pc-qty-discount__tiers {
+  display: flex; gap: 4px; padding: 0 16px 12px;
+}
+.pc-qty-discount__tier {
+  display: flex; flex-direction: column; align-items: center; gap: 2px; flex: 1;
+}
+.pc-qty-discount__bar {
+  width: 100%; border-radius: 20px; padding: 4px 0;
+  background: #ffeaf4; text-align: center;
+}
+.pc-qty-discount__pct {
+  font-size: 12px; font-weight: 600; color: #cb11ab;
+}
+.pc-qty-discount__tier-price { font-size: 12px; font-weight: 600; color: #6b7280; }
+.pc-qty-discount__tier-qty { font-size: 11px; color: #9ca3af; }
+
+/* Wholesale button */
+.pc-btn-wholesale {
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  width: 100%; padding: 12px; gap: 2px;
+  background: #ffeaf4; border: none; border-radius: 12px;
+  cursor: pointer; transition: background 0.15s;
+}
+.pc-btn-wholesale:hover { background: #ffd6eb; }
+.pc-btn-wholesale__text { font-size: 14px; font-weight: 600; color: #cb11ab; }
+.pc-btn-wholesale__sub { font-size: 12px; color: #cb11ab; opacity: 0.8; }
+
+
 .pc-delivery-section { padding: 16px; }
 .pc-delivery-header {
   font-size: 14px; font-weight: 700; color: #1a1a1a; margin-bottom: 14px;

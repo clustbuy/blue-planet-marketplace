@@ -54,10 +54,9 @@
       <span class="current">Беспроводные наушники Premium</span>
     </div>
 
-    <div class="product-detail">
-      <!-- Gallery Ozon-style with Swiper -->
+    <div class="product-detail product-detail--3col">
+      <!-- Column 1: Gallery -->
       <div class="product-gallery-wrap">
-        <!-- Vertical thumbnails slider -->
         <div class="gallery-thumbs-swiper-wrap">
           <div class="swiper gallery-thumbs-swiper">
             <div class="swiper-wrapper">
@@ -69,7 +68,6 @@
             </div>
           </div>
         </div>
-        <!-- Main image slider -->
         <div class="gallery-main-swiper-wrap">
           <div class="swiper gallery-main-swiper">
             <div class="swiper-wrapper">
@@ -83,24 +81,46 @@
             <div class="swiper-button-prev"></div>
           </div>
           <span class="product-card__badge" style="position:absolute;top:16px;left:16px;z-index:5">Хит продаж</span>
-          <!-- Pagination dots for mobile -->
           <div class="gallery-pagination"></div>
         </div>
       </div>
 
-      <!-- Info -->
+      <!-- Column 2: Product info -->
       <div class="product-info">
-        <div>
-          <h1 class="product-title">Беспроводные наушники с активным шумоподавлением Premium</h1>
-          <div class="product-meta">
-            <div class="product-rating"><span style="color:var(--accent)">★</span> 4.8</div>
-            <a href="#reviews" class="product-reviews" style="cursor:pointer">2 341 отзыв</a>
-            <span class="product-seller">Продавец: TechStore</span>
-          </div>
+        <h1 class="product-title">Беспроводные наушники с активным шумоподавлением Premium</h1>
+        <div class="product-meta">
+          <div class="product-rating"><span style="color:var(--accent)">★</span> 4.8</div>
+          <a href="#reviews" class="product-reviews-link">2 341 отзыв</a>
+          <span class="product-orders">Заказов: 5 400+</span>
         </div>
+        <div class="product-seller-block">
+          <span class="product-seller-label">Продавец:</span>
+          <a href="#" class="product-seller-name">TechStore</a>
+        </div>
+        <div class="product-short-specs">
+          <h3 class="product-section-title">О товаре</h3>
+          <div class="short-spec-row"><span class="short-spec-label">Тип</span><span class="short-spec-value">Полноразмерные, закрытые</span></div>
+          <div class="short-spec-row"><span class="short-spec-label">Bluetooth</span><span class="short-spec-value">5.3 (AAC, LDAC, SBC)</span></div>
+          <div class="short-spec-row"><span class="short-spec-label">Шумоподавление</span><span class="short-spec-value">Активное (ANC) до -35 дБ</span></div>
+          <div class="short-spec-row"><span class="short-spec-label">Время работы</span><span class="short-spec-value">до 30 часов</span></div>
+          <div class="short-spec-row"><span class="short-spec-label">Быстрая зарядка</span><span class="short-spec-value">10 мин → 3 часа</span></div>
+          <a href="#tab-specs" class="product-all-specs-link">Все характеристики →</a>
+        </div>
+        <div class="product-description-short">
+          <h3 class="product-section-title">Описание</h3>
+          <p>Беспроводные наушники с активным шумоподавлением Premium — высококачественный аудиоаксессуар. Оснащены передовой технологией ANC, обеспечивающей идеальное погружение в звук. Автономная работа до 30 часов, быстрая зарядка за 10 минут даёт 3 часа прослушивания.</p>
+        </div>
+      </div>
 
-        <div class="price-card">
-          <div><span class="price-main">5 990 ₽</span><span class="price-old">8 990 ₽</span><span class="price-discount">-33%</span></div>
+      <!-- Column 3: Sticky price card -->
+      <div class="product-sidebar">
+        <div class="price-card price-card--sticky">
+          <div class="price-card__price-row">
+            <span class="price-main">5 990 ₽</span>
+            <span class="price-old">8 990 ₽</span>
+            <span class="price-discount">-33%</span>
+          </div>
+          <div class="price-card__credit">в кредит от 599 ₽/мес</div>
           <div class="qty-row">
             <span class="qty-label">Количество:</span>
             <div class="qty-control">
@@ -109,17 +129,33 @@
               <button class="qty-btn qty-plus">+</button>
             </div>
           </div>
-          <div class="action-row">
-            <button class="btn btn--primary btn--lg" style="flex:1">🛒 В корзину</button>
-            <button class="btn--icon" title="В избранное"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
-            <button class="btn--icon" title="Поделиться"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg></button>
+          <div class="action-row action-row--ozon">
+            <button class="btn btn--primary btn--lg btn--cart-main">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+              Добавить в корзину
+            </button>
+            <button class="btn btn--secondary btn--lg btn--buy-now">Купить сейчас</button>
           </div>
-        </div>
-
-        <div class="delivery-info">
-          <div class="delivery-item"><div class="delivery-icon">🚚</div><div><div class="delivery-title">Доставка завтра</div><div class="delivery-desc">Бесплатно от 2000 ₽</div></div></div>
-          <div class="delivery-item"><div class="delivery-icon">🛡️</div><div><div class="delivery-title">Гарантия 12 месяцев</div><div class="delivery-desc">Официальная гарантия производителя</div></div></div>
-          <div class="delivery-item"><div class="delivery-icon">🔄</div><div><div class="delivery-title">Возврат 30 дней</div><div class="delivery-desc">Без объяснения причин</div></div></div>
+          <div class="price-card__actions-row">
+            <button class="btn--icon-text" title="В избранное">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+              <span>В избранное</span>
+            </button>
+            <button class="btn--icon-text" title="Сравнить">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+              <span>Сравнить</span>
+            </button>
+            <button class="btn--icon-text" title="Поделиться">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>
+              <span>Поделиться</span>
+            </button>
+          </div>
+          <div class="delivery-info">
+            <div class="delivery-item"><div class="delivery-icon">🚚</div><div><div class="delivery-title">Доставка завтра</div><div class="delivery-desc">Бесплатно от 2000 ₽</div></div></div>
+            <div class="delivery-item"><div class="delivery-icon">📍</div><div><div class="delivery-title">Самовывоз послезавтра</div><div class="delivery-desc">Из 28 пунктов выдачи</div></div></div>
+            <div class="delivery-item"><div class="delivery-icon">🛡️</div><div><div class="delivery-title">Гарантия 12 месяцев</div><div class="delivery-desc">Официальная гарантия</div></div></div>
+            <div class="delivery-item"><div class="delivery-icon">🔄</div><div><div class="delivery-title">Возврат 30 дней</div><div class="delivery-desc">Без объяснения причин</div></div></div>
+          </div>
         </div>
       </div>
     </div>

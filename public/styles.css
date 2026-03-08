@@ -853,8 +853,22 @@ input, select, textarea { font-family: inherit; }
 .co-bonus-icon { color: #005bff; font-weight: 600; }
 
 /* Promo */
-.co-promo-card { padding: 14px 20px; }
+.co-promo-card { padding: 16px 20px; }
 .co-promo-head { display: flex; align-items: center; gap: 8px; font-size: 14px; color: var(--text); cursor: pointer; }
+.co-promo-body { margin-top: 12px; }
+.co-promo-input {
+  width: 100%; height: 42px; border: 1px solid #d6dae1; border-radius: 10px;
+  padding: 0 14px; font-size: 14px; color: var(--text); background: var(--card);
+  outline: none; transition: border-color 0.15s;
+}
+.co-promo-input:focus { border-color: #005bff; }
+.co-promo-input::placeholder { color: #a0a8b4; }
+.co-promo-btn {
+  width: 100%; margin-top: 8px; padding: 11px; border-radius: 12px;
+  background: #005bff; color: #fff; font-size: 14px; font-weight: 600;
+  transition: background 0.15s;
+}
+.co-promo-btn:hover { background: #004ad6; }
 
 /* ===== PROFILE PAGE ===== */
 .profile-layout { display: flex; gap: 24px; }

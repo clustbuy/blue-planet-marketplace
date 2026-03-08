@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Результаты поиска — Маркет</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="favicon.ico">
+</head>
+<body>
+
+  <header class="header">
+    <div class="header-top">
+      <div class="container header-inner">
+        <a href="home.html" class="logo"><div class="logo-icon">M</div><span class="logo-text">Маркет</span></a>
+        <button class="catalog-toggle" id="catalogToggle">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+          Каталог
+        </button>
+        <div class="search-bar"><input type="text" placeholder="Искать товары..." id="searchInput"><button class="search-btn"><svg class="icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></button></div>
+        <div class="header-actions">
+          <a href="favorites.html" class="header-btn"><svg class="icon" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></a>
+          <a href="cart.html" class="header-btn"><svg class="icon" viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg><span class="badge">3</span></a>
+          <a href="login.html" class="header-btn"><svg class="icon" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></a>
+        </div>
+      </div>
+    </div>
+    <div id="catalogDropdown" class="catalog-dropdown">
+      <div class="catalog-dropdown__inner">
+        <div class="catalog-dropdown__categories">
+          <div class="catalog-dropdown__cat-item active" data-subcats="sub-electronics"><span class="cat-emoji">📱</span> Электроника <span class="cat-arrow">›</span></div>
+          <div class="catalog-dropdown__cat-item" data-subcats="sub-clothes"><span class="cat-emoji">👕</span> Одежда <span class="cat-arrow">›</span></div>
+          <div class="catalog-dropdown__cat-item" data-subcats="sub-home"><span class="cat-emoji">🏠</span> Дом и сад <span class="cat-arrow">›</span></div>
+          <div class="catalog-dropdown__cat-item" data-subcats="sub-beauty"><span class="cat-emoji">💄</span> Красота <span class="cat-arrow">›</span></div>
+          <div class="catalog-dropdown__cat-item" data-subcats="sub-sport"><span class="cat-emoji">⚽</span> Спорт <span class="cat-arrow">›</span></div>
+        </div>
+        <div class="catalog-dropdown__subcats subcat-panel" id="sub-electronics" style="display:grid"><div class="catalog-dropdown__subgroup"><h4>Смартфоны</h4><a href="catalog.html">Apple</a><a href="catalog.html">Samsung</a></div><div class="catalog-dropdown__subgroup"><h4>Аудио</h4><a href="catalog.html">Наушники</a><a href="catalog.html">Колонки</a></div></div>
+        <div class="catalog-dropdown__subcats subcat-panel" id="sub-clothes" style="display:none"><div class="catalog-dropdown__subgroup"><h4>Мужская</h4><a href="catalog.html">Футболки</a></div></div>
+        <div class="catalog-dropdown__subcats subcat-panel" id="sub-home" style="display:none"><div class="catalog-dropdown__subgroup"><h4>Мебель</h4><a href="catalog.html">Диваны</a></div></div>
+        <div class="catalog-dropdown__subcats subcat-panel" id="sub-beauty" style="display:none"><div class="catalog-dropdown__subgroup"><h4>Макияж</h4><a href="catalog.html">Помада</a></div></div>
+        <div class="catalog-dropdown__subcats subcat-panel" id="sub-sport" style="display:none"><div class="catalog-dropdown__subgroup"><h4>Тренажёры</h4><a href="catalog.html">Беговые</a></div></div>
+      </div>
+    </div>
+    <div id="catalogOverlay" class="catalog-overlay"></div>
+  </header>
+
+  <main class="container" style="padding:24px 16px 32px">
+    <div class="breadcrumb">
+      <a href="home.html">Главная</a><span class="sep">/</span><span class="current">Результаты поиска</span>
+    </div>
+
+    <h1 style="font-size:24px;font-weight:700;margin-bottom:8px">Результаты поиска</h1>
+    <p class="search-info">Найдено <strong>128</strong> товаров по запросу «<strong id="searchQuery">наушники</strong>»</p>
+
+    <div class="search-tags">
+      <span class="search-tag active">Все</span>
+      <span class="search-tag">Электроника</span>
+      <span class="search-tag">Аксессуары</span>
+      <span class="search-tag">Аудио</span>
+      <span class="search-tag">Скидки</span>
+    </div>
+
+    <div class="sort-bar">
+      <div style="font-size:14px;color:var(--text-secondary)">128 товаров</div>
+      <select>
+        <option>По релевантности</option>
+        <option>По популярности</option>
+        <option>Сначала дешёвые</option>
+        <option>Сначала дорогие</option>
+        <option>По рейтингу</option>
+      </select>
+    </div>
+
+    <div class="products-grid products-grid--4col">
+      <a href="product.html?id=1" class="product-card">
+        <div class="product-card__img-wrap"><img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&h=400&fit=crop" alt="" class="product-card__img"><span class="product-card__badge">Хит</span><span class="product-card__discount">-33%</span></div>
+        <div class="product-card__body"><div class="product-card__rating"><span class="product-card__star">★</span><span class="product-card__rating-val">4.8</span><span class="product-card__reviews">(2341)</span></div><div class="product-card__title">Беспроводные наушники Premium</div><div class="product-card__seller">TechStore</div><div class="product-card__footer"><div><span class="product-card__price">5 990 ₽</span><span class="product-card__old-price">8 990 ₽</span></div><button class="product-card__cart-btn"><svg class="icon--sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg></button></div></div>
+      </a>
+      <a href="product.html?id=5" class="product-card">
+        <div class="product-card__img-wrap"><img src="https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=400&h=400&fit=crop" alt="" class="product-card__img"><span class="product-card__discount">-30%</span></div>
+        <div class="product-card__body"><div class="product-card__rating"><span class="product-card__star">★</span><span class="product-card__rating-val">4.4</span><span class="product-card__reviews">(987)</span></div><div class="product-card__title">Bluetooth колонка 20Вт RGB</div><div class="product-card__seller">AudioPro</div><div class="product-card__footer"><div><span class="product-card__price">3 490 ₽</span><span class="product-card__old-price">4 990 ₽</span></div><button class="product-card__cart-btn"><svg class="icon--sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg></button></div></div>
+      </a>
+      <a href="product.html?id=8" class="product-card">
+        <div class="product-card__img-wrap"><img src="https://images.unsplash.com/photo-1541140532154-b024d705b90a?w=400&h=400&fit=crop" alt="" class="product-card__img"><span class="product-card__badge">Выбор</span><span class="product-card__discount">-24%</span></div>
+        <div class="product-card__body"><div class="product-card__rating"><span class="product-card__star">★</span><span class="product-card__rating-val">4.7</span><span class="product-card__reviews">(1123)</span></div><div class="product-card__title">Клавиатура механическая RGB</div><div class="product-card__seller">KeyboardLab</div><div class="product-card__footer"><div><span class="product-card__price">6 790 ₽</span><span class="product-card__old-price">8 990 ₽</span></div><button class="product-card__cart-btn"><svg class="icon--sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg></button></div></div>
+      </a>
+      <a href="product.html?id=9" class="product-card">
+        <div class="product-card__img-wrap"><img src="https://images.unsplash.com/photo-1575311373937-040b8e1fd5b6?w=400&h=400&fit=crop" alt="" class="product-card__img"><span class="product-card__discount">-28%</span></div>
+        <div class="product-card__body"><div class="product-card__rating"><span class="product-card__star">★</span><span class="product-card__rating-val">4.5</span><span class="product-card__reviews">(765)</span></div><div class="product-card__title">Фитнес-браслет GPS</div><div class="product-card__seller">FitGear</div><div class="product-card__footer"><div><span class="product-card__price">3 290 ₽</span><span class="product-card__old-price">4 590 ₽</span></div><button class="product-card__cart-btn"><svg class="icon--sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg></button></div></div>
+      </a>
+      <a href="product.html?id=2" class="product-card">
+        <div class="product-card__img-wrap"><img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400&h=400&fit=crop" alt="" class="product-card__img"><span class="product-card__badge">Новинка</span><span class="product-card__discount">-22%</span></div>
+        <div class="product-card__body"><div class="product-card__rating"><span class="product-card__star">★</span><span class="product-card__rating-val">4.6</span><span class="product-card__reviews">(876)</span></div><div class="product-card__title">Смарт-часы AMOLED</div><div class="product-card__seller">GadgetWorld</div><div class="product-card__footer"><div><span class="product-card__price">12 490 ₽</span><span class="product-card__old-price">15 990 ₽</span></div><button class="product-card__cart-btn"><svg class="icon--sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg></button></div></div>
+      </a>
+      <a href="product.html?id=4" class="product-card">
+        <div class="product-card__img-wrap"><img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=400&h=400&fit=crop" alt="" class="product-card__img"></div>
+        <div class="product-card__body"><div class="product-card__rating"><span class="product-card__star">★</span><span class="product-card__rating-val">4.5</span><span class="product-card__reviews">(654)</span></div><div class="product-card__title">Рюкзак водонепроницаемый</div><div class="product-card__seller">BagMaster</div><div class="product-card__footer"><div><span class="product-card__price">2 990 ₽</span></div><button class="product-card__cart-btn"><svg class="icon--sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg></button></div></div>
+      </a>
+      <a href="product.html?id=10" class="product-card">
+        <div class="product-card__img-wrap"><img src="https://images.unsplash.com/photo-1517467139951-f5a925c9f2e0?w=400&h=400&fit=crop" alt="" class="product-card__img"><span class="product-card__badge">Премиум</span><span class="product-card__discount">-24%</span></div>
+        <div class="product-card__body"><div class="product-card__rating"><span class="product-card__star">★</span><span class="product-card__rating-val">4.8</span><span class="product-card__reviews">(543)</span></div><div class="product-card__title">Кофемашина Barista Pro</div><div class="product-card__seller">CoffeeHouse</div><div class="product-card__footer"><div><span class="product-card__price">24 990 ₽</span><span class="product-card__old-price">32 990 ₽</span></div><button class="product-card__cart-btn"><svg class="icon--sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg></button></div></div>
+      </a>
+      <a href="product.html?id=6" class="product-card">
+        <div class="product-card__img-wrap"><img src="https://images.unsplash.com/photo-1593618998160-e34014e67546?w=400&h=400&fit=crop" alt="" class="product-card__img"><span class="product-card__badge">Топ</span><span class="product-card__discount">-34%</span></div>
+        <div class="product-card__body"><div class="product-card__rating"><span class="product-card__star">★</span><span class="product-card__rating-val">4.9</span><span class="product-card__reviews">(432)</span></div><div class="product-card__title">Набор ножей дамасская сталь</div><div class="product-card__seller">КухняПро</div><div class="product-card__footer"><div><span class="product-card__price">7 890 ₽</span><span class="product-card__old-price">11 990 ₽</span></div><button class="product-card__cart-btn"><svg class="icon--sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg></button></div></div>
+      </a>
+    </div>
+
+    <div class="pagination">
+      <button class="page-btn active">1</button>
+      <button class="page-btn">2</button>
+      <button class="page-btn">3</button>
+      <button class="page-btn">4</button>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container"><div class="footer-bottom">© 2026 Маркет. Все права защищены.</div></div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    // Fill search query from URL
+    const params = new URLSearchParams(window.location.search);
+    const q = params.get('q');
+    if (q) {
+      document.getElementById('searchQuery').textContent = q;
+      document.getElementById('searchInput').value = q;
+      document.title = q + ' — поиск на Маркете';
+    }
+  </script>
+</body>
+</html>

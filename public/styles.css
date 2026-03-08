@@ -572,8 +572,8 @@ input, select, textarea { font-family: inherit; }
   .catalog-dropdown__inner { min-height: 350px; }
 }
 
-/* Catalog with sidebar: < 900px — 3 columns products */
-@media (max-width: 899px) {
+/* Catalog with sidebar: < 1024px — 3 columns products */
+@media (max-width: 1023px) {
   .products-grid--4col { grid-template-columns: repeat(3, 1fr); }
 }
 

@@ -572,6 +572,11 @@ input, select, textarea { font-family: inherit; }
   .catalog-dropdown__inner { min-height: 350px; }
 }
 
+/* Catalog with sidebar: < 900px — 3 columns products */
+@media (max-width: 899px) {
+  .products-grid--4col { grid-template-columns: repeat(3, 1fr); }
+}
+
 /* Mobile: < 768px — 2 columns products, 2 categories */
 @media (max-width: 767px) {
   .products-grid { grid-template-columns: repeat(2, 1fr); }

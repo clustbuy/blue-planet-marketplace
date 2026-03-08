@@ -39,7 +39,7 @@ input, select, textarea { font-family: inherit; }
 }
 
 /* ===== UTILITIES ===== */
-.container { max-width: 1280px; margin: 0 auto; padding: 0 16px; }
+.container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 16px; }
 .flex { display: flex; }
 .flex-col { flex-direction: column; }
 .items-center { align-items: center; }
@@ -530,18 +530,53 @@ input, select, textarea { font-family: inherit; }
 .icon--sm { width: 16px; height: 16px; }
 .icon--lg { width: 24px; height: 24px; }
 
+/* ===== MOBILE BOTTOM NAV ===== */
+.mobile-bottom-nav {
+  display: none;
+  position: fixed; bottom: 0; left: 0; right: 0; z-index: 100;
+  background: var(--card); border-top: 1px solid var(--border);
+  box-shadow: 0 -2px 10px rgba(26,35,50,0.08);
+  padding: 4px 0 calc(4px + env(safe-area-inset-bottom, 0px));
+}
+.mobile-bottom-nav__inner {
+  display: flex; justify-content: space-around; align-items: center;
+}
+.mobile-bottom-nav__item {
+  display: flex; flex-direction: column; align-items: center; gap: 2px;
+  padding: 6px 0; min-width: 56px; color: var(--text-secondary);
+  font-size: 10px; font-weight: 500; text-decoration: none;
+  transition: color 0.2s; background: none;
+}
+.mobile-bottom-nav__item:hover,
+.mobile-bottom-nav__item.active { color: var(--primary); }
+.mobile-bottom-nav__item svg { width: 22px; height: 22px; }
+.mobile-bottom-nav__item .badge {
+  position: absolute; top: -2px; right: -6px; width: 16px; height: 16px;
+  background: var(--accent); color: #fff; font-size: 9px; font-weight: 700;
+  border-radius: 50%; display: flex; align-items: center; justify-content: center;
+}
+.mobile-bottom-nav__icon-wrap { position: relative; }
+
 /* ===== RESPONSIVE ===== */
-@media (max-width: 1024px) {
+
+/* Desktop: >= 1200px — 6 columns products, 5 categories */
+/* (default styles already handle this) */
+
+/* Tablet: 768–1199px — 4 columns products, 4 categories */
+@media (max-width: 1199px) {
   .products-grid { grid-template-columns: repeat(4, 1fr); }
   .categories-grid { grid-template-columns: repeat(4, 1fr); }
   .footer-grid { grid-template-columns: repeat(2, 1fr); }
   .checkout-layout { flex-direction: column; }
   .checkout-sidebar { width: 100%; }
+  .catalog-dropdown__inner { min-height: 350px; }
 }
-@media (max-width: 768px) {
-  .products-grid { grid-template-columns: repeat(3, 1fr); }
+
+/* Mobile: < 768px — 2 columns products, 2 categories */
+@media (max-width: 767px) {
+  .products-grid { grid-template-columns: repeat(2, 1fr); }
   .products-grid--4col { grid-template-columns: repeat(2, 1fr); }
-  .categories-grid { grid-template-columns: repeat(3, 1fr); }
+  .categories-grid { grid-template-columns: repeat(2, 1fr); }
   .features-bar { grid-template-columns: repeat(2, 1fr); }
   .banner-carousel { height: 160px; }
   .banner-title { font-size: 22px; }
@@ -562,15 +597,28 @@ input, select, textarea { font-family: inherit; }
   .nav-bar { overflow-x: auto; }
   .catalog-dropdown__inner { flex-direction: column; min-height: auto; }
   .catalog-dropdown__categories { width: 100%; border-right: none; border-bottom: 1px solid var(--border); }
-  .catalog-dropdown__subcats { display: none; }
+  .catalog-dropdown__subcats { display: none !important; }
   .reviews-summary { flex-direction: column; }
+
+  /* Show mobile bottom nav */
+  .mobile-bottom-nav { display: block; }
+  /* Add padding to body so content isn't hidden behind bottom nav */
+  body { padding-bottom: 64px; }
+  /* Hide desktop footer on mobile */
+  .footer { display: none; }
+  /* Hide header action buttons that are now in bottom nav */
+  .header-actions .header-btn[href="favorites.html"],
+  .header-actions .header-btn[href="cart.html"],
+  .header-actions .header-btn[href="profile.html"],
+  .header-actions .header-btn[href="login.html"] { display: none; }
 }
-@media (max-width: 480px) {
-  .products-grid { grid-template-columns: repeat(2, 1fr); }
-  .categories-grid { grid-template-columns: repeat(2, 1fr); }
+
+@media (max-width: 479px) {
   .features-bar { grid-template-columns: 1fr; }
   .header-inner { gap: 8px; }
   .form-row { flex-direction: column; }
   .thankyou-actions { flex-direction: column; }
   .auth-card { padding: 24px; }
+  .search-bar { min-width: 0; }
+  .catalog-toggle { display: none; }
 }

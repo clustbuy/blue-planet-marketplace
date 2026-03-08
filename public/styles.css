@@ -299,7 +299,7 @@ input, select, textarea { font-family: inherit; }
 
 /* Thumbnail swiper (vertical) */
 .gallery-thumbs-swiper-wrap {
-  flex-shrink: 0; position: sticky; top: 100px;
+  width: 64px; flex-shrink: 0; position: sticky; top: 100px;
   display: flex; flex-direction: column; align-items: center;
   align-self: flex-start;
 }

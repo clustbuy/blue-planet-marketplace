@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Спасибо за заказ — Маркет</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="favicon.ico">
+</head>
+<body>
+
+  <header class="header">
+    <div class="header-top">
+      <div class="container header-inner">
+        <a href="home.html" class="logo"><div class="logo-icon">M</div><span class="logo-text">Маркет</span></a>
+        <div class="search-bar"><input type="text" placeholder="Искать товары..."><button class="search-btn"><svg class="icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></button></div>
+        <div class="header-actions">
+          <a href="home.html" class="header-btn"><svg class="icon" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="thankyou-page">
+      <div class="thankyou-icon">🎉</div>
+      <h1 class="thankyou-title">Спасибо за заказ!</h1>
+      <p class="thankyou-subtitle">Ваш заказ успешно оформлен. Мы уже начали его собирать.</p>
+
+      <div class="thankyou-order-card">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px">
+          <div>
+            <div style="font-weight:600;color:var(--text)">Заказ №MK-28432</div>
+            <div style="font-size:13px;color:var(--text-secondary)">8 марта 2026</div>
+          </div>
+          <span class="order-status order-status--transit">Собирается</span>
+        </div>
+
+        <div style="border-top:1px solid var(--border);padding-top:12px;margin-bottom:12px">
+          <div style="display:flex;gap:12px;align-items:center;margin-bottom:10px">
+            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=80&h=80&fit=crop" style="width:48px;height:48px;border-radius:8px;object-fit:cover">
+            <div style="flex:1;font-size:13px;color:var(--text)">Наушники Premium</div>
+            <div style="font-size:13px;font-weight:600;color:var(--text)">5 990 ₽</div>
+          </div>
+          <div style="display:flex;gap:12px;align-items:center;margin-bottom:10px">
+            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=80&h=80&fit=crop" style="width:48px;height:48px;border-radius:8px;object-fit:cover">
+            <div style="flex:1;font-size:13px;color:var(--text)">Кроссовки Air Comfort × 2</div>
+            <div style="font-size:13px;font-weight:600;color:var(--text)">8 580 ₽</div>
+          </div>
+          <div style="display:flex;gap:12px;align-items:center">
+            <img src="https://images.unsplash.com/photo-1593618998160-e34014e67546?w=80&h=80&fit=crop" style="width:48px;height:48px;border-radius:8px;object-fit:cover">
+            <div style="flex:1;font-size:13px;color:var(--text)">Набор ножей</div>
+            <div style="font-size:13px;font-weight:600;color:var(--text)">7 890 ₽</div>
+          </div>
+        </div>
+
+        <div style="border-top:1px solid var(--border);padding-top:12px;display:flex;justify-content:space-between">
+          <span style="font-size:14px;color:var(--text-secondary)">Итого</span>
+          <span style="font-size:18px;font-weight:700;color:var(--text)">22 460 ₽</span>
+        </div>
+      </div>
+
+      <div style="background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:20px;max-width:500px;margin:0 auto 24px;text-align:left">
+        <div style="font-weight:600;margin-bottom:8px;color:var(--text)">📍 Доставка</div>
+        <div style="font-size:14px;color:var(--text-secondary)">Курьером, завтра 9 марта</div>
+        <div style="font-size:14px;color:var(--text)">г. Москва, ул. Ленина, д. 12, кв. 45</div>
+      </div>
+
+      <div class="thankyou-actions">
+        <a href="profile.html" class="btn btn--primary btn--lg">Отследить заказ</a>
+        <a href="home.html" class="btn btn--outline btn--lg">На главную</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container"><div class="footer-bottom">© 2026 Маркет. Все права защищены.</div></div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -3,9 +3,7 @@ function initBannerCarousel() {
   const slides = document.querySelectorAll('.banner-slide');
   const dots = document.querySelectorAll('.banner-dot');
   if (!slides.length) return;
-  
   let current = 0;
-  
   function showSlide(index) {
     slides.forEach(s => s.classList.remove('active'));
     dots.forEach(d => d.classList.remove('active'));
@@ -13,28 +11,32 @@ function initBannerCarousel() {
     dots[index].classList.add('active');
     current = index;
   }
-  
-  dots.forEach((dot, i) => {
-    dot.addEventListener('click', () => showSlide(i));
-  });
-  
-  setInterval(() => {
-    showSlide((current + 1) % slides.length);
-  }, 4000);
+  dots.forEach((dot, i) => dot.addEventListener('click', () => showSlide(i)));
+  setInterval(() => showSlide((current + 1) % slides.length), 4000);
 }
 
 /* ===== Tabs ===== */
 function initTabs() {
-  const tabBtns = document.querySelectorAll('.tab-btn');
-  const tabContents = document.querySelectorAll('.tab-content');
-  if (!tabBtns.length) return;
-  
-  tabBtns.forEach(btn => {
+  document.querySelectorAll('.tab-btn').forEach(btn => {
     btn.addEventListener('click', () => {
       const target = btn.dataset.tab;
-      tabBtns.forEach(b => b.classList.remove('active'));
-      tabContents.forEach(c => c.classList.remove('active'));
+      const parent = btn.closest('.tabs') || document;
+      parent.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      parent.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
       btn.classList.add('active');
+      document.getElementById(target)?.classList.add('active');
+    });
+  });
+}
+
+/* ===== Auth Tabs ===== */
+function initAuthTabs() {
+  document.querySelectorAll('.auth-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      const target = tab.dataset.panel;
+      document.querySelectorAll('.auth-tab').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.auth-panel').forEach(p => p.classList.remove('active'));
+      tab.classList.add('active');
       document.getElementById(target)?.classList.add('active');
     });
   });
@@ -47,14 +49,14 @@ function initQuantity() {
     const plusBtn = control.querySelector('.qty-plus');
     const valEl = control.querySelector('.qty-val');
     if (!minusBtn || !plusBtn || !valEl) return;
-    
-    minusBtn.addEventListener('click', () => {
+    minusBtn.addEventListener('click', (e) => {
+      e.preventDefault();
       let val = parseInt(valEl.textContent) || 1;
       if (val > 1) valEl.textContent = val - 1;
       updateCartTotal();
     });
-    
-    plusBtn.addEventListener('click', () => {
+    plusBtn.addEventListener('click', (e) => {
+      e.preventDefault();
       let val = parseInt(valEl.textContent) || 1;
       valEl.textContent = val + 1;
       updateCartTotal();
@@ -75,10 +77,7 @@ function initCartRemove() {
 
 function updateCartTotal() {
   const items = document.querySelectorAll('.cart-item');
-  let subtotal = 0;
-  let oldTotal = 0;
-  let count = 0;
-  
+  let subtotal = 0, oldTotal = 0, count = 0;
   items.forEach(item => {
     const price = parseInt(item.dataset.price) || 0;
     const oldPrice = parseInt(item.dataset.oldprice) || price;
@@ -86,29 +85,22 @@ function updateCartTotal() {
     subtotal += price * qty;
     oldTotal += oldPrice * qty;
     count += qty;
-
     const priceEl = item.querySelector('.cart-item__price');
     if (priceEl) priceEl.textContent = formatPrice(price * qty);
     const oldEl = item.querySelector('.cart-item__old');
     if (oldEl && oldPrice > price) oldEl.textContent = formatPrice(oldPrice * qty);
   });
-  
   const savings = oldTotal - subtotal;
   const countEl = document.getElementById('summary-count');
-  const totalPriceEl = document.getElementById('summary-total-price');
-  const oldPriceEl = document.getElementById('summary-old-price');
   const savingsEl = document.getElementById('summary-savings');
   const finalEl = document.getElementById('summary-final');
-  
   if (countEl) countEl.textContent = count;
-  if (totalPriceEl) totalPriceEl.textContent = formatPrice(oldTotal);
   if (savingsEl) savingsEl.textContent = '-' + formatPrice(savings);
   if (finalEl) finalEl.textContent = formatPrice(subtotal);
 }
 
 function checkEmptyCart() {
-  const items = document.querySelectorAll('.cart-item');
-  if (items.length === 0) {
+  if (document.querySelectorAll('.cart-item').length === 0) {
     const cartLayout = document.querySelector('.cart-layout');
     if (cartLayout) {
       cartLayout.innerHTML = `
@@ -122,9 +114,125 @@ function checkEmptyCart() {
   }
 }
 
-/* ===== Format Price ===== */
 function formatPrice(num) {
   return new Intl.NumberFormat('ru-RU').format(num) + ' ₽';
+}
+
+/* ===== Catalog Dropdown ===== */
+function initCatalogDropdown() {
+  const toggle = document.getElementById('catalogToggle');
+  const dropdown = document.getElementById('catalogDropdown');
+  const overlay = document.getElementById('catalogOverlay');
+  if (!toggle || !dropdown) return;
+
+  toggle.addEventListener('click', (e) => {
+    e.stopPropagation();
+    dropdown.classList.toggle('open');
+    overlay?.classList.toggle('open');
+  });
+  overlay?.addEventListener('click', () => {
+    dropdown.classList.remove('open');
+    overlay.classList.remove('open');
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      dropdown.classList.remove('open');
+      overlay?.classList.remove('open');
+    }
+  });
+
+  // Category hover to show subcategories
+  const catItems = dropdown.querySelectorAll('.catalog-dropdown__cat-item');
+  const subcatPanels = dropdown.querySelectorAll('.subcat-panel');
+  catItems.forEach(item => {
+    item.addEventListener('mouseenter', () => {
+      catItems.forEach(c => c.classList.remove('active'));
+      subcatPanels.forEach(p => p.style.display = 'none');
+      item.classList.add('active');
+      const panel = document.getElementById(item.dataset.subcats);
+      if (panel) panel.style.display = 'grid';
+    });
+  });
+}
+
+/* ===== Gallery Thumbnails ===== */
+function initGallery() {
+  const thumbs = document.querySelectorAll('.gallery-thumb');
+  const mainImg = document.getElementById('galleryMainImg');
+  if (!thumbs.length || !mainImg) return;
+  thumbs.forEach(thumb => {
+    thumb.addEventListener('click', () => {
+      thumbs.forEach(t => t.classList.remove('active'));
+      thumb.classList.add('active');
+      mainImg.src = thumb.dataset.full || thumb.querySelector('img')?.src;
+    });
+  });
+}
+
+/* ===== Radio Options ===== */
+function initRadioOptions() {
+  document.querySelectorAll('.radio-group').forEach(group => {
+    group.querySelectorAll('.radio-option').forEach(option => {
+      option.addEventListener('click', () => {
+        group.querySelectorAll('.radio-option').forEach(o => o.classList.remove('selected'));
+        option.classList.add('selected');
+        option.querySelector('input[type="radio"]').checked = true;
+      });
+    });
+  });
+}
+
+/* ===== INN Validation ===== */
+function initINNCheck() {
+  const innInput = document.getElementById('companyINN');
+  const innResult = document.getElementById('innResult');
+  if (!innInput || !innResult) return;
+
+  innInput.addEventListener('input', () => {
+    const val = innInput.value.replace(/\D/g, '');
+    innInput.value = val;
+    if (val.length === 10 || val.length === 12) {
+      innResult.className = 'inn-check valid';
+      innResult.textContent = '✓ ИНН найден: ООО «' + (val.length === 10 ? 'Компания' : 'ИП Иванов') + '»';
+    } else if (val.length > 0) {
+      innResult.className = 'inn-check invalid';
+      innResult.textContent = '✕ Введите 10 или 12 цифр ИНН';
+    } else {
+      innResult.textContent = '';
+      innResult.className = 'inn-check';
+    }
+  });
+}
+
+/* ===== Phone mask ===== */
+function initPhoneMask() {
+  document.querySelectorAll('.phone-input').forEach(input => {
+    input.addEventListener('input', () => {
+      let val = input.value.replace(/\D/g, '');
+      if (val.length > 10) val = val.substring(0, 10);
+      let formatted = '';
+      if (val.length > 0) formatted += '(' + val.substring(0, 3);
+      if (val.length > 3) formatted += ') ' + val.substring(3, 6);
+      if (val.length > 6) formatted += '-' + val.substring(6, 8);
+      if (val.length > 8) formatted += '-' + val.substring(8, 10);
+      input.value = formatted;
+    });
+  });
+}
+
+/* ===== Search ===== */
+function initSearch() {
+  document.querySelectorAll('.search-bar').forEach(bar => {
+    const input = bar.querySelector('input');
+    const btn = bar.querySelector('.search-btn');
+    if (!input || !btn) return;
+    const doSearch = () => {
+      const q = input.value.trim();
+      if (q) window.location.href = 'search.html?q=' + encodeURIComponent(q);
+    };
+    btn.addEventListener('click', doSearch);
+    input.addEventListener('keypress', (e) => { if (e.key === 'Enter') doSearch(); });
+  });
 }
 
 /* ===== Mobile Menu ===== */
@@ -132,17 +240,21 @@ function initMobileMenu() {
   const toggle = document.querySelector('.menu-toggle');
   const nav = document.querySelector('.nav-inner');
   if (!toggle || !nav) return;
-  
-  toggle.addEventListener('click', () => {
-    nav.classList.toggle('nav-open');
-  });
+  toggle.addEventListener('click', () => nav.classList.toggle('nav-open'));
 }
 
 /* ===== Init ===== */
 document.addEventListener('DOMContentLoaded', () => {
   initBannerCarousel();
   initTabs();
+  initAuthTabs();
   initQuantity();
   initCartRemove();
+  initCatalogDropdown();
+  initGallery();
+  initRadioOptions();
+  initINNCheck();
+  initPhoneMask();
+  initSearch();
   initMobileMenu();
 });

@@ -14,10 +14,11 @@
   <header class="header">
     <div class="header-top">
       <div class="container header-inner">
-        <a href="home.html" class="logo">
-          <div class="logo-icon">M</div>
-          <span class="logo-text">Маркет</span>
-        </a>
+        <a href="home.html" class="logo"><div class="logo-icon">M</div><span class="logo-text">Маркет</span></a>
+        <button class="catalog-toggle" id="catalogToggle">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+          Каталог
+        </button>
         <div class="search-bar">
           <input type="text" placeholder="Искать товары...">
           <button class="search-btn">
@@ -32,7 +33,7 @@
             <svg class="icon" viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
             <span class="badge">3</span>
           </a>
-          <a href="profile.html" class="header-btn" title="Профиль">
+          <a href="login.html" class="header-btn" title="Профиль">
             <svg class="icon" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
           </a>
           <button class="header-btn menu-toggle">
@@ -59,6 +60,33 @@
         <a href="catalog.html?cat=pets" class="nav-link">Зоотовары</a>
       </div>
     </nav>
+    <div id="catalogDropdown" class="catalog-dropdown">
+      <div class="catalog-dropdown__inner">
+        <div class="catalog-dropdown__categories">
+          <div class="catalog-dropdown__cat-item active" data-subcats="sub-electronics"><span class="cat-emoji">📱</span> Электроника <span class="cat-arrow">›</span></div>
+          <div class="catalog-dropdown__cat-item" data-subcats="sub-clothes"><span class="cat-emoji">👕</span> Одежда <span class="cat-arrow">›</span></div>
+          <div class="catalog-dropdown__cat-item" data-subcats="sub-home"><span class="cat-emoji">🏠</span> Дом и сад <span class="cat-arrow">›</span></div>
+          <div class="catalog-dropdown__cat-item" data-subcats="sub-beauty"><span class="cat-emoji">💄</span> Красота <span class="cat-arrow">›</span></div>
+          <div class="catalog-dropdown__cat-item" data-subcats="sub-sport"><span class="cat-emoji">⚽</span> Спорт <span class="cat-arrow">›</span></div>
+          <div class="catalog-dropdown__cat-item" data-subcats="sub-kids"><span class="cat-emoji">🧸</span> Детские товары <span class="cat-arrow">›</span></div>
+          <div class="catalog-dropdown__cat-item" data-subcats="sub-food"><span class="cat-emoji">🍎</span> Продукты <span class="cat-arrow">›</span></div>
+          <div class="catalog-dropdown__cat-item" data-subcats="sub-auto"><span class="cat-emoji">🚗</span> Автотовары <span class="cat-arrow">›</span></div>
+          <div class="catalog-dropdown__cat-item" data-subcats="sub-books"><span class="cat-emoji">📚</span> Книги <span class="cat-arrow">›</span></div>
+          <div class="catalog-dropdown__cat-item" data-subcats="sub-pets"><span class="cat-emoji">🐾</span> Зоотовары <span class="cat-arrow">›</span></div>
+        </div>
+        <div class="catalog-dropdown__subcats subcat-panel" id="sub-electronics" style="display:grid"><div class="catalog-dropdown__subgroup"><h4>Смартфоны</h4><a href="catalog.html">Apple</a><a href="catalog.html">Samsung</a><a href="catalog.html">Xiaomi</a></div><div class="catalog-dropdown__subgroup"><h4>Ноутбуки</h4><a href="catalog.html">Игровые</a><a href="catalog.html">Для работы</a></div><div class="catalog-dropdown__subgroup"><h4>Аудио</h4><a href="catalog.html">Наушники</a><a href="catalog.html">Колонки</a></div></div>
+        <div class="catalog-dropdown__subcats subcat-panel" id="sub-clothes" style="display:none"><div class="catalog-dropdown__subgroup"><h4>Мужская</h4><a href="catalog.html">Футболки</a><a href="catalog.html">Джинсы</a></div><div class="catalog-dropdown__subgroup"><h4>Женская</h4><a href="catalog.html">Платья</a><a href="catalog.html">Блузки</a></div></div>
+        <div class="catalog-dropdown__subcats subcat-panel" id="sub-home" style="display:none"><div class="catalog-dropdown__subgroup"><h4>Мебель</h4><a href="catalog.html">Диваны</a><a href="catalog.html">Столы</a></div></div>
+        <div class="catalog-dropdown__subcats subcat-panel" id="sub-beauty" style="display:none"><div class="catalog-dropdown__subgroup"><h4>Макияж</h4><a href="catalog.html">Помада</a><a href="catalog.html">Тушь</a></div></div>
+        <div class="catalog-dropdown__subcats subcat-panel" id="sub-sport" style="display:none"><div class="catalog-dropdown__subgroup"><h4>Тренажёры</h4><a href="catalog.html">Беговые</a></div></div>
+        <div class="catalog-dropdown__subcats subcat-panel" id="sub-kids" style="display:none"><div class="catalog-dropdown__subgroup"><h4>Игрушки</h4><a href="catalog.html">Конструкторы</a></div></div>
+        <div class="catalog-dropdown__subcats subcat-panel" id="sub-food" style="display:none"><div class="catalog-dropdown__subgroup"><h4>Напитки</h4><a href="catalog.html">Вода</a></div></div>
+        <div class="catalog-dropdown__subcats subcat-panel" id="sub-auto" style="display:none"><div class="catalog-dropdown__subgroup"><h4>Масла</h4><a href="catalog.html">Моторные</a></div></div>
+        <div class="catalog-dropdown__subcats subcat-panel" id="sub-books" style="display:none"><div class="catalog-dropdown__subgroup"><h4>Художественная</h4><a href="catalog.html">Классика</a></div></div>
+        <div class="catalog-dropdown__subcats subcat-panel" id="sub-pets" style="display:none"><div class="catalog-dropdown__subgroup"><h4>Корма</h4><a href="catalog.html">Для собак</a></div></div>
+      </div>
+    </div>
+    <div id="catalogOverlay" class="catalog-overlay"></div>
   </header>
 
   <main>

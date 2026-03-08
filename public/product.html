@@ -117,19 +117,24 @@
         <div class="pc-sidebar pc-sidebar--sticky">
 
           <!-- Card 1: Sale banner + Price + Actions -->
-          <div class="pc-card">
-            <!-- Sale urgency banner -->
-            <div class="pc-sale-banner">
-              <div class="pc-sale-banner__left">
-                <span class="pc-sale-banner__icon">🔥</span>
-                <div>
-                  <span class="pc-sale-banner__title">Распродажа <svg class="pc-chevron-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="12" height="12"><polyline points="9 18 15 12 9 6"/></svg></span>
-                  <span class="pc-sale-banner__stock">1 929 единиц осталось</span>
-                </div>
+          <!-- Sale urgency banner (separate card) -->
+          <div class="pc-card pc-sale-banner">
+            <div class="pc-sale-banner__left">
+              <div class="pc-sale-banner__circle">
+                <svg width="32" height="32" viewBox="0 0 32 32">
+                  <circle cx="16" cy="16" r="14" fill="none" stroke="#e0e0e0" stroke-width="3"/>
+                  <circle cx="16" cy="16" r="14" fill="none" stroke="#cb11ab" stroke-width="3" stroke-dasharray="22 66" stroke-dashoffset="22" stroke-linecap="round"/>
+                </svg>
               </div>
-              <span class="pc-sale-banner__timer">4 дня до конца</span>
+              <div>
+                <span class="pc-sale-banner__title">Распродажа <svg class="pc-chevron-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14"><polyline points="9 18 15 12 9 6"/></svg></span>
+                <span class="pc-sale-banner__stock"><span class="pc-sale-banner__stock-num">1929</span> единиц осталось</span>
+              </div>
             </div>
+            <span class="pc-sale-banner__timer">4 дня до конца</span>
+          </div>
 
+          <div class="pc-card">
             <!-- Price block -->
             <div class="pc-price-block">
               <div class="pc-price-row-main">

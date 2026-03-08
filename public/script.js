@@ -155,17 +155,35 @@ function initCatalogDropdown() {
   });
 }
 
-/* ===== Gallery Thumbnails ===== */
+/* ===== Product Gallery Swiper (Ozon-style) ===== */
 function initGallery() {
-  const thumbs = document.querySelectorAll('.gallery-thumb');
-  const mainImg = document.getElementById('galleryMainImg');
-  if (!thumbs.length || !mainImg) return;
-  thumbs.forEach(thumb => {
-    thumb.addEventListener('click', () => {
-      thumbs.forEach(t => t.classList.remove('active'));
-      thumb.classList.add('active');
-      mainImg.src = thumb.dataset.full || thumb.querySelector('img')?.src;
-    });
+  const mainEl = document.querySelector('.gallery-main-swiper');
+  const thumbsEl = document.querySelector('.gallery-thumbs-swiper');
+  if (!mainEl || !thumbsEl) return;
+
+  const isMobile = window.innerWidth < 768;
+
+  const thumbsSwiper = new Swiper(thumbsEl, {
+    direction: isMobile ? 'horizontal' : 'vertical',
+    spaceBetween: 8,
+    slidesPerView: 'auto',
+    freeMode: true,
+    watchSlidesProgress: true,
+  });
+
+  const mainSwiper = new Swiper(mainEl, {
+    spaceBetween: 0,
+    navigation: {
+      nextEl: '.gallery-main-swiper .swiper-button-next',
+      prevEl: '.gallery-main-swiper .swiper-button-prev',
+    },
+    pagination: {
+      el: '.gallery-pagination',
+      clickable: true,
+    },
+    thumbs: {
+      swiper: thumbsSwiper,
+    },
   });
 }
 

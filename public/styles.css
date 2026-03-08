@@ -295,15 +295,16 @@ input, select, textarea { font-family: inherit; }
   margin-bottom: 40px;
   align-items: start;
 }
-.product-gallery-wrap { display: flex; gap: 12px; }
+.product-gallery-wrap { display: flex; gap: 12px; position: relative; }
 
 /* Thumbnail swiper (vertical) */
 .gallery-thumbs-swiper-wrap {
-  width: 64px; flex-shrink: 0; position: relative;
+  width: 64px; flex-shrink: 0; position: sticky; top: 100px;
   display: flex; flex-direction: column; align-items: center;
+  max-height: 480px; align-self: flex-start;
 }
 .gallery-thumbs-swiper {
-  flex: 1; overflow: hidden; max-height: calc(100% - 56px);
+  flex: 1; overflow: hidden; min-height: 0;
 }
 
 /* Thumbs navigation arrows */

@@ -112,30 +112,119 @@
         </div>
       </div>
 
-      <!-- Column 3: Sticky price card -->
+      <!-- Column 3: Sticky price card (Ozon style) -->
       <div class="product-sidebar">
         <div class="price-card price-card--sticky">
-          <div class="price-card__price-row">
-            <span class="price-main">5 990 ₽</span>
-            <span class="price-old">8 990 ₽</span>
-            <span class="price-discount">-33%</span>
+          <!-- Price block -->
+          <div class="price-card__prices">
+            <div class="price-card__card-price">
+              <span class="price-card-value">5 590 ₽</span>
+              <span class="price-card-label">с Картой Маркет</span>
+            </div>
+            <div class="price-card__main-price-row">
+              <span class="price-main">5 990 ₽</span>
+              <span class="price-old">8 990 ₽</span>
+              <span class="price-discount">-33%</span>
+            </div>
           </div>
-          <div class="price-card__credit">в кредит от 599 ₽/мес</div>
+
+          <!-- Ozon card promo -->
+          <div class="price-card__promo">
+            <div class="price-card__promo-icon">💳</div>
+            <div class="price-card__promo-text">
+              <span class="price-card__promo-title">Оформите Карту Маркет</span>
+              <span class="price-card__promo-desc">и получите скидку 400 ₽ на этот товар</span>
+            </div>
+          </div>
+
+          <!-- Credit/installment -->
+          <div class="price-card__credit-block">
+            <div class="price-card__credit-row">
+              <span class="price-card__credit-label">В рассрочку</span>
+              <span class="price-card__credit-value">от 999 ₽/мес</span>
+            </div>
+            <div class="price-card__credit-row">
+              <span class="price-card__credit-label">В кредит</span>
+              <span class="price-card__credit-value">от 599 ₽/мес</span>
+            </div>
+          </div>
+
+          <!-- Color selector -->
+          <div class="price-card__option">
+            <span class="price-card__option-label">Цвет: <b>Чёрный</b></span>
+            <div class="price-card__color-swatches">
+              <button class="color-swatch active" style="background:#1a1a1a" title="Чёрный"></button>
+              <button class="color-swatch" style="background:#f5f0e8" title="Бежевый"></button>
+              <button class="color-swatch" style="background:#3b2f24" title="Коричневый"></button>
+            </div>
+          </div>
+
+          <!-- Quantity -->
           <div class="qty-row">
-            <span class="qty-label">Количество:</span>
             <div class="qty-control">
               <button class="qty-btn qty-minus">−</button>
               <span class="qty-val">1</span>
               <button class="qty-btn qty-plus">+</button>
             </div>
           </div>
+
+          <!-- Action buttons -->
           <div class="action-row action-row--ozon">
             <button class="btn btn--primary btn--lg btn--cart-main">
               <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
               Добавить в корзину
             </button>
-            <button class="btn btn--secondary btn--lg btn--buy-now">Купить сейчас</button>
+            <button class="btn btn--secondary btn--lg btn--buy-now">Купить в 1 клик</button>
           </div>
+
+          <!-- Delivery section -->
+          <div class="price-card__delivery">
+            <div class="price-card__delivery-header">
+              <span class="price-card__delivery-title">Доставка</span>
+              <a href="#" class="price-card__delivery-change">Москва</a>
+            </div>
+            <div class="delivery-option">
+              <div class="delivery-option__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20"><rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8h4l3 4v4h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+              </div>
+              <div class="delivery-option__info">
+                <div class="delivery-option__title">Курьером, <b>завтра, 9 марта</b></div>
+                <div class="delivery-option__desc">Бесплатно от 2 000 ₽ · 99 ₽ при меньшей сумме</div>
+              </div>
+            </div>
+            <div class="delivery-option">
+              <div class="delivery-option__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div class="delivery-option__info">
+                <div class="delivery-option__title">В пункт выдачи, <b>завтра, 9 марта</b></div>
+                <div class="delivery-option__desc">Бесплатно · 28 пунктов выдачи</div>
+              </div>
+            </div>
+            <div class="delivery-option">
+              <div class="delivery-option__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20"><path d="M5 8h14M5 8a2 2 0 1 1 0-4h14a2 2 0 1 1 0 4M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8"/></svg>
+              </div>
+              <div class="delivery-option__info">
+                <div class="delivery-option__title">Постамат, <b>завтра, 9 марта</b></div>
+                <div class="delivery-option__desc">Бесплатно · 15 постаматов рядом</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Seller block -->
+          <div class="price-card__seller">
+            <div class="price-card__seller-row">
+              <span class="price-card__seller-label">Продавец</span>
+              <a href="#" class="price-card__seller-name">TechStore</a>
+            </div>
+            <div class="price-card__seller-meta">
+              <span class="price-card__seller-rating">★ 4.9</span>
+              <span class="price-card__seller-orders">12 543 заказа</span>
+            </div>
+          </div>
+
+          <!-- Bottom actions -->
           <div class="price-card__actions-row">
             <button class="btn--icon-text" title="В избранное">
               <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
@@ -150,11 +239,25 @@
               <span>Поделиться</span>
             </button>
           </div>
-          <div class="delivery-info">
-            <div class="delivery-item"><div class="delivery-icon">🚚</div><div><div class="delivery-title">Доставка завтра</div><div class="delivery-desc">Бесплатно от 2000 ₽</div></div></div>
-            <div class="delivery-item"><div class="delivery-icon">📍</div><div><div class="delivery-title">Самовывоз послезавтра</div><div class="delivery-desc">Из 28 пунктов выдачи</div></div></div>
-            <div class="delivery-item"><div class="delivery-icon">🛡️</div><div><div class="delivery-title">Гарантия 12 месяцев</div><div class="delivery-desc">Официальная гарантия</div></div></div>
-            <div class="delivery-item"><div class="delivery-icon">🔄</div><div><div class="delivery-title">Возврат 30 дней</div><div class="delivery-desc">Без объяснения причин</div></div></div>
+
+          <!-- Return & guarantee -->
+          <div class="price-card__guarantees">
+            <div class="guarantee-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="18" height="18"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              <span>Гарантия 12 месяцев</span>
+            </div>
+            <div class="guarantee-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="18" height="18"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg>
+              <span>Возврат 30 дней</span>
+            </div>
+            <div class="guarantee-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="18" height="18"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+              <span>Оплата при получении</span>
+            </div>
+            <div class="guarantee-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="18" height="18"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              <span>Проверка товара при выдаче</span>
+            </div>
           </div>
         </div>
       </div>

@@ -2235,17 +2235,25 @@ input, select, textarea { font-family: inherit; }
 
   .points-balance {
     grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
-    padding: 16px;
-    margin-bottom: 20px;
+    margin-bottom: 12px;
   }
 
   .points-balance-item {
-    gap: 6px;
+    gap: 8px;
+    padding: 14px;
+  }
+
+  .points-balance-item:nth-child(2) {
+    border-right: none;
+  }
+
+  .points-balance-item:nth-child(1),
+  .points-balance-item:nth-child(2) {
+    border-bottom: 1px solid var(--border);
   }
 
   .points-balance-value {
-    font-size: 16px;
+    font-size: 20px;
   }
 
   .points-balance-label {

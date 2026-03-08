@@ -24,87 +24,134 @@
   </header>
 
   <main class="container" style="padding: 24px 16px 32px">
-    <h1 style="font-size:24px;font-weight:700;margin-bottom:24px">Корзина <span style="color:var(--text-secondary);font-weight:400;font-size:18px">(3)</span></h1>
+    <h1 class="cart-page-title">Корзина<sup class="cart-page-count">3</sup></h1>
 
     <div class="cart-layout">
-      <div class="cart-items">
+      <!-- LEFT COLUMN -->
+      <div class="cart-left">
 
-        <div class="cart-item" data-price="5990" data-oldprice="8990">
-          <a href="product.html?id=1"><img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=200&h=200&fit=crop" alt="Наушники" class="cart-item__img"></a>
-          <div class="cart-item__info">
-            <a href="product.html?id=1" class="cart-item__title">Беспроводные наушники с активным шумоподавлением Premium</a>
-            <div class="cart-item__seller">Продавец: TechStore</div>
-            <div class="cart-item__bottom">
+        <!-- Select all bar -->
+        <div class="cart-controls-bar">
+          <label class="cart-checkbox-label">
+            <input type="checkbox" checked class="cart-checkbox">
+            <span>Выбрать все</span>
+          </label>
+          <div class="cart-controls-right">
+            <button class="cart-control-btn"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg> Поделиться</button>
+            <button class="cart-control-btn cart-control-btn--danger"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></button>
+          </div>
+        </div>
+
+        <!-- Delivery group -->
+        <div class="cart-delivery-label">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+          <span>Доставка Маркет</span>
+        </div>
+
+        <!-- Cart items -->
+        <div class="cart-items">
+
+          <div class="cart-item" data-price="5990" data-oldprice="8990">
+            <div class="cart-item__left">
+              <input type="checkbox" checked class="cart-checkbox">
+              <a href="product.html?id=1"><img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=200&h=200&fit=crop" alt="Наушники" class="cart-item__img"></a>
+            </div>
+            <div class="cart-item__center">
+              <a href="product.html?id=1" class="cart-item__title">Беспроводные наушники с активным шумоподавлением Premium</a>
+              <div class="cart-item__seller">Продавец: TechStore</div>
+              <div class="cart-item__actions">
+                <button class="cart-item__action-btn" title="В избранное"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
+                <button class="cart-item__action-btn" title="Удалить"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></button>
+              </div>
+            </div>
+            <div class="cart-item__right">
+              <div class="cart-item__prices">
+                <div class="cart-item__price">5 990 ₽</div>
+                <div class="cart-item__old">8 990 ₽</div>
+              </div>
               <div class="qty-control">
                 <button class="qty-btn qty-minus">−</button>
                 <span class="qty-val">1</span>
                 <button class="qty-btn qty-plus">+</button>
               </div>
-              <div style="text-align:right">
-                <div class="cart-item__price">5 990 ₽</div>
-                <div class="cart-item__old">8 990 ₽</div>
-              </div>
             </div>
           </div>
-          <button class="cart-item__remove" title="Удалить">
-            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
-          </button>
-        </div>
 
-        <div class="cart-item" data-price="4290" data-oldprice="6490">
-          <a href="product.html?id=3"><img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=200&h=200&fit=crop" alt="Кроссовки" class="cart-item__img"></a>
-          <div class="cart-item__info">
-            <a href="product.html?id=3" class="cart-item__title">Кроссовки спортивные для бега Air Comfort</a>
-            <div class="cart-item__seller">Продавец: SportLine</div>
-            <div class="cart-item__bottom">
+          <div class="cart-item" data-price="4290" data-oldprice="6490">
+            <div class="cart-item__left">
+              <input type="checkbox" checked class="cart-checkbox">
+              <a href="product.html?id=3"><img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=200&h=200&fit=crop" alt="Кроссовки" class="cart-item__img"></a>
+            </div>
+            <div class="cart-item__center">
+              <a href="product.html?id=3" class="cart-item__title">Кроссовки спортивные для бега Air Comfort</a>
+              <div class="cart-item__seller">Продавец: SportLine</div>
+              <div class="cart-item__actions">
+                <button class="cart-item__action-btn" title="В избранное"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
+                <button class="cart-item__action-btn" title="Удалить"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></button>
+              </div>
+            </div>
+            <div class="cart-item__right">
+              <div class="cart-item__prices">
+                <div class="cart-item__price">8 580 ₽</div>
+                <div class="cart-item__old">12 980 ₽</div>
+              </div>
               <div class="qty-control">
                 <button class="qty-btn qty-minus">−</button>
                 <span class="qty-val">2</span>
                 <button class="qty-btn qty-plus">+</button>
               </div>
-              <div style="text-align:right">
-                <div class="cart-item__price">8 580 ₽</div>
-                <div class="cart-item__old">12 980 ₽</div>
-              </div>
             </div>
           </div>
-          <button class="cart-item__remove" title="Удалить">
-            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
-          </button>
-        </div>
 
-        <div class="cart-item" data-price="7890" data-oldprice="11990">
-          <a href="product.html?id=6"><img src="https://images.unsplash.com/photo-1593618998160-e34014e67546?w=200&h=200&fit=crop" alt="Ножи" class="cart-item__img"></a>
-          <div class="cart-item__info">
-            <a href="product.html?id=6" class="cart-item__title">Набор кухонных ножей из дамасской стали 6 предметов</a>
-            <div class="cart-item__seller">Продавец: КухняПро</div>
-            <div class="cart-item__bottom">
+          <div class="cart-item" data-price="7890" data-oldprice="11990">
+            <div class="cart-item__left">
+              <input type="checkbox" checked class="cart-checkbox">
+              <a href="product.html?id=6"><img src="https://images.unsplash.com/photo-1593618998160-e34014e67546?w=200&h=200&fit=crop" alt="Ножи" class="cart-item__img"></a>
+            </div>
+            <div class="cart-item__center">
+              <a href="product.html?id=6" class="cart-item__title">Набор кухонных ножей из дамасской стали 6 предметов</a>
+              <div class="cart-item__seller">Продавец: КухняПро</div>
+              <div class="cart-item__actions">
+                <button class="cart-item__action-btn" title="В избранное"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
+                <button class="cart-item__action-btn" title="Удалить"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></button>
+              </div>
+            </div>
+            <div class="cart-item__right">
+              <div class="cart-item__prices">
+                <div class="cart-item__price">7 890 ₽</div>
+                <div class="cart-item__old">11 990 ₽</div>
+              </div>
               <div class="qty-control">
                 <button class="qty-btn qty-minus">−</button>
                 <span class="qty-val">1</span>
                 <button class="qty-btn qty-plus">+</button>
               </div>
-              <div style="text-align:right">
-                <div class="cart-item__price">7 890 ₽</div>
-                <div class="cart-item__old">11 990 ₽</div>
-              </div>
             </div>
           </div>
-          <button class="cart-item__remove" title="Удалить">
-            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
-          </button>
-        </div>
 
+        </div>
       </div>
 
+      <!-- RIGHT COLUMN (summary) -->
       <div class="cart-summary">
         <div class="summary-card">
-          <div class="summary-title">Итого</div>
-          <div class="summary-row"><span class="summary-label">Товары (<span id="summary-count">4</span>)</span><span class="summary-value" id="summary-old-price">33 960 ₽</span></div>
-          <div class="summary-row"><span class="summary-label">Скидка</span><span class="summary-value summary-value--discount" id="summary-savings">-11 500 ₽</span></div>
-          <div class="summary-row"><span class="summary-label">Доставка</span><span class="summary-value summary-value--success">Бесплатно</span></div>
+          <button class="btn btn--primary btn--full btn--lg">Перейти к оформлению</button>
+          <p class="summary-delivery-hint">Доступные способы и время доставки можно выбрать при оформлении заказа</p>
+
+          <div class="summary-section">
+            <div class="summary-section-title">Ваша корзина</div>
+            <div class="summary-meta">3 товара</div>
+          </div>
+
+          <div class="summary-row"><span class="summary-label">Товары (4)</span><span class="summary-value" id="summary-old-price">33 960 ₽</span></div>
+          <div class="summary-row"><span class="summary-label">Скидка</span><span class="summary-value summary-value--discount" id="summary-savings">− 11 500 ₽</span></div>
+
           <div class="summary-total"><span>К оплате</span><span id="summary-final">22 460 ₽</span></div>
-          <button class="btn btn--primary btn--full btn--lg" style="margin-top:16px">Оформить заказ</button>
+
+          <div class="summary-extra-row">
+            <span class="summary-label">Включая НДС</span>
+            <span class="summary-value">85 ₽</span>
+          </div>
         </div>
       </div>
     </div>

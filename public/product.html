@@ -233,7 +233,7 @@
                   <button class="pc-cart-counter__btn" onclick="changeQty(-1)">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/></svg>
                   </button>
-                  <span class="pc-cart-counter__val" id="pcCartQty">1</span>
+                  <input type="text" class="pc-cart-counter__val" id="pcCartQty" value="1" onchange="setQty(this.value)" onkeydown="if(event.key==='Enter')this.blur()">
                   <button class="pc-cart-counter__btn" onclick="changeQty(1)">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
                   </button>
@@ -556,8 +556,7 @@
       btn.style.display = 'none';
       document.getElementById('pcCartCounter').style.display = 'flex';
       document.getElementById('pcCartInBtn').style.display = 'flex';
-      document.getElementById('pcCartQty').textContent = cartQty;
-      // Change fav button stroke to blue
+      document.getElementById('pcCartQty').value = cartQty;
       document.getElementById('pcFavBtn').querySelector('svg').setAttribute('stroke', '#005bff');
     }
     function changeQty(delta) {
@@ -569,7 +568,14 @@
         document.getElementById('pcFavBtn').querySelector('svg').setAttribute('stroke', '#fff');
         return;
       }
-      document.getElementById('pcCartQty').textContent = cartQty;
+      document.getElementById('pcCartQty').value = cartQty;
+    }
+    function setQty(val) {
+      var n = parseInt(val, 10);
+      if (isNaN(n) || n < 0) n = 1;
+      cartQty = n;
+      if (cartQty === 0) { changeQty(0); return; }
+      document.getElementById('pcCartQty').value = cartQty;
     }
     function goToCart() { window.location.href = '/cart.html'; }
   </script>

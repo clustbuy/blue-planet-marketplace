@@ -506,7 +506,10 @@ input, select, textarea { font-family: inherit; }
 .pc-cart-counter__btn:hover { background: #f2f3f5; }
 .pc-cart-counter__val {
   width: 36px; text-align: center; font-size: 16px; font-weight: 600; color: #1a1a1a;
+  border: none; outline: none; background: none; padding: 0; -moz-appearance: textfield;
 }
+.pc-cart-counter__val::-webkit-outer-spin-button,
+.pc-cart-counter__val::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
 
 /* Fav button updated for in-cart state */
 .pc-btn-fav--active svg { fill: #005bff; stroke: #005bff; }

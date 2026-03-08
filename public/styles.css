@@ -444,31 +444,32 @@ input, select, textarea { font-family: inherit; }
   padding: 4px 16px 12px;
 }
 .pc-pay-later__btn {
-  padding: 6px 14px; border-radius: 6px; font-size: 12px; font-weight: 600;
+  padding: 8px 16px; border-radius: 8px; font-size: 13px; font-weight: 600;
   background: #1a2b4a; color: #fff; border: none; cursor: pointer;
 }
 .pc-pay-later__btn:hover { background: #253d66; }
-.pc-pay-later__desc { font-size: 12px; color: #9e9e9e; }
+.pc-pay-later__desc { font-size: 13px; color: #9e9e9e; }
 
 /* Cart + Favorite row */
 .pc-cart-row {
-  display: flex; gap: 8px; padding: 0 16px 16px;
+  display: flex; gap: 8px; padding: 0 16px 16px; align-items: stretch;
 }
 .pc-btn-cart {
   flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center;
-  padding: 12px 20px; border-radius: 12px; border: none; cursor: pointer;
-  background: linear-gradient(135deg, #005bff, #0050e6); color: #fff; transition: background 0.15s;
+  padding: 12px 20px; border-radius: 16px; border: none; cursor: pointer;
+  background: #005bff; color: #fff; transition: background 0.15s;
 }
-.pc-btn-cart:hover { background: linear-gradient(135deg, #0050e6, #0046cc); }
+.pc-btn-cart:hover { background: #0050e6; }
 .pc-btn-cart__text { font-size: 16px; font-weight: 600; }
 .pc-btn-cart__sub { font-size: 11px; opacity: 0.75; margin-top: 1px; }
 .pc-btn-fav {
-  width: 48px; height: 48px; display: flex; align-items: center; justify-content: center;
-  border-radius: 12px; border: none; cursor: pointer;
-  background: linear-gradient(135deg, #005bff, #6b4ce6); color: #fff;
-  transition: background 0.15s; flex-shrink: 0; align-self: stretch;
+  width: 52px; display: flex; align-items: center; justify-content: center;
+  border-radius: 16px; border: none; cursor: pointer;
+  background: #e8eaf0; color: #1a2b4a;
+  transition: background 0.15s; flex-shrink: 0;
 }
-.pc-btn-fav:hover { opacity: 0.9; }
+.pc-btn-fav svg { stroke: #1a2b4a; fill: none; }
+.pc-btn-fav:hover { background: #dcdfe6; }
 
 /* Cheaper alternatives */
 .pc-cheaper {

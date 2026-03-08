@@ -227,6 +227,39 @@
           <!-- Buy now (standalone, no card wrapper) -->
           <button class="pc-btn-buy-now">Купить сейчас</button>
 
+          <!-- Quantity discount -->
+          <div class="pc-card pc-card--outline pc-qty-discount">
+            <div class="pc-qty-discount__header">
+              <div class="pc-qty-discount__icon">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" fill="#ff2389" opacity="0.15"/><text x="10" y="14" text-anchor="middle" font-size="12" font-weight="700" fill="#cb11ab">%</text></svg>
+              </div>
+              <span class="pc-qty-discount__title">Скидка 4% от 2 ед</span>
+              <svg class="pc-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polyline points="9 18 15 12 9 6"/></svg>
+            </div>
+            <div class="pc-qty-discount__tiers">
+              <div class="pc-qty-discount__tier">
+                <div class="pc-qty-discount__bar">
+                  <span class="pc-qty-discount__pct">4%</span>
+                </div>
+                <span class="pc-qty-discount__tier-price">157 ₽</span>
+                <span class="pc-qty-discount__tier-qty">от 2 ед</span>
+              </div>
+              <div class="pc-qty-discount__tier">
+                <div class="pc-qty-discount__bar">
+                  <span class="pc-qty-discount__pct">5%</span>
+                </div>
+                <span class="pc-qty-discount__tier-price">155 ₽</span>
+                <span class="pc-qty-discount__tier-qty">от 5 ед</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Wholesale button -->
+          <button class="pc-btn-wholesale">
+            <span class="pc-btn-wholesale__text">Заказать оптом</span>
+            <span class="pc-btn-wholesale__sub">от 10 ед</span>
+          </button>
+
           <!-- Card 3: Delivery & Return (layered) -->
           <div class="pc-card pc-card--layered pc-card--layered-outline">
             <div class="pc-card__front">

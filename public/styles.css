@@ -1196,6 +1196,14 @@ input, select, textarea { font-family: inherit; }
   .catalog-toggle { display: none; }
 }
 
+/* LK card container */
+.lk-card {
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 32px;
+  box-shadow: var(--shadow-sm);
+}
+
 /* ===== ACTS PAGE (Акты сверки) ===== */
 .acts-tabs {
   display: flex;

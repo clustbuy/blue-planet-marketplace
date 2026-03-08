@@ -2057,8 +2057,7 @@ input, select, textarea { font-family: inherit; }
 
 .points-history-tabs {
   display: flex;
-  gap: 0;
-  border-bottom: 2px solid var(--border);
+  gap: 8px;
   margin-bottom: 24px;
 }
 
@@ -2066,20 +2065,22 @@ input, select, textarea { font-family: inherit; }
   background: none;
   font-size: 14px;
   font-weight: 500;
-  color: var(--text-secondary);
-  padding: 12px 20px;
-  border-bottom: 2px solid transparent;
-  margin-bottom: -2px;
+  color: var(--text);
+  padding: 8px 18px;
+  border: 1.5px solid var(--border);
+  border-radius: 20px;
   transition: all 0.2s;
+  cursor: pointer;
 }
 
 .points-history-tab:hover {
-  color: var(--text);
+  background: var(--bg-secondary);
 }
 
-.points-history-tab:first-child {
-  color: var(--text);
-  border-bottom-color: var(--text);
+.points-history-tab.active {
+  background: var(--text);
+  color: #fff;
+  border-color: var(--text);
 }
 
 .points-history-list {
@@ -2138,23 +2139,22 @@ input, select, textarea { font-family: inherit; }
   color: var(--text-secondary);
 }
 
-.points-history-amount {
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--success);
-  flex-shrink: 0;
-}
-
 .points-history-more {
   display: inline-block;
   font-size: 14px;
+  font-weight: 500;
   color: var(--primary);
-  margin-top: 16px;
-  transition: opacity 0.2s;
+  margin-top: 20px;
+  padding: 8px 20px;
+  border: 1.5px solid var(--primary);
+  border-radius: 20px;
+  background: none;
+  cursor: pointer;
+  transition: all 0.2s;
 }
 
 .points-history-more:hover {
-  opacity: 0.8;
+  background: rgba(0, 91, 255, 0.06);
 }
 
 /* FAQ section */

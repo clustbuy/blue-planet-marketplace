@@ -9,6 +9,12 @@ export const mockProducts: Product[] = [
     rating: 4.8,
     reviews: 2341,
     image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&h=400&fit=crop",
+    images: [
+      "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1583394838336-acd977736f90?w=400&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1487215078519-e21cc028cb29?w=400&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1524678606370-a47ad25cb82a?w=400&h=400&fit=crop",
+    ],
     badge: "Хит продаж",
     seller: "TechStore"
   },
@@ -20,6 +26,11 @@ export const mockProducts: Product[] = [
     rating: 4.6,
     reviews: 876,
     image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400&h=400&fit=crop",
+    images: [
+      "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1546868871-af0de0ae72be?w=400&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1579586337278-3befd40fd17a?w=400&h=400&fit=crop",
+    ],
     badge: "Новинка",
     seller: "GadgetWorld"
   },
@@ -31,6 +42,12 @@ export const mockProducts: Product[] = [
     rating: 4.7,
     reviews: 1543,
     image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&h=400&fit=crop",
+    images: [
+      "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1460353581641-37baddab0fa2?w=400&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=400&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1539185441755-769473a23570?w=400&h=400&fit=crop",
+    ],
     seller: "SportLine"
   },
   {
@@ -40,6 +57,11 @@ export const mockProducts: Product[] = [
     rating: 4.5,
     reviews: 654,
     image: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=400&h=400&fit=crop",
+    images: [
+      "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=400&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1622260614153-03223fb72052?w=400&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1581605405669-fcdf81165b94?w=400&h=400&fit=crop",
+    ],
     seller: "BagMaster"
   },
   {
@@ -50,6 +72,11 @@ export const mockProducts: Product[] = [
     rating: 4.4,
     reviews: 987,
     image: "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=400&h=400&fit=crop",
+    images: [
+      "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=400&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1589003077984-894e133dabab?w=400&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1558089687-f282ffcbc126?w=400&h=400&fit=crop",
+    ],
     badge: "Скидка",
     seller: "AudioPro"
   },
@@ -61,6 +88,11 @@ export const mockProducts: Product[] = [
     rating: 4.9,
     reviews: 432,
     image: "https://images.unsplash.com/photo-1593618998160-e34014e67546?w=400&h=400&fit=crop",
+    images: [
+      "https://images.unsplash.com/photo-1593618998160-e34014e67546?w=400&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1566454419290-57a64afe21aa?w=400&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1622542796254-5b7e2f20f5a4?w=400&h=400&fit=crop",
+    ],
     badge: "Топ",
     seller: "КухняПро"
   },
@@ -71,6 +103,11 @@ export const mockProducts: Product[] = [
     rating: 4.3,
     reviews: 321,
     image: "https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=400&h=400&fit=crop",
+    images: [
+      "https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=400&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1574169208507-8437623e0a21?w=400&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1613915617090-a1ef3d8e8c1f?w=400&h=400&fit=crop",
+    ],
     seller: "HomeComfort"
   },
   {
@@ -81,6 +118,11 @@ export const mockProducts: Product[] = [
     rating: 4.7,
     reviews: 1123,
     image: "https://images.unsplash.com/photo-1541140532154-b024d705b90a?w=400&h=400&fit=crop",
+    images: [
+      "https://images.unsplash.com/photo-1541140532154-b024d705b90a?w=400&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1618384887929-16ec33fab9ef?w=400&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1595225476474-87563907a212?w=400&h=400&fit=crop",
+    ],
     badge: "Выбор покупателей",
     seller: "KeyboardLab"
   },
@@ -92,6 +134,11 @@ export const mockProducts: Product[] = [
     rating: 4.5,
     reviews: 765,
     image: "https://images.unsplash.com/photo-1575311373937-040b8e1fd5b6?w=400&h=400&fit=crop",
+    images: [
+      "https://images.unsplash.com/photo-1575311373937-040b8e1fd5b6?w=400&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1557438159-51eec7a6c9e8?w=400&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1576243345690-4e4b79b63288?w=400&h=400&fit=crop",
+    ],
     seller: "FitGear"
   },
   {
@@ -102,6 +149,11 @@ export const mockProducts: Product[] = [
     rating: 4.8,
     reviews: 543,
     image: "https://images.unsplash.com/photo-1517467139951-f5a925c9f2e0?w=400&h=400&fit=crop",
+    images: [
+      "https://images.unsplash.com/photo-1517467139951-f5a925c9f2e0?w=400&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=400&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=400&h=400&fit=crop",
+    ],
     badge: "Премиум",
     seller: "CoffeeHouse"
   },
@@ -113,6 +165,11 @@ export const mockProducts: Product[] = [
     rating: 4.6,
     reviews: 234,
     image: "https://images.unsplash.com/photo-1558981806-ec527fa84c39?w=400&h=400&fit=crop",
+    images: [
+      "https://images.unsplash.com/photo-1558981806-ec527fa84c39?w=400&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1571068316344-75bc76f77890?w=400&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1604868189265-219ba590edfc?w=400&h=400&fit=crop",
+    ],
     badge: "Скидка",
     seller: "RideCity"
   },
@@ -124,6 +181,11 @@ export const mockProducts: Product[] = [
     rating: 4.4,
     reviews: 876,
     image: "https://images.unsplash.com/photo-1541643600914-78b084683601?w=400&h=400&fit=crop",
+    images: [
+      "https://images.unsplash.com/photo-1541643600914-78b084683601?w=400&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1587017539504-67cfbddac569?w=400&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1594035910387-fea081e66b64?w=400&h=400&fit=crop",
+    ],
     seller: "PerfumeBox"
   },
 ];

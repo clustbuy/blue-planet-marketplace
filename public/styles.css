@@ -1816,3 +1816,474 @@ input, select, textarea { font-family: inherit; }
   .codes-activate { flex-direction: column; }
   .codes-activate__input { max-width: none; }
 }
+
+/* ===== POINTS PAGE ===== */
+.points-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 24px;
+}
+
+/* Balance header */
+.points-balance {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 24px;
+  padding: 20px;
+  background: #f8fafc;
+  border-radius: var(--radius);
+}
+
+.points-balance-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  text-align: center;
+}
+
+.points-balance-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-sm);
+  background: var(--primary-light);
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.points-balance-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.points-balance-value {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.points-balance-label {
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+/* Burning section */
+.points-burning {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 20px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  margin-bottom: 28px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.points-burning:hover {
+  border-color: var(--primary);
+  background: #f8fbfd;
+}
+
+.points-burning-icon {
+  font-size: 24px;
+  flex-shrink: 0;
+}
+
+.points-burning-content {
+  flex: 1;
+}
+
+.points-burning-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 2px;
+}
+
+.points-burning-desc {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.points-burning svg {
+  width: 20px;
+  height: 20px;
+  color: var(--text-secondary);
+  flex-shrink: 0;
+}
+
+/* Seller bonuses section */
+.points-sellers {
+  margin-bottom: 40px;
+}
+
+.points-sellers-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.points-sellers-header h2 {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.points-sellers-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.points-sellers-controls svg {
+  width: 16px;
+  height: 16px;
+  color: var(--text-secondary);
+  flex-shrink: 0;
+}
+
+.points-sellers-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.points-seller-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.points-seller-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 20px;
+  background: #fff;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.points-seller-card:hover .points-seller-header {
+  background: #f8fafc;
+}
+
+.points-seller-logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.points-seller-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.points-seller-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 6px;
+}
+
+.points-seller-bonus {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.points-seller-bonus svg {
+  width: 14px;
+  height: 14px;
+}
+
+.points-seller-header > svg:last-child {
+  width: 16px;
+  height: 16px;
+  color: var(--text-secondary);
+  flex-shrink: 0;
+  transition: transform 0.2s;
+}
+
+.points-seller-card:hover .points-seller-header > svg:last-child {
+  transform: translateX(4px);
+}
+
+.points-seller-products {
+  display: flex;
+  gap: 8px;
+  padding: 0 20px 20px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.points-seller-products::-webkit-scrollbar {
+  display: none;
+}
+
+.points-seller-product {
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+/* History section */
+.points-history {
+  margin-bottom: 40px;
+}
+
+.points-history h2 {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 20px;
+}
+
+.points-history-tabs {
+  display: flex;
+  gap: 0;
+  border-bottom: 2px solid var(--border);
+  margin-bottom: 24px;
+}
+
+.points-history-tab {
+  background: none;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  padding: 12px 20px;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
+  transition: all 0.2s;
+}
+
+.points-history-tab:hover {
+  color: var(--text);
+}
+
+.points-history-tab:first-child {
+  color: var(--text);
+  border-bottom-color: var(--text);
+}
+
+.points-history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.points-history-date {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-top: 8px;
+}
+
+.points-history-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.points-history-item:last-of-type {
+  border-bottom: none;
+}
+
+.points-history-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #f1f5f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  flex-shrink: 0;
+}
+
+.points-history-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.points-history-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 2px;
+}
+
+.points-history-code {
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.points-history-amount {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--success);
+  flex-shrink: 0;
+}
+
+.points-history-more {
+  display: inline-block;
+  font-size: 14px;
+  color: var(--primary);
+  margin-top: 16px;
+  transition: opacity 0.2s;
+}
+
+.points-history-more:hover {
+  opacity: 0.8;
+}
+
+/* FAQ section */
+.points-faq {
+  margin-bottom: 40px;
+}
+
+.points-faq h2 {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 24px;
+}
+
+.points-faq-category {
+  margin-bottom: 32px;
+}
+
+.points-faq-category-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 12px;
+}
+
+.points-faq-item {
+  margin-bottom: 0;
+}
+
+.points-faq-item summary {
+  font-size: 14px;
+  color: var(--text);
+  padding: 12px 0;
+  cursor: pointer;
+  padding-left: 20px;
+  position: relative;
+  user-select: none;
+  transition: color 0.2s;
+}
+
+.points-faq-item summary:hover {
+  color: var(--primary);
+}
+
+.points-faq-item summary::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  transition: transform 0.2s;
+}
+
+.points-faq-item[open] summary::before {
+  transform: rotate(90deg);
+}
+
+.points-faq-item p {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  padding: 0 0 16px 20px;
+  margin: 0;
+}
+
+/* Mobile responsive */
+@media (max-width: 767px) {
+  .points-title {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+
+  .points-balance {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    padding: 16px;
+    margin-bottom: 20px;
+  }
+
+  .points-balance-item {
+    gap: 6px;
+  }
+
+  .points-balance-value {
+    font-size: 16px;
+  }
+
+  .points-balance-label {
+    font-size: 11px;
+  }
+
+  .points-sellers-header {
+    margin-bottom: 16px;
+  }
+
+  .points-sellers-header h2 {
+    font-size: 16px;
+  }
+
+  .points-seller-header {
+    gap: 10px;
+    padding: 12px 16px;
+  }
+
+  .points-seller-logo {
+    width: 48px;
+    height: 48px;
+  }
+
+  .points-seller-products {
+    padding: 0 16px 16px;
+    gap: 6px;
+  }
+
+  .points-seller-product {
+    width: 50px;
+    height: 50px;
+  }
+
+  .points-history h2,
+  .points-faq h2 {
+    font-size: 16px;
+    margin-bottom: 16px;
+  }
+
+  .points-history-tabs {
+    margin-bottom: 16px;
+  }
+
+  .points-history-tab {
+    font-size: 13px;
+    padding: 10px 16px;
+  }
+}

@@ -60,6 +60,33 @@
         <a href="catalog.html?cat=pets" class="nav-link">Зоотовары</a>
       </div>
     </nav>
+    <div id="catalogDropdown" class="catalog-dropdown">
+      <div class="catalog-dropdown__inner">
+        <div class="catalog-dropdown__categories">
+          <div class="catalog-dropdown__cat-item active" data-subcats="sub-electronics"><span class="cat-emoji">📱</span> Электроника <span class="cat-arrow">›</span></div>
+          <div class="catalog-dropdown__cat-item" data-subcats="sub-clothes"><span class="cat-emoji">👕</span> Одежда <span class="cat-arrow">›</span></div>
+          <div class="catalog-dropdown__cat-item" data-subcats="sub-home"><span class="cat-emoji">🏠</span> Дом и сад <span class="cat-arrow">›</span></div>
+          <div class="catalog-dropdown__cat-item" data-subcats="sub-beauty"><span class="cat-emoji">💄</span> Красота <span class="cat-arrow">›</span></div>
+          <div class="catalog-dropdown__cat-item" data-subcats="sub-sport"><span class="cat-emoji">⚽</span> Спорт <span class="cat-arrow">›</span></div>
+          <div class="catalog-dropdown__cat-item" data-subcats="sub-kids"><span class="cat-emoji">🧸</span> Детские товары <span class="cat-arrow">›</span></div>
+          <div class="catalog-dropdown__cat-item" data-subcats="sub-food"><span class="cat-emoji">🍎</span> Продукты <span class="cat-arrow">›</span></div>
+          <div class="catalog-dropdown__cat-item" data-subcats="sub-auto"><span class="cat-emoji">🚗</span> Автотовары <span class="cat-arrow">›</span></div>
+          <div class="catalog-dropdown__cat-item" data-subcats="sub-books"><span class="cat-emoji">📚</span> Книги <span class="cat-arrow">›</span></div>
+          <div class="catalog-dropdown__cat-item" data-subcats="sub-pets"><span class="cat-emoji">🐾</span> Зоотовары <span class="cat-arrow">›</span></div>
+        </div>
+        <div class="catalog-dropdown__subcats subcat-panel" id="sub-electronics" style="display:grid"><div class="catalog-dropdown__subgroup"><h4>Смартфоны</h4><a href="catalog.html">Apple</a><a href="catalog.html">Samsung</a><a href="catalog.html">Xiaomi</a></div><div class="catalog-dropdown__subgroup"><h4>Ноутбуки</h4><a href="catalog.html">Игровые</a><a href="catalog.html">Для работы</a></div><div class="catalog-dropdown__subgroup"><h4>Аудио</h4><a href="catalog.html">Наушники</a><a href="catalog.html">Колонки</a></div></div>
+        <div class="catalog-dropdown__subcats subcat-panel" id="sub-clothes" style="display:none"><div class="catalog-dropdown__subgroup"><h4>Мужская</h4><a href="catalog.html">Футболки</a><a href="catalog.html">Джинсы</a></div><div class="catalog-dropdown__subgroup"><h4>Женская</h4><a href="catalog.html">Платья</a><a href="catalog.html">Блузки</a></div></div>
+        <div class="catalog-dropdown__subcats subcat-panel" id="sub-home" style="display:none"><div class="catalog-dropdown__subgroup"><h4>Мебель</h4><a href="catalog.html">Диваны</a><a href="catalog.html">Столы</a></div></div>
+        <div class="catalog-dropdown__subcats subcat-panel" id="sub-beauty" style="display:none"><div class="catalog-dropdown__subgroup"><h4>Макияж</h4><a href="catalog.html">Помада</a><a href="catalog.html">Тушь</a></div></div>
+        <div class="catalog-dropdown__subcats subcat-panel" id="sub-sport" style="display:none"><div class="catalog-dropdown__subgroup"><h4>Тренажёры</h4><a href="catalog.html">Беговые</a></div></div>
+        <div class="catalog-dropdown__subcats subcat-panel" id="sub-kids" style="display:none"><div class="catalog-dropdown__subgroup"><h4>Игрушки</h4><a href="catalog.html">Конструкторы</a></div></div>
+        <div class="catalog-dropdown__subcats subcat-panel" id="sub-food" style="display:none"><div class="catalog-dropdown__subgroup"><h4>Напитки</h4><a href="catalog.html">Вода</a></div></div>
+        <div class="catalog-dropdown__subcats subcat-panel" id="sub-auto" style="display:none"><div class="catalog-dropdown__subgroup"><h4>Масла</h4><a href="catalog.html">Моторные</a></div></div>
+        <div class="catalog-dropdown__subcats subcat-panel" id="sub-books" style="display:none"><div class="catalog-dropdown__subgroup"><h4>Художественная</h4><a href="catalog.html">Классика</a></div></div>
+        <div class="catalog-dropdown__subcats subcat-panel" id="sub-pets" style="display:none"><div class="catalog-dropdown__subgroup"><h4>Корма</h4><a href="catalog.html">Для собак</a></div></div>
+      </div>
+    </div>
+    <div id="catalogOverlay" class="catalog-overlay"></div>
   </header>
 
   <main>

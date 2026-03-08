@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Маркет — маркетплейс с миллионами товаров</title>
+  <meta name="description" content="Маркет — маркетплейс с широким ассортиментом товаров по выгодным ценам. Быстрая доставка и гарантия качества.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="favicon.ico">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-top">
+      <div class="container header-inner">
+        <a href="home.html" class="logo">
+          <div class="logo-icon">M</div>
+          <span class="logo-text">Маркет</span>
+        </a>
+        <div class="search-bar">
+          <input type="text" placeholder="Искать товары...">
+          <button class="search-btn">
+            <svg class="icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          </button>
+        </div>
+        <div class="header-actions">
+          <a href="favorites.html" class="header-btn" title="Избранное">
+            <svg class="icon" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </a>
+          <a href="cart.html" class="header-btn" title="Корзина">
+            <svg class="icon" viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+            <span class="badge">3</span>
+          </a>
+          <a href="profile.html" class="header-btn" title="Профиль">
+            <svg class="icon" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          </a>
+          <button class="header-btn menu-toggle">
+            <svg class="icon" viewBox="0 0 24 24"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <nav class="nav-bar">
+      <div class="container nav-inner">
+        <a href="catalog.html" class="nav-link nav-link--catalog">
+          <svg class="icon--sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+          Каталог
+        </a>
+        <a href="catalog.html?cat=electronics" class="nav-link">Электроника</a>
+        <a href="catalog.html?cat=clothes" class="nav-link">Одежда</a>
+        <a href="catalog.html?cat=home" class="nav-link">Дом и сад</a>
+        <a href="catalog.html?cat=beauty" class="nav-link">Красота</a>
+        <a href="catalog.html?cat=sport" class="nav-link">Спорт</a>
+        <a href="catalog.html?cat=kids" class="nav-link">Детям</a>
+        <a href="catalog.html?cat=food" class="nav-link">Продукты</a>
+        <a href="catalog.html?cat=auto" class="nav-link">Авто</a>
+        <a href="catalog.html?cat=books" class="nav-link">Книги</a>
+        <a href="catalog.html?cat=pets" class="nav-link">Зоотовары</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- BANNER CAROUSEL -->
+    <section class="container">
+      <div class="banner-carousel">
+        <div class="banner-slide banner-slide--1 active">
+          <div>
+            <h2 class="banner-title">Весенняя распродажа</h2>
+            <p class="banner-subtitle">Скидки до 70% на тысячи товаров</p>
+          </div>
+        </div>
+        <div class="banner-slide banner-slide--2">
+          <div>
+            <h2 class="banner-title">Бесплатная доставка</h2>
+            <p class="banner-subtitle">От 2000 ₽ по всей России</p>
+          </div>
+        </div>
+        <div class="banner-slide banner-slide--3">
+          <div>
+            <h2 class="banner-title">Кэшбэк до 30%</h2>
+            <p class="banner-subtitle">На первый заказ в приложении</p>
+          </div>
+        </div>
+        <div class="banner-dots">
+          <button class="banner-dot active"></button>
+          <button class="banner-dot"></button>
+          <button class="banner-dot"></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="container">
+      <div class="features-bar">
+        <div class="feature-card">
+          <div class="feature-icon">🚚</div>
+          <span class="feature-text">Бесплатная доставка от 2000 ₽</span>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🛡️</div>
+          <span class="feature-text">Гарантия качества товаров</span>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🔄</div>
+          <span class="feature-text">Возврат в течение 30 дней</span>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">⏱️</div>
+          <span class="feature-text">Доставка за 1-2 дня</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- CATEGORIES -->
+    <section class="container">
+      <div class="section-header">
+        <h2 class="section-title">Категории</h2>
+        <a href="catalog.html" class="section-link">Все →</a>
+      </div>
+      <div class="categories-grid">
+        <a href="catalog.html?cat=electronics" class="category-card">
+          <span class="category-emoji">📱</span>
+          <span class="category-name">Электроника</span>
+          <span class="category-count">45 230 товаров</span>
+        </a>
+        <a href="catalog.html?cat=clothes" class="category-card">
+          <span class="category-emoji">👕</span>
+          <span class="category-name">Одежда</span>
+          <span class="category-count">128 340 товаров</span>
+        </a>
+        <a href="catalog.html?cat=home" class="category-card">
+          <span class="category-emoji">🏠</span>
+          <span class="category-name">Дом и сад</span>
+          <span class="category-count">67 890 товаров</span>
+        </a>
+        <a href="catalog.html?cat=beauty" class="category-card">
+          <span class="category-emoji">💄</span>
+          <span class="category-name">Красота и здоровье</span>
+          <span class="category-count">34 560 товаров</span>
+        </a>
+        <a href="catalog.html?cat=sport" class="category-card">
+          <span class="category-emoji">⚽</span>
+          <span class="category-name">Спорт и отдых</span>
+          <span class="category-count">23 450 товаров</span>
+        </a>
+        <a href="catalog.html?cat=kids" class="category-card">
+          <span class="category-emoji">🧸</span>
+          <span class="category-name">Детские товары</span>
+          <span class="category-count">18 920 товаров</span>
+        </a>
+        <a href="catalog.html?cat=food" class="category-card">
+          <span class="category-emoji">🍎</span>
+          <span class="category-name">Продукты питания</span>
+          <span class="category-count">56 780 товаров</span>
+        </a>
+        <a href="catalog.html?cat=auto" class="category-card">
+          <span class="category-emoji">🚗</span>
+          <span class="category-name">Автотовары</span>
+          <span class="category-count">12 340 товаров</span>
+        </a>
+        <a href="catalog.html?cat=books" class="category-card">
+          <span class="category-emoji">📚</span>
+          <span class="category-name">Книги</span>
+          <span class="category-count">89 120 товаров</span>
+        </a>
+        <a href="catalog.html?cat=pets" class="category-card">
+          <span class="category-emoji">🐾</span>
+          <span class="category-name">Зоотовары</span>
+          <span class="category-count">7 650 товаров</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- POPULAR PRODUCTS -->
+    <section class="container">
+      <div class="section-header">
+        <h2 class="section-title">Популярные товары</h2>
+        <a href="catalog.html" class="section-link">Смотреть все →</a>
+      </div>
+      <div class="products-grid">
+
+        <a href="product.html?id=1" class="product-card">
+          <div class="product-card__img-wrap">
+            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&h=400&fit=crop" alt="Наушники" class="product-card__img">
+            <span class="product-card__badge">Хит продаж</span>
+            <span class="product-card__discount">-33%</span>
+          </div>
+          <div class="product-card__body">
+            <div class="product-card__rating">
+              <span class="product-card__star">★</span>
+              <span class="product-card__rating-val">4.8</span>
+              <span class="product-card__reviews">(2341)</span>
+            </div>
+            <div class="product-card__title">Беспроводные наушники с активным шумоподавлением Premium</div>
+            <div class="product-card__seller">TechStore</div>
+            <div class="product-card__footer">
+              <div>
+                <span class="product-card__price">5 990 ₽</span>
+                <span class="product-card__old-price">8 990 ₽</span>
+              </div>
+              <button class="product-card__cart-btn" title="В корзину">
+                <svg class="icon--sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+              </button>
+            </div>
+          </div>
+        </a>
+
+        <a href="product.html?id=2" class="product-card">
+          <div class="product-card__img-wrap">
+            <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400&h=400&fit=crop" alt="Смарт-часы" class="product-card__img">
+            <span class="product-card__badge">Новинка</span>
+            <span class="product-card__discount">-22%</span>
+          </div>
+          <div class="product-card__body">
+            <div class="product-card__rating">
+              <span class="product-card__star">★</span>
+              <span class="product-card__rating-val">4.6</span>
+              <span class="product-card__reviews">(876)</span>
+            </div>
+            <div class="product-card__title">Смарт-часы с AMOLED дисплеем и мониторингом здоровья</div>
+            <div class="product-card__seller">GadgetWorld</div>
+            <div class="product-card__footer">
+              <div>
+                <span class="product-card__price">12 490 ₽</span>
+                <span class="product-card__old-price">15 990 ₽</span>
+              </div>
+              <button class="product-card__cart-btn" title="В корзину">
+                <svg class="icon--sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+              </button>
+            </div>
+          </div>
+        </a>
+
+        <a href="product.html?id=3" class="product-card">
+          <div class="product-card__img-wrap">
+            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&h=400&fit=crop" alt="Кроссовки" class="product-card__img">
+            <span class="product-card__discount">-34%</span>
+          </div>
+          <div class="product-card__body">
+            <div class="product-card__rating">
+              <span class="product-card__star">★</span>
+              <span class="product-card__rating-val">4.7</span>
+              <span class="product-card__reviews">(1543)</span>
+            </div>
+            <div class="product-card__title">Кроссовки спортивные для бега Air Comfort</div>
+            <div class="product-card__seller">SportLine</div>
+            <div class="product-card__footer">
+              <div>
+                <span class="product-card__price">4 290 ₽</span>
+                <span class="product-card__old-price">6 490 ₽</span>
+              </div>
+              <button class="product-card__cart-btn" title="В корзину">
+                <svg class="icon--sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+              </button>
+            </div>
+          </div>
+        </a>
+
+        <a href="product.html?id=4" class="product-card">
+          <div class="product-card__img-wrap">
+            <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=400&h=400&fit=crop" alt="Рюкзак" class="product-card__img">
+          </div>
+          <div class="product-card__body">
+            <div class="product-card__rating">
+              <span class="product-card__star">★</span>
+              <span class="product-card__rating-val">4.5</span>
+              <span class="product-card__reviews">(654)</span>
+            </div>
+            <div class="product-card__title">Рюкзак городской водонепроницаемый 25л</div>
+            <div class="product-card__seller">BagMaster</div>
+            <div class="product-card__footer">
+              <div><span class="product-card__price">2 990 ₽</span></div>
+              <button class="product-card__cart-btn" title="В корзину">
+                <svg class="icon--sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+              </button>
+            </div>
+          </div>
+        </a>
+
+        <a href="product.html?id=5" class="product-card">
+          <div class="product-card__img-wrap">
+            <img src="https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=400&h=400&fit=crop" alt="Колонка" class="product-card__img">
+            <span class="product-card__badge">Скидка</span>
+            <span class="product-card__discount">-30%</span>
+          </div>
+          <div class="product-card__body">
+            <div class="product-card__rating">
+              <span class="product-card__star">★</span>
+              <span class="product-card__rating-val">4.4</span>
+              <span class="product-card__reviews">(987)</span>
+            </div>
+            <div class="product-card__title">Портативная Bluetooth колонка 20Вт с RGB подсветкой</div>
+            <div class="product-card__seller">AudioPro</div>
+            <div class="product-card__footer">
+              <div>
+                <span class="product-card__price">3 490 ₽</span>
+                <span class="product-card__old-price">4 990 ₽</span>
+              </div>
+              <button class="product-card__cart-btn" title="В корзину">
+                <svg class="icon--sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+              </button>
+            </div>
+          </div>
+        </a>
+
+        <a href="product.html?id=6" class="product-card">
+          <div class="product-card__img-wrap">
+            <img src="https://images.unsplash.com/photo-1593618998160-e34014e67546?w=400&h=400&fit=crop" alt="Ножи" class="product-card__img">
+            <span class="product-card__badge">Топ</span>
+            <span class="product-card__discount">-34%</span>
+          </div>
+          <div class="product-card__body">
+            <div class="product-card__rating">
+              <span class="product-card__star">★</span>
+              <span class="product-card__rating-val">4.9</span>
+              <span class="product-card__reviews">(432)</span>
+            </div>
+            <div class="product-card__title">Набор кухонных ножей из дамасской стали 6 предметов</div>
+            <div class="product-card__seller">КухняПро</div>
+            <div class="product-card__footer">
+              <div>
+                <span class="product-card__price">7 890 ₽</span>
+                <span class="product-card__old-price">11 990 ₽</span>
+              </div>
+              <button class="product-card__cart-btn" title="В корзину">
+                <svg class="icon--sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+              </button>
+            </div>
+          </div>
+        </a>
+
+        <a href="product.html?id=7" class="product-card">
+          <div class="product-card__img-wrap">
+            <img src="https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=400&h=400&fit=crop" alt="Увлажнитель" class="product-card__img">
+          </div>
+          <div class="product-card__body">
+            <div class="product-card__rating">
+              <span class="product-card__star">★</span>
+              <span class="product-card__rating-val">4.3</span>
+              <span class="product-card__reviews">(321)</span>
+            </div>
+            <div class="product-card__title">Увлажнитель воздуха ультразвуковой с ароматизацией</div>
+            <div class="product-card__seller">HomeComfort</div>
+            <div class="product-card__footer">
+              <div><span class="product-card__price">2 490 ₽</span></div>
+              <button class="product-card__cart-btn" title="В корзину">
+                <svg class="icon--sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+              </button>
+            </div>
+          </div>
+        </a>
+
+        <a href="product.html?id=8" class="product-card">
+          <div class="product-card__img-wrap">
+            <img src="https://images.unsplash.com/photo-1541140532154-b024d705b90a?w=400&h=400&fit=crop" alt="Клавиатура" class="product-card__img">
+            <span class="product-card__badge">Выбор покупателей</span>
+            <span class="product-card__discount">-24%</span>
+          </div>
+          <div class="product-card__body">
+            <div class="product-card__rating">
+              <span class="product-card__star">★</span>
+              <span class="product-card__rating-val">4.7</span>
+              <span class="product-card__reviews">(1123)</span>
+            </div>
+            <div class="product-card__title">Механическая клавиатура RGB с горячей заменой свитчей</div>
+            <div class="product-card__seller">KeyboardLab</div>
+            <div class="product-card__footer">
+              <div>
+                <span class="product-card__price">6 790 ₽</span>
+                <span class="product-card__old-price">8 990 ₽</span>
+              </div>
+              <button class="product-card__cart-btn" title="В корзину">
+                <svg class="icon--sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+              </button>
+            </div>
+          </div>
+        </a>
+
+        <a href="product.html?id=9" class="product-card">
+          <div class="product-card__img-wrap">
+            <img src="https://images.unsplash.com/photo-1575311373937-040b8e1fd5b6?w=400&h=400&fit=crop" alt="Фитнес-браслет" class="product-card__img">
+            <span class="product-card__discount">-28%</span>
+          </div>
+          <div class="product-card__body">
+            <div class="product-card__rating">
+              <span class="product-card__star">★</span>
+              <span class="product-card__rating-val">4.5</span>
+              <span class="product-card__reviews">(765)</span>
+            </div>
+            <div class="product-card__title">Фитнес-браслет с пульсоксиметром и GPS трекером</div>
+            <div class="product-card__seller">FitGear</div>
+            <div class="product-card__footer">
+              <div>
+                <span class="product-card__price">3 290 ₽</span>
+                <span class="product-card__old-price">4 590 ₽</span>
+              </div>
+              <button class="product-card__cart-btn" title="В корзину">
+                <svg class="icon--sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+              </button>
+            </div>
+          </div>
+        </a>
+
+        <a href="product.html?id=10" class="product-card">
+          <div class="product-card__img-wrap">
+            <img src="https://images.unsplash.com/photo-1517467139951-f5a925c9f2e0?w=400&h=400&fit=crop" alt="Кофемашина" class="product-card__img">
+            <span class="product-card__badge">Премиум</span>
+            <span class="product-card__discount">-24%</span>
+          </div>
+          <div class="product-card__body">
+            <div class="product-card__rating">
+              <span class="product-card__star">★</span>
+              <span class="product-card__rating-val">4.8</span>
+              <span class="product-card__reviews">(543)</span>
+            </div>
+            <div class="product-card__title">Кофемашина автоматическая с капучинатором Barista Pro</div>
+            <div class="product-card__seller">CoffeeHouse</div>
+            <div class="product-card__footer">
+              <div>
+                <span class="product-card__price">24 990 ₽</span>
+                <span class="product-card__old-price">32 990 ₽</span>
+              </div>
+              <button class="product-card__cart-btn" title="В корзину">
+                <svg class="icon--sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+              </button>
+            </div>
+          </div>
+        </a>
+
+        <a href="product.html?id=11" class="product-card">
+          <div class="product-card__img-wrap">
+            <img src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?w=400&h=400&fit=crop" alt="Самокат" class="product-card__img">
+            <span class="product-card__badge">Скидка</span>
+            <span class="product-card__discount">-29%</span>
+          </div>
+          <div class="product-card__body">
+            <div class="product-card__rating">
+              <span class="product-card__star">★</span>
+              <span class="product-card__rating-val">4.6</span>
+              <span class="product-card__reviews">(234)</span>
+            </div>
+            <div class="product-card__title">Электросамокат складной 350Вт запас хода 30км</div>
+            <div class="product-card__seller">RideCity</div>
+            <div class="product-card__footer">
+              <div>
+                <span class="product-card__price">19 990 ₽</span>
+                <span class="product-card__old-price">27 990 ₽</span>
+              </div>
+              <button class="product-card__cart-btn" title="В корзину">
+                <svg class="icon--sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+              </button>
+            </div>
+          </div>
+        </a>
+
+        <a href="product.html?id=12" class="product-card">
+          <div class="product-card__img-wrap">
+            <img src="https://images.unsplash.com/photo-1541643600914-78b084683601?w=400&h=400&fit=crop" alt="Парфюм" class="product-card__img">
+            <span class="product-card__discount">-43%</span>
+          </div>
+          <div class="product-card__body">
+            <div class="product-card__rating">
+              <span class="product-card__star">★</span>
+              <span class="product-card__rating-val">4.4</span>
+              <span class="product-card__reviews">(876)</span>
+            </div>
+            <div class="product-card__title">Парфюмерная вода унисекс Aqua Fresh 100ml</div>
+            <div class="product-card__seller">PerfumeBox</div>
+            <div class="product-card__footer">
+              <div>
+                <span class="product-card__price">1 990 ₽</span>
+                <span class="product-card__old-price">3 490 ₽</span>
+              </div>
+              <button class="product-card__cart-btn" title="В корзину">
+                <svg class="icon--sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+              </button>
+            </div>
+          </div>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- DEALS -->
+    <section class="container" style="padding-bottom: 32px;">
+      <div class="section-header">
+        <h2 class="section-title">🔥 Скидки дня</h2>
+      </div>
+      <div class="products-grid">
+        <a href="product.html?id=1" class="product-card">
+          <div class="product-card__img-wrap">
+            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&h=400&fit=crop" alt="Наушники" class="product-card__img">
+            <span class="product-card__discount">-33%</span>
+          </div>
+          <div class="product-card__body">
+            <div class="product-card__rating"><span class="product-card__star">★</span><span class="product-card__rating-val">4.8</span><span class="product-card__reviews">(2341)</span></div>
+            <div class="product-card__title">Беспроводные наушники с активным шумоподавлением</div>
+            <div class="product-card__seller">TechStore</div>
+            <div class="product-card__footer">
+              <div><span class="product-card__price">5 990 ₽</span><span class="product-card__old-price">8 990 ₽</span></div>
+              <button class="product-card__cart-btn" title="В корзину"><svg class="icon--sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg></button>
+            </div>
+          </div>
+        </a>
+        <a href="product.html?id=6" class="product-card">
+          <div class="product-card__img-wrap">
+            <img src="https://images.unsplash.com/photo-1593618998160-e34014e67546?w=400&h=400&fit=crop" alt="Ножи" class="product-card__img">
+            <span class="product-card__badge">Топ</span><span class="product-card__discount">-34%</span>
+          </div>
+          <div class="product-card__body">
+            <div class="product-card__rating"><span class="product-card__star">★</span><span class="product-card__rating-val">4.9</span><span class="product-card__reviews">(432)</span></div>
+            <div class="product-card__title">Набор кухонных ножей из дамасской стали</div>
+            <div class="product-card__seller">КухняПро</div>
+            <div class="product-card__footer">
+              <div><span class="product-card__price">7 890 ₽</span><span class="product-card__old-price">11 990 ₽</span></div>
+              <button class="product-card__cart-btn" title="В корзину"><svg class="icon--sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg></button>
+            </div>
+          </div>
+        </a>
+        <a href="product.html?id=10" class="product-card">
+          <div class="product-card__img-wrap">
+            <img src="https://images.unsplash.com/photo-1517467139951-f5a925c9f2e0?w=400&h=400&fit=crop" alt="Кофемашина" class="product-card__img">
+            <span class="product-card__badge">Премиум</span><span class="product-card__discount">-24%</span>
+          </div>
+          <div class="product-card__body">
+            <div class="product-card__rating"><span class="product-card__star">★</span><span class="product-card__rating-val">4.8</span><span class="product-card__reviews">(543)</span></div>
+            <div class="product-card__title">Кофемашина автоматическая Barista Pro</div>
+            <div class="product-card__seller">CoffeeHouse</div>
+            <div class="product-card__footer">
+              <div><span class="product-card__price">24 990 ₽</span><span class="product-card__old-price">32 990 ₽</span></div>
+              <button class="product-card__cart-btn" title="В корзину"><svg class="icon--sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg></button>
+            </div>
+          </div>
+        </a>
+        <a href="product.html?id=11" class="product-card">
+          <div class="product-card__img-wrap">
+            <img src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?w=400&h=400&fit=crop" alt="Самокат" class="product-card__img">
+            <span class="product-card__discount">-29%</span>
+          </div>
+          <div class="product-card__body">
+            <div class="product-card__rating"><span class="product-card__star">★</span><span class="product-card__rating-val">4.6</span><span class="product-card__reviews">(234)</span></div>
+            <div class="product-card__title">Электросамокат складной 350Вт</div>
+            <div class="product-card__seller">RideCity</div>
+            <div class="product-card__footer">
+              <div><span class="product-card__price">19 990 ₽</span><span class="product-card__old-price">27 990 ₽</span></div>
+              <button class="product-card__cart-btn" title="В корзину"><svg class="icon--sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg></button>
+            </div>
+          </div>
+        </a>
+        <a href="product.html?id=12" class="product-card">
+          <div class="product-card__img-wrap">
+            <img src="https://images.unsplash.com/photo-1541643600914-78b084683601?w=400&h=400&fit=crop" alt="Парфюм" class="product-card__img">
+            <span class="product-card__discount">-43%</span>
+          </div>
+          <div class="product-card__body">
+            <div class="product-card__rating"><span class="product-card__star">★</span><span class="product-card__rating-val">4.4</span><span class="product-card__reviews">(876)</span></div>
+            <div class="product-card__title">Парфюмерная вода унисекс Aqua Fresh</div>
+            <div class="product-card__seller">PerfumeBox</div>
+            <div class="product-card__footer">
+              <div><span class="product-card__price">1 990 ₽</span><span class="product-card__old-price">3 490 ₽</span></div>
+              <button class="product-card__cart-btn" title="В корзину"><svg class="icon--sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg></button>
+            </div>
+          </div>
+        </a>
+        <a href="product.html?id=3" class="product-card">
+          <div class="product-card__img-wrap">
+            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&h=400&fit=crop" alt="Кроссовки" class="product-card__img">
+            <span class="product-card__discount">-34%</span>
+          </div>
+          <div class="product-card__body">
+            <div class="product-card__rating"><span class="product-card__star">★</span><span class="product-card__rating-val">4.7</span><span class="product-card__reviews">(1543)</span></div>
+            <div class="product-card__title">Кроссовки спортивные Air Comfort</div>
+            <div class="product-card__seller">SportLine</div>
+            <div class="product-card__footer">
+              <div><span class="product-card__price">4 290 ₽</span><span class="product-card__old-price">6 490 ₽</span></div>
+              <button class="product-card__cart-btn" title="В корзину"><svg class="icon--sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg></button>
+            </div>
+          </div>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="flex items-center gap-2">
+            <div class="logo-icon" style="background:linear-gradient(135deg,var(--primary-dark),var(--primary))">M</div>
+            <span style="font-weight:700;font-size:20px;color:var(--text)">Маркет</span>
+          </div>
+          <p>Маркетплейс с миллионами товаров от проверенных продавцов</p>
+        </div>
+        <div>
+          <h4 class="footer-heading">Покупателям</h4>
+          <ul class="footer-links">
+            <li><a href="#">Как оформить заказ</a></li>
+            <li><a href="#">Способы оплаты</a></li>
+            <li><a href="#">Доставка</a></li>
+            <li><a href="#">Возврат товара</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Партнёрам</h4>
+          <ul class="footer-links">
+            <li><a href="#">Продавайте на Маркете</a></li>
+            <li><a href="#">Документация API</a></li>
+            <li><a href="#">Реклама на сайте</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Компания</h4>
+          <ul class="footer-links">
+            <li><a href="#">О нас</a></li>
+            <li><a href="#">Вакансии</a></li>
+            <li><a href="#">Пресс-центр</a></li>
+            <li><a href="#">Контакты</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">© 2026 Маркет. Все права защищены.</div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

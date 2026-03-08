@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Товар — Маркет</title>
+  <meta name="description" content="Подробное описание товара на маркетплейсе Маркет.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="favicon.ico">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-top">
+      <div class="container header-inner">
+        <a href="home.html" class="logo"><div class="logo-icon">M</div><span class="logo-text">Маркет</span></a>
+        <div class="search-bar"><input type="text" placeholder="Искать товары..."><button class="search-btn"><svg class="icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></button></div>
+        <div class="header-actions">
+          <a href="favorites.html" class="header-btn"><svg class="icon" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></a>
+          <a href="cart.html" class="header-btn"><svg class="icon" viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg><span class="badge">3</span></a>
+          <a href="profile.html" class="header-btn"><svg class="icon" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></a>
+        </div>
+      </div>
+    </div>
+    <nav class="nav-bar"><div class="container nav-inner">
+      <a href="catalog.html" class="nav-link nav-link--catalog"><svg class="icon--sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg> Каталог</a>
+      <a href="catalog.html?cat=electronics" class="nav-link">Электроника</a><a href="catalog.html?cat=clothes" class="nav-link">Одежда</a><a href="catalog.html?cat=home" class="nav-link">Дом и сад</a><a href="catalog.html?cat=beauty" class="nav-link">Красота</a><a href="catalog.html?cat=sport" class="nav-link">Спорт</a>
+    </div></nav>
+  </header>
+
+  <main class="container" style="padding-bottom:32px">
+    <div class="breadcrumb">
+      <a href="home.html">Главная</a><span class="sep">/</span><a href="catalog.html">Каталог</a><span class="sep">/</span><span class="current">Беспроводные наушники Premium</span>
+    </div>
+
+    <div class="product-detail">
+      <!-- Gallery -->
+      <div class="product-gallery">
+        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600&h=600&fit=crop" alt="Беспроводные наушники">
+        <span class="product-card__badge" style="position:absolute;top:16px;left:16px">Хит продаж</span>
+      </div>
+
+      <!-- Info -->
+      <div class="product-info">
+        <div>
+          <h1 class="product-title">Беспроводные наушники с активным шумоподавлением Premium</h1>
+          <div class="product-meta">
+            <div class="product-rating">
+              <span style="color:var(--accent)">★</span> 4.8
+            </div>
+            <span class="product-reviews">2341 отзыв</span>
+            <span class="product-seller">Продавец: TechStore</span>
+          </div>
+        </div>
+
+        <div class="price-card">
+          <div>
+            <span class="price-main">5 990 ₽</span>
+            <span class="price-old">8 990 ₽</span>
+            <span class="price-discount">-33%</span>
+          </div>
+
+          <div class="qty-row">
+            <span class="qty-label">Количество:</span>
+            <div class="qty-control">
+              <button class="qty-btn qty-minus">−</button>
+              <span class="qty-val">1</span>
+              <button class="qty-btn qty-plus">+</button>
+            </div>
+          </div>
+
+          <div class="action-row">
+            <button class="btn btn--primary btn--lg" style="flex:1">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:20px;height:20px"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+              В корзину
+            </button>
+            <button class="btn--icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg></button>
+          </div>
+        </div>
+
+        <div class="delivery-info">
+          <div class="delivery-item">
+            <div class="delivery-icon">🚚</div>
+            <div><div class="delivery-title">Доставка завтра</div><div class="delivery-desc">Бесплатно от 2000 ₽</div></div>
+          </div>
+          <div class="delivery-item">
+            <div class="delivery-icon">🛡️</div>
+            <div><div class="delivery-title">Гарантия 12 месяцев</div><div class="delivery-desc">Официальная гарантия производителя</div></div>
+          </div>
+          <div class="delivery-item">
+            <div class="delivery-icon">🔄</div>
+            <div><div class="delivery-title">Возврат 30 дней</div><div class="delivery-desc">Без объяснения причин</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tabs -->
+    <div class="tabs">
+      <div class="tab-list">
+        <button class="tab-btn active" data-tab="tab-desc">Описание</button>
+        <button class="tab-btn" data-tab="tab-specs">Характеристики</button>
+        <button class="tab-btn" data-tab="tab-reviews">Отзывы (2341)</button>
+      </div>
+      <div class="tab-content active" id="tab-desc">
+        <p>Беспроводные наушники с активным шумоподавлением Premium — высококачественный аудиоаксессуар от проверенного продавца TechStore. Оснащены передовой технологией активного шумоподавления, обеспечивающей идеальное погружение в звук. Автономная работа до 30 часов, быстрая зарядка, удобная складная конструкция. Поддержка Bluetooth 5.3, AAC и LDAC кодеков.</p>
+      </div>
+      <div class="tab-content" id="tab-specs">
+        <div class="spec-row"><span class="spec-label">Бренд</span><span class="spec-value">TechStore</span></div>
+        <div class="spec-row"><span class="spec-label">Артикул</span><span class="spec-value">MK-1001</span></div>
+        <div class="spec-row"><span class="spec-label">Тип</span><span class="spec-value">Полноразмерные</span></div>
+        <div class="spec-row"><span class="spec-label">Bluetooth</span><span class="spec-value">5.3</span></div>
+        <div class="spec-row"><span class="spec-label">Время работы</span><span class="spec-value">до 30 часов</span></div>
+        <div class="spec-row"><span class="spec-label">Гарантия</span><span class="spec-value">12 месяцев</span></div>
+        <div class="spec-row"><span class="spec-label">Вес</span><span class="spec-value">250 г</span></div>
+        <div class="spec-row"><span class="spec-label">Страна</span><span class="spec-value">Китай</span></div>
+      </div>
+      <div class="tab-content" id="tab-reviews">
+        <p>Отзывы покупателей будут отображаться здесь.</p>
+      </div>
+    </div>
+
+    <!-- Related -->
+    <div class="section-header"><h2 class="section-title">Похожие товары</h2></div>
+    <div class="products-grid">
+      <a href="product.html?id=2" class="product-card">
+        <div class="product-card__img-wrap"><img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400&h=400&fit=crop" alt="Часы" class="product-card__img"><span class="product-card__discount">-22%</span></div>
+        <div class="product-card__body"><div class="product-card__rating"><span class="product-card__star">★</span><span class="product-card__rating-val">4.6</span><span class="product-card__reviews">(876)</span></div><div class="product-card__title">Смарт-часы AMOLED</div><div class="product-card__seller">GadgetWorld</div><div class="product-card__footer"><div><span class="product-card__price">12 490 ₽</span><span class="product-card__old-price">15 990 ₽</span></div><button class="product-card__cart-btn"><svg class="icon--sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg></button></div></div>
+      </a>
+      <a href="product.html?id=5" class="product-card">
+        <div class="product-card__img-wrap"><img src="https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=400&h=400&fit=crop" alt="Колонка" class="product-card__img"><span class="product-card__discount">-30%</span></div>
+        <div class="product-card__body"><div class="product-card__rating"><span class="product-card__star">★</span><span class="product-card__rating-val">4.4</span><span class="product-card__reviews">(987)</span></div><div class="product-card__title">Bluetooth колонка 20Вт</div><div class="product-card__seller">AudioPro</div><div class="product-card__footer"><div><span class="product-card__price">3 490 ₽</span><span class="product-card__old-price">4 990 ₽</span></div><button class="product-card__cart-btn"><svg class="icon--sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg></button></div></div>
+      </a>
+      <a href="product.html?id=8" class="product-card">
+        <div class="product-card__img-wrap"><img src="https://images.unsplash.com/photo-1541140532154-b024d705b90a?w=400&h=400&fit=crop" alt="Клавиатура" class="product-card__img"><span class="product-card__discount">-24%</span></div>
+        <div class="product-card__body"><div class="product-card__rating"><span class="product-card__star">★</span><span class="product-card__rating-val">4.7</span><span class="product-card__reviews">(1123)</span></div><div class="product-card__title">Клавиатура механическая RGB</div><div class="product-card__seller">KeyboardLab</div><div class="product-card__footer"><div><span class="product-card__price">6 790 ₽</span><span class="product-card__old-price">8 990 ₽</span></div><button class="product-card__cart-btn"><svg class="icon--sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg></button></div></div>
+      </a>
+      <a href="product.html?id=9" class="product-card">
+        <div class="product-card__img-wrap"><img src="https://images.unsplash.com/photo-1575311373937-040b8e1fd5b6?w=400&h=400&fit=crop" alt="Фитнес" class="product-card__img"><span class="product-card__discount">-28%</span></div>
+        <div class="product-card__body"><div class="product-card__rating"><span class="product-card__star">★</span><span class="product-card__rating-val">4.5</span><span class="product-card__reviews">(765)</span></div><div class="product-card__title">Фитнес-браслет GPS</div><div class="product-card__seller">FitGear</div><div class="product-card__footer"><div><span class="product-card__price">3 290 ₽</span><span class="product-card__old-price">4 590 ₽</span></div><button class="product-card__cart-btn"><svg class="icon--sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg></button></div></div>
+      </a>
+      <a href="product.html?id=10" class="product-card">
+        <div class="product-card__img-wrap"><img src="https://images.unsplash.com/photo-1517467139951-f5a925c9f2e0?w=400&h=400&fit=crop" alt="Кофемашина" class="product-card__img"><span class="product-card__discount">-24%</span></div>
+        <div class="product-card__body"><div class="product-card__rating"><span class="product-card__star">★</span><span class="product-card__rating-val">4.8</span><span class="product-card__reviews">(543)</span></div><div class="product-card__title">Кофемашина Barista Pro</div><div class="product-card__seller">CoffeeHouse</div><div class="product-card__footer"><div><span class="product-card__price">24 990 ₽</span><span class="product-card__old-price">32 990 ₽</span></div><button class="product-card__cart-btn"><svg class="icon--sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg></button></div></div>
+      </a>
+      <a href="product.html?id=3" class="product-card">
+        <div class="product-card__img-wrap"><img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&h=400&fit=crop" alt="Кроссовки" class="product-card__img"><span class="product-card__discount">-34%</span></div>
+        <div class="product-card__body"><div class="product-card__rating"><span class="product-card__star">★</span><span class="product-card__rating-val">4.7</span><span class="product-card__reviews">(1543)</span></div><div class="product-card__title">Кроссовки Air Comfort</div><div class="product-card__seller">SportLine</div><div class="product-card__footer"><div><span class="product-card__price">4 290 ₽</span><span class="product-card__old-price">6 490 ₽</span></div><button class="product-card__cart-btn"><svg class="icon--sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg></button></div></div>
+      </a>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><div class="flex items-center gap-2"><div class="logo-icon" style="background:linear-gradient(135deg,var(--primary-dark),var(--primary))">M</div><span style="font-weight:700;font-size:20px;color:var(--text)">Маркет</span></div><p>Маркетплейс с миллионами товаров</p></div>
+        <div><h4 class="footer-heading">Покупателям</h4><ul class="footer-links"><li><a href="#">Как оформить заказ</a></li><li><a href="#">Доставка</a></li><li><a href="#">Возврат</a></li></ul></div>
+        <div><h4 class="footer-heading">Партнёрам</h4><ul class="footer-links"><li><a href="#">Продавайте на Маркете</a></li><li><a href="#">API</a></li></ul></div>
+        <div><h4 class="footer-heading">Компания</h4><ul class="footer-links"><li><a href="#">О нас</a></li><li><a href="#">Контакты</a></li></ul></div>
+      </div>
+      <div class="footer-bottom">© 2026 Маркет. Все права защищены.</div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

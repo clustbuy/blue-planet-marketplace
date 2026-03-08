@@ -2062,11 +2062,25 @@ input, select, textarea { font-family: inherit; }
   margin-bottom: 40px;
 }
 
-.points-history h2 {
+.points-history-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.points-history-header h2 {
   font-size: 20px;
   font-weight: 700;
   color: var(--text);
-  margin-bottom: 20px;
+}
+
+.points-history-amount {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+  flex-shrink: 0;
+  margin-left: auto;
 }
 
 .points-history-tabs {

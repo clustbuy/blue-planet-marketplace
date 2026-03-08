@@ -549,5 +549,29 @@
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="script.js"></script>
+  <script>
+    var cartQty = 0;
+    function toggleCart(btn) {
+      cartQty = 1;
+      btn.style.display = 'none';
+      document.getElementById('pcCartCounter').style.display = 'flex';
+      document.getElementById('pcCartInBtn').style.display = 'flex';
+      document.getElementById('pcCartQty').textContent = cartQty;
+      // Change fav button stroke to blue
+      document.getElementById('pcFavBtn').querySelector('svg').setAttribute('stroke', '#005bff');
+    }
+    function changeQty(delta) {
+      cartQty = Math.max(0, cartQty + delta);
+      if (cartQty === 0) {
+        document.getElementById('pcCartCounter').style.display = 'none';
+        document.getElementById('pcCartInBtn').style.display = 'none';
+        document.getElementById('pcCartBtn').style.display = 'flex';
+        document.getElementById('pcFavBtn').querySelector('svg').setAttribute('stroke', '#fff');
+        return;
+      }
+      document.getElementById('pcCartQty').textContent = cartQty;
+    }
+    function goToCart() { window.location.href = '/cart.html'; }
+  </script>
 </body>
 </html>

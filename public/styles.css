@@ -1195,3 +1195,102 @@ input, select, textarea { font-family: inherit; }
   .search-bar { min-width: 0; }
   .catalog-toggle { display: none; }
 }
+
+/* ===== ACTS PAGE (Акты сверки) ===== */
+.acts-tabs {
+  display: flex;
+  gap: 32px;
+  border-bottom: 2px solid var(--border);
+  margin-bottom: 24px;
+}
+.acts-tab {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-secondary);
+  padding-bottom: 12px;
+  border-bottom: 3px solid transparent;
+  margin-bottom: -2px;
+  transition: color .2s, border-color .2s;
+}
+.acts-tab:hover { color: var(--text); }
+.acts-tab--active {
+  color: var(--text);
+  border-bottom-color: var(--text);
+}
+
+.acts-info {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  background: #f0f4f8;
+  border-radius: var(--radius);
+  padding: 16px 20px;
+  margin-bottom: 28px;
+}
+.acts-info__icon { flex-shrink: 0; margin-top: 2px; }
+.acts-info__text {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+.acts-info__link {
+  color: #005bff;
+  font-weight: 500;
+  margin-left: 4px;
+}
+.acts-info__link:hover { text-decoration: underline; }
+
+.acts-count {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.acts-table {
+  background: var(--card);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  overflow: hidden;
+}
+.acts-row {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 0.7fr 1fr;
+  align-items: center;
+  padding: 18px 24px;
+  border-bottom: 1px solid var(--border);
+}
+.acts-row:last-child { border-bottom: none; }
+
+.acts-cell { font-size: 14px; color: var(--text); }
+.acts-cell--period { font-weight: 500; }
+.acts-cell--status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-secondary);
+}
+.acts-cell--download { }
+.acts-download-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #005bff;
+  font-weight: 600;
+  font-size: 14px;
+}
+.acts-download-link:hover { text-decoration: underline; }
+.acts-cell--date {
+  color: var(--text-secondary);
+  text-align: right;
+}
+
+@media (max-width: 767px) {
+  .acts-tabs { gap: 16px; }
+  .acts-tab { font-size: 16px; }
+  .acts-row {
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    padding: 14px 16px;
+  }
+  .acts-cell--date { text-align: left; }
+}

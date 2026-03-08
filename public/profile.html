@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Профиль — Маркет</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="favicon.ico">
+</head>
+<body>
+
+  <header class="header">
+    <div class="header-top">
+      <div class="container header-inner">
+        <a href="home.html" class="logo"><div class="logo-icon">M</div><span class="logo-text">Маркет</span></a>
+        <div class="search-bar"><input type="text" placeholder="Искать товары..."><button class="search-btn"><svg class="icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></button></div>
+        <div class="header-actions">
+          <a href="favorites.html" class="header-btn"><svg class="icon" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></a>
+          <a href="cart.html" class="header-btn"><svg class="icon" viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg><span class="badge">3</span></a>
+          <a href="profile.html" class="header-btn"><svg class="icon" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container" style="padding: 24px 16px 32px">
+    <div class="profile-layout">
+      <aside class="profile-sidebar">
+        <div class="user-card">
+          <div class="flex items-center gap-3">
+            <div class="user-avatar">
+              <svg class="icon--lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:28px;height:28px"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            </div>
+            <div>
+              <div class="user-name">Иван Петров</div>
+              <div class="user-email">ivan@example.com</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="profile-menu">
+          <a href="#" class="profile-menu-item">
+            <span class="profile-menu-icon">📦</span>
+            <div class="flex-1"><div class="profile-menu-label">Мои заказы</div><div class="profile-menu-desc">3 активных заказа</div></div>
+            <span style="color:var(--text-secondary)">→</span>
+          </a>
+          <a href="favorites.html" class="profile-menu-item">
+            <span class="profile-menu-icon">❤️</span>
+            <div class="flex-1"><div class="profile-menu-label">Избранное</div><div class="profile-menu-desc">12 товаров</div></div>
+            <span style="color:var(--text-secondary)">→</span>
+          </a>
+          <a href="#" class="profile-menu-item">
+            <span class="profile-menu-icon">📍</span>
+            <div class="flex-1"><div class="profile-menu-label">Адреса доставки</div><div class="profile-menu-desc">2 адреса</div></div>
+            <span style="color:var(--text-secondary)">→</span>
+          </a>
+          <a href="#" class="profile-menu-item">
+            <span class="profile-menu-icon">💳</span>
+            <div class="flex-1"><div class="profile-menu-label">Способы оплаты</div><div class="profile-menu-desc">Visa •••• 4242</div></div>
+            <span style="color:var(--text-secondary)">→</span>
+          </a>
+          <a href="#" class="profile-menu-item">
+            <span class="profile-menu-icon">⚙️</span>
+            <div class="flex-1"><div class="profile-menu-label">Настройки</div><div class="profile-menu-desc">Уведомления, безопасность</div></div>
+            <span style="color:var(--text-secondary)">→</span>
+          </a>
+          <a href="#" class="profile-menu-item profile-menu-item--danger">
+            <span class="profile-menu-icon">🚪</span>
+            <div class="profile-menu-label">Выйти</div>
+          </a>
+        </div>
+      </aside>
+
+      <div class="profile-main">
+        <h1 style="font-size:24px;font-weight:700;margin-bottom:24px">Мои заказы</h1>
+
+        <div class="order-card">
+          <div class="order-header">
+            <div><span class="order-id">Заказ MK-28431</span><span class="order-date">5 марта 2026</span></div>
+            <span class="order-status order-status--transit">В пути</span>
+          </div>
+          <div class="order-footer">
+            <span class="order-count">2 товара</span>
+            <span class="order-total">10 280 ₽</span>
+          </div>
+        </div>
+
+        <div class="order-card">
+          <div class="order-header">
+            <div><span class="order-id">Заказ MK-27995</span><span class="order-date">1 марта 2026</span></div>
+            <span class="order-status order-status--delivered">Доставлен</span>
+          </div>
+          <div class="order-footer">
+            <span class="order-count">1 товар</span>
+            <span class="order-total">5 990 ₽</span>
+          </div>
+        </div>
+
+        <div class="order-card">
+          <div class="order-header">
+            <div><span class="order-id">Заказ MK-26712</span><span class="order-date">18 февраля 2026</span></div>
+            <span class="order-status order-status--delivered">Доставлен</span>
+          </div>
+          <div class="order-footer">
+            <span class="order-count">3 товара</span>
+            <span class="order-total">15 670 ₽</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">© 2026 Маркет. Все права защищены.</div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

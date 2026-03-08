@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Избранное — Маркет</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="favicon.ico">
+</head>
+<body>
+
+  <header class="header">
+    <div class="header-top">
+      <div class="container header-inner">
+        <a href="home.html" class="logo"><div class="logo-icon">M</div><span class="logo-text">Маркет</span></a>
+        <div class="search-bar"><input type="text" placeholder="Искать товары..."><button class="search-btn"><svg class="icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></button></div>
+        <div class="header-actions">
+          <a href="favorites.html" class="header-btn"><svg class="icon" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></a>
+          <a href="cart.html" class="header-btn"><svg class="icon" viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg><span class="badge">3</span></a>
+          <a href="profile.html" class="header-btn"><svg class="icon" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container" style="padding: 24px 16px 32px">
+    <h1 style="font-size:24px;font-weight:700;margin-bottom:24px">Избранное</h1>
+
+    <div class="products-grid">
+      <a href="product.html?id=1" class="product-card">
+        <div class="product-card__img-wrap"><img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&h=400&fit=crop" alt="Наушники" class="product-card__img"><span class="product-card__badge">Хит</span><span class="product-card__discount">-33%</span></div>
+        <div class="product-card__body"><div class="product-card__rating"><span class="product-card__star">★</span><span class="product-card__rating-val">4.8</span><span class="product-card__reviews">(2341)</span></div><div class="product-card__title">Беспроводные наушники Premium</div><div class="product-card__seller">TechStore</div><div class="product-card__footer"><div><span class="product-card__price">5 990 ₽</span><span class="product-card__old-price">8 990 ₽</span></div><button class="product-card__cart-btn"><svg class="icon--sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg></button></div></div>
+      </a>
+      <a href="product.html?id=2" class="product-card">
+        <div class="product-card__img-wrap"><img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400&h=400&fit=crop" alt="Часы" class="product-card__img"><span class="product-card__badge">Новинка</span><span class="product-card__discount">-22%</span></div>
+        <div class="product-card__body"><div class="product-card__rating"><span class="product-card__star">★</span><span class="product-card__rating-val">4.6</span><span class="product-card__reviews">(876)</span></div><div class="product-card__title">Смарт-часы AMOLED</div><div class="product-card__seller">GadgetWorld</div><div class="product-card__footer"><div><span class="product-card__price">12 490 ₽</span><span class="product-card__old-price">15 990 ₽</span></div><button class="product-card__cart-btn"><svg class="icon--sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg></button></div></div>
+      </a>
+      <a href="product.html?id=3" class="product-card">
+        <div class="product-card__img-wrap"><img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&h=400&fit=crop" alt="Кроссовки" class="product-card__img"><span class="product-card__discount">-34%</span></div>
+        <div class="product-card__body"><div class="product-card__rating"><span class="product-card__star">★</span><span class="product-card__rating-val">4.7</span><span class="product-card__reviews">(1543)</span></div><div class="product-card__title">Кроссовки Air Comfort</div><div class="product-card__seller">SportLine</div><div class="product-card__footer"><div><span class="product-card__price">4 290 ₽</span><span class="product-card__old-price">6 490 ₽</span></div><button class="product-card__cart-btn"><svg class="icon--sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg></button></div></div>
+      </a>
+      <a href="product.html?id=5" class="product-card">
+        <div class="product-card__img-wrap"><img src="https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=400&h=400&fit=crop" alt="Колонка" class="product-card__img"><span class="product-card__badge">Скидка</span><span class="product-card__discount">-30%</span></div>
+        <div class="product-card__body"><div class="product-card__rating"><span class="product-card__star">★</span><span class="product-card__rating-val">4.4</span><span class="product-card__reviews">(987)</span></div><div class="product-card__title">Bluetooth колонка 20Вт</div><div class="product-card__seller">AudioPro</div><div class="product-card__footer"><div><span class="product-card__price">3 490 ₽</span><span class="product-card__old-price">4 990 ₽</span></div><button class="product-card__cart-btn"><svg class="icon--sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg></button></div></div>
+      </a>
+      <a href="product.html?id=6" class="product-card">
+        <div class="product-card__img-wrap"><img src="https://images.unsplash.com/photo-1593618998160-e34014e67546?w=400&h=400&fit=crop" alt="Ножи" class="product-card__img"><span class="product-card__badge">Топ</span><span class="product-card__discount">-34%</span></div>
+        <div class="product-card__body"><div class="product-card__rating"><span class="product-card__star">★</span><span class="product-card__rating-val">4.9</span><span class="product-card__reviews">(432)</span></div><div class="product-card__title">Набор ножей дамасская сталь</div><div class="product-card__seller">КухняПро</div><div class="product-card__footer"><div><span class="product-card__price">7 890 ₽</span><span class="product-card__old-price">11 990 ₽</span></div><button class="product-card__cart-btn"><svg class="icon--sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg></button></div></div>
+      </a>
+      <a href="product.html?id=10" class="product-card">
+        <div class="product-card__img-wrap"><img src="https://images.unsplash.com/photo-1517467139951-f5a925c9f2e0?w=400&h=400&fit=crop" alt="Кофемашина" class="product-card__img"><span class="product-card__badge">Премиум</span><span class="product-card__discount">-24%</span></div>
+        <div class="product-card__body"><div class="product-card__rating"><span class="product-card__star">★</span><span class="product-card__rating-val">4.8</span><span class="product-card__reviews">(543)</span></div><div class="product-card__title">Кофемашина Barista Pro</div><div class="product-card__seller">CoffeeHouse</div><div class="product-card__footer"><div><span class="product-card__price">24 990 ₽</span><span class="product-card__old-price">32 990 ₽</span></div><button class="product-card__cart-btn"><svg class="icon--sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg></button></div></div>
+      </a>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">© 2026 Маркет. Все права защищены.</div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

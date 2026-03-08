@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Детали заказа — Маркет</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="favicon.ico">
+</head>
+<body>
+
+  <header class="header">
+    <div class="header-top">
+      <div class="container header-inner">
+        <a href="home.html" class="logo"><div class="logo-icon">M</div><span class="logo-text">Маркет</span></a>
+        <div class="search-bar"><input type="text" placeholder="Искать товары..."><button class="search-btn"><svg class="icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></button></div>
+        <div class="header-actions">
+          <a href="favorites.html" class="header-btn"><svg class="icon" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></a>
+          <a href="cart.html" class="header-btn"><svg class="icon" viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg><span class="badge">3</span></a>
+          <a href="profile.html" class="header-btn"><svg class="icon" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container" style="padding:16px 16px 40px">
+
+    <!-- Back link -->
+    <a href="profile.html" class="od-back-link">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5"/><polyline points="12 19 5 12 12 5"/></svg>
+      К списку заказов
+    </a>
+
+    <h1 class="od-title">Заказ от 8 марта не оплачен</h1>
+
+    <!-- Warning banner -->
+    <div class="od-warning">
+      <div class="od-warning__icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 20c5.584 0 9 0 9-3 0-3.5-5.5-14-9-14S3 13.5 3 17c0 3 3.416 3 9 3" fill="#dc2626"/><path d="M11 8a1 1 0 1 1 2 0v4a1 1 0 1 1-2 0z" fill="#fff"/><circle cx="12" cy="16" r="1" fill="#fff"/></svg>
+      </div>
+      <div class="od-warning__body">
+        <div class="od-warning__text"><strong>Оплатите заказ за 6 дней</strong></div>
+        <div class="od-warning__sub">Товары не бронируются</div>
+        <button class="od-warning__link">Условия оплаты</button>
+      </div>
+    </div>
+
+    <div class="od-layout">
+      <!-- LEFT COLUMN -->
+      <div class="od-left">
+
+        <!-- Delivery & recipient info -->
+        <div class="od-card">
+          <div class="od-info-row">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <div class="od-info-content">
+              <div class="od-info-label">Доставка в пункт выдачи</div>
+              <div class="od-info-detail">Пункт Маркет, Россия, Москва, улица Грузинский Вал, 26с1</div>
+            </div>
+            <button class="od-btn-outline">О пункте выдачи</button>
+          </div>
+
+          <div class="co-divider"></div>
+
+          <div class="od-info-row">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            <div class="od-info-content">
+              <div class="od-info-label">Получатель</div>
+              <div class="od-info-detail">Забрать заказ может любой человек по вашему штрихкоду или коду получения</div>
+            </div>
+          </div>
+
+          <div class="co-divider"></div>
+
+          <div class="od-info-row">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+            <div class="od-info-content">
+              <div class="od-info-label">Чаевые по умолчанию выключены <span class="od-info-hint">ⓘ</span></div>
+              <div class="od-info-detail">Включите, если хотите благодарить сотрудников пунктов выдачи</div>
+            </div>
+            <button class="od-btn-primary-sm">Изменить</button>
+          </div>
+        </div>
+
+        <!-- Delivery group 1 -->
+        <div class="od-card">
+          <div class="od-group-header">
+            <div class="od-group-status">Создано <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></div>
+            <div class="od-group-date">Ожидаемая дата: 9 марта</div>
+          </div>
+          <div class="od-group-actions">
+            <button class="od-btn-outline-sm">Написать в чат</button>
+          </div>
+
+          <!-- Seller -->
+          <div class="od-seller">GP Россия, Marussia. Официальный магазин ООО "А Зет"</div>
+          <div class="od-product-item">
+            <img src="https://images.unsplash.com/photo-1585386959984-a4155224a1ad?w=80&h=80&fit=crop" alt="" class="od-product-img">
+            <div class="od-product-info">
+              <div class="od-product-price">462 ₽</div>
+              <div class="od-product-name">GP Батарейки пальчиковые АА алкалиновые, набор 10 шт</div>
+              <div class="od-product-attr">Цвет: зеленый, голубой, желтый</div>
+            </div>
+            <div class="od-product-actions">
+              <button class="od-btn-primary-sm">В корзину</button>
+              <button class="od-btn-heart"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
+            </div>
+          </div>
+
+          <div class="od-seller">ЗетТек</div>
+          <div class="od-product-item">
+            <img src="https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=80&h=80&fit=crop" alt="" class="od-product-img">
+            <div class="od-product-info">
+              <div class="od-product-price">525 ₽</div>
+              <div class="od-product-name">СВЕЖАЯ НОТА Влажные салфетки детские, для новорожденных, УЛЬТРАМЯГКИЕ, с экстрактом...</div>
+              <div class="od-product-attr">Цвет: белый, оранжевый</div>
+            </div>
+            <div class="od-product-actions">
+              <button class="od-btn-primary-sm">В корзину</button>
+              <button class="od-btn-heart"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
+            </div>
+          </div>
+
+          <div class="od-seller">Смарт Бьюти</div>
+          <div class="od-product-item">
+            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=80&h=80&fit=crop" alt="" class="od-product-img">
+            <div class="od-product-info">
+              <div class="od-product-price">2 340 ₽ <span class="od-product-price-calc">3 × 780 ₽</span></div>
+              <div class="od-product-name">MIXIT Шампунь для волос женский и бальзам кондиционер восстанавливающий с коллагеном и...</div>
+            </div>
+            <div class="od-product-actions">
+              <button class="od-btn-primary-sm">В корзину</button>
+              <button class="od-btn-heart"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
+            </div>
+          </div>
+
+          <div class="od-seller">SVOYO</div>
+          <div class="od-product-item">
+            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=80&h=80&fit=crop" alt="" class="od-product-img">
+            <div class="od-product-info">
+              <div class="od-product-price">15 239 ₽ <span class="od-product-price-calc">7 × 2177 ₽</span></div>
+              <div class="od-product-name">Сумка мужская через плечо кожаная портфель мужской кожаный</div>
+              <div class="od-product-attr">Цвет: черный</div>
+            </div>
+            <div class="od-product-actions">
+              <button class="od-btn-primary-sm">В корзину</button>
+              <button class="od-btn-heart"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
+            </div>
+          </div>
+
+          <div class="od-seller">Классические часы</div>
+          <div class="od-product-item">
+            <img src="https://images.unsplash.com/photo-1593618998160-e34014e67546?w=80&h=80&fit=crop" alt="" class="od-product-img">
+            <div class="od-product-info">
+              <div class="od-product-price">558 ₽</div>
+              <div class="od-product-name">Casio Часы наручные</div>
+              <div class="od-product-attr">Цвет: серебро</div>
+            </div>
+            <div class="od-product-actions">
+              <button class="od-btn-primary-sm">В корзину</button>
+              <button class="od-btn-heart"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Delivery group 2 -->
+        <div class="od-card">
+          <div class="od-group-header">
+            <div class="od-group-status">Создано <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></div>
+            <div class="od-group-date">Ожидаемая дата: с 14 до 15 марта</div>
+          </div>
+          <div class="od-group-actions">
+            <button class="od-btn-outline-sm">Изменить адрес</button>
+            <button class="od-btn-outline-sm">Написать в чат</button>
+          </div>
+
+          <div class="od-seller">Мебель Lina Loft</div>
+          <div class="od-product-item">
+            <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=80&h=80&fit=crop" alt="" class="od-product-img">
+            <div class="od-product-info">
+              <div class="od-product-price">7 673 ₽</div>
+              <div class="od-product-name">Обувница для прихожей "Мэйли" 5 полок / 101х30х98см / белый каркас - ЛДСП черное дерево</div>
+              <div class="od-product-attr">Цвет: белый, черный</div>
+            </div>
+            <div class="od-product-actions">
+              <button class="od-btn-primary-sm">В корзину</button>
+              <button class="od-btn-heart"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Delivery group 3 -->
+        <div class="od-card">
+          <div class="od-group-header">
+            <div class="od-group-status">Создано <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></div>
+            <div class="od-group-date">Ожидаемая дата: 10 марта</div>
+          </div>
+          <div class="od-group-actions">
+            <button class="od-btn-outline-sm">Изменить адрес</button>
+            <button class="od-btn-outline-sm">Написать в чат</button>
+          </div>
+
+          <div class="od-seller">EZShop</div>
+          <div class="od-product-item">
+            <img src="https://images.unsplash.com/photo-1559454403-b8fb88521f11?w=80&h=80&fit=crop" alt="" class="od-product-img">
+            <div class="od-product-info">
+              <div class="od-product-price">827 ₽</div>
+              <div class="od-product-name">Мягкая игрушка Слон-мальчик, 27 см, серый</div>
+              <div class="od-product-attr">Цвет: серый</div>
+            </div>
+            <div class="od-product-actions">
+              <button class="od-btn-primary-sm">В корзину</button>
+              <button class="od-btn-heart"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- RIGHT SIDEBAR -->
+      <div class="od-sidebar">
+        <div class="od-sidebar-sticky">
+
+          <!-- Order summary -->
+          <div class="od-card">
+            <div class="od-order-head">
+              <div class="od-order-label">Ваш заказ</div>
+              <div class="od-order-num">№ 0149533331-0003 · 15 товаров</div>
+            </div>
+            <div class="od-summary-rows">
+              <div class="od-summary-row"><span>Товары</span><span class="od-summary-val">27 624 ₽</span></div>
+              <div class="od-summary-row"><span>Доставка</span><span class="od-summary-val">Без доплат</span></div>
+            </div>
+            <div class="od-summary-total">
+              <span>К оплате</span>
+              <span class="od-total-price">27 624 ₽</span>
+            </div>
+            <div class="od-payment-method">Расчётный счёт</div>
+            <button class="od-btn-cta">Скачать счёт</button>
+          </div>
+
+          <!-- Questions -->
+          <div class="od-card">
+            <a href="#" class="od-questions-row">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--text-secondary)" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+              <span>Вопросы по заказу</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--text-secondary)" stroke-width="2" style="margin-left:auto"><polyline points="9 18 15 12 9 6"/></svg>
+            </a>
+          </div>
+
+          <!-- Cancel -->
+          <div class="od-card">
+            <button class="od-btn-cancel">Отменить заказ</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container"><div class="footer-bottom">© 2026 Маркет. Все права защищены.</div></div>
+  </footer>
+
+  <!-- Mobile Bottom Nav -->
+  <nav class="mobile-bottom-nav">
+    <div class="mobile-bottom-nav__inner">
+      <a href="home.html" class="mobile-bottom-nav__item"><div class="mobile-bottom-nav__icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>Главная</a>
+      <a href="catalog.html" class="mobile-bottom-nav__item"><div class="mobile-bottom-nav__icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg></div>Каталог</a>
+      <a href="favorites.html" class="mobile-bottom-nav__item"><div class="mobile-bottom-nav__icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>Избранное</a>
+      <a href="cart.html" class="mobile-bottom-nav__item"><div class="mobile-bottom-nav__icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg><span class="badge">3</span></div>Корзина</a>
+      <a href="profile.html" class="mobile-bottom-nav__item"><div class="mobile-bottom-nav__icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>Профиль</a>
+    </div>
+  </nav>
+
+  <script src="script.js"></script>
+</body>
+</html>

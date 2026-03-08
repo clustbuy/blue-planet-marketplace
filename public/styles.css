@@ -324,9 +324,9 @@ input, select, textarea { font-family: inherit; }
 
 /* Main image swiper */
 .gallery-main-swiper-wrap {
-  flex: 1; position: relative; background: var(--card);
+  position: relative; background: var(--card);
   border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden;
-  aspect-ratio: 3/4;
+  aspect-ratio: 3/4; height: fit-content;
 }
 .gallery-main-swiper { width: 100%; height: 100%; }
 .gallery-main-swiper .swiper-slide { display: flex; align-items: center; justify-content: center; }

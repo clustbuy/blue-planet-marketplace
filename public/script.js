@@ -359,6 +359,86 @@ function initMobileBottomNav() {
   });
 }
 
+/* ===== Active Filter Tags ===== */
+function initActiveFilterTags() {
+  const container = document.getElementById('activeFilters');
+  if (!container) return;
+  const sidebar = document.querySelector('.catalog-sidebar');
+  if (!sidebar) return;
+
+  function updateTags() {
+    const tags = [];
+    // Checkboxes
+    sidebar.querySelectorAll('.filter-option input[type="checkbox"]:checked').forEach(cb => {
+      const label = cb.closest('.filter-option');
+      if (!label) return;
+      let text = label.textContent.trim();
+      tags.push({ text, el: cb });
+    });
+    // Radio buttons (skip "Неважно")
+    sidebar.querySelectorAll('.filter-option input[type="radio"]:checked').forEach(rb => {
+      const label = rb.closest('.filter-option');
+      if (!label) return;
+      let text = label.textContent.trim();
+      if (text === 'Неважно') return;
+      tags.push({ text, el: rb });
+    });
+    // Toggles
+    sidebar.querySelectorAll('.filter-toggle-row input[type="checkbox"]:checked').forEach(toggle => {
+      const row = toggle.closest('.filter-toggle-row');
+      if (!row) return;
+      const labelEl = row.querySelector('.filter-toggle-label');
+      let text = labelEl ? labelEl.textContent.trim() : '';
+      tags.push({ text, el: toggle });
+    });
+    // Active chips
+    sidebar.querySelectorAll('.filter-chip.active').forEach(chip => {
+      tags.push({ text: chip.textContent.trim(), el: chip });
+    });
+
+    container.innerHTML = '';
+    if (tags.length === 0) {
+      container.style.display = 'none';
+      return;
+    }
+    container.style.display = 'flex';
+    tags.forEach(tag => {
+      const el = document.createElement('span');
+      el.className = 'active-filter-tag';
+      el.innerHTML = tag.text + '<button class="active-filter-tag__close">&times;</button>';
+      el.querySelector('.active-filter-tag__close').addEventListener('click', () => {
+        if (tag.el.type === 'checkbox' || tag.el.type === 'radio') {
+          tag.el.checked = false;
+          // For radios, select "Неважно" if available
+          if (tag.el.type === 'radio') {
+            const group = tag.el.name;
+            const nevazhno = sidebar.querySelector(`input[type="radio"][name="${group}"]`);
+            const labels = sidebar.querySelectorAll(`input[type="radio"][name="${group}"]`);
+            labels.forEach(r => {
+              const lbl = r.closest('.filter-option');
+              if (lbl && lbl.textContent.trim() === 'Неважно') r.checked = true;
+            });
+          }
+        } else if (tag.el.classList.contains('filter-chip')) {
+          tag.el.classList.remove('active');
+        }
+        updateTags();
+      });
+      container.appendChild(el);
+    });
+  }
+
+  sidebar.addEventListener('change', updateTags);
+  sidebar.addEventListener('click', (e) => {
+    if (e.target.closest('.filter-chip')) {
+      const chip = e.target.closest('.filter-chip');
+      chip.classList.toggle('active');
+      updateTags();
+    }
+  });
+  updateTags();
+}
+
 /* ===== Init ===== */
 document.addEventListener('DOMContentLoaded', () => {
   initBannerCarousel();
@@ -375,4 +455,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initMobileMenu();
   initCardGallery();
   initMobileBottomNav();
+  initActiveFilterTags();
 });

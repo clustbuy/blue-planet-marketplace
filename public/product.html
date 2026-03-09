@@ -686,7 +686,16 @@
       openGalleryPopup(idx);
     });
 
-    var cartQty = 0;
+    function selectVariant(btn, group) {
+      var siblings = btn.closest('.product-variant-options').querySelectorAll('.variant-chip');
+      siblings.forEach(function(s){ s.classList.remove('active'); });
+      btn.classList.add('active');
+      if (group === 'color') {
+        document.getElementById('colorName').textContent = btn.getAttribute('data-value');
+      }
+    }
+
+
     function toggleCart(btn) {
       cartQty = 1;
       btn.style.display = 'none';

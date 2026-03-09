@@ -402,7 +402,12 @@ input, select, textarea { font-family: inherit; }
 .filter-chip:hover { border-color: var(--primary); }
 .filter-chip.active { border-color: var(--primary); background: hsl(197 85% 92%); color: var(--primary); }
 
-/* All filters button */
+/* Active filter tags above products */
+.active-filters { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
+.active-filter-tag { display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; background: #eaedf0; border-radius: 20px; font-size: 13px; color: var(--text); cursor: default; border: none; line-height: 1; }
+.active-filter-tag__close { display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; border-radius: 50%; background: none; border: none; cursor: pointer; font-size: 14px; color: var(--text-secondary); line-height: 1; padding: 0; transition: color 0.15s; }
+.active-filter-tag__close:hover { color: var(--text); }
+
 .filter-all-btn { width: 100%; padding: 10px; margin-top: 8px; background: none; border: 1px solid var(--border); border-radius: var(--radius-sm); font-size: 13px; font-weight: 600; color: var(--text); cursor: pointer; transition: border-color 0.15s; }
 .filter-all-btn:hover { border-color: var(--primary); color: var(--primary); }
 

@@ -222,6 +222,8 @@ function initGallery() {
       swiper: thumbsSwiper,
     },
   });
+
+  window.galleryMain = mainSwiper;
 }
 
 /* ===== Radio Options ===== */

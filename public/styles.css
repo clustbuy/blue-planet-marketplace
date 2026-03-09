@@ -213,8 +213,8 @@ input, select, textarea { font-family: inherit; }
 .products-grid--4col { grid-template-columns: repeat(4, 1fr); }
 
 /* ===== PRODUCT CARD ===== */
-.product-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-sm); transition: all 0.2s; display: flex; flex-direction: column; }
-.product-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+.product-card { background: var(--card); border: none; border-radius: var(--radius); overflow: hidden; box-shadow: none; transition: all 0.2s; display: flex; flex-direction: column; }
+.product-card:hover { box-shadow: none; transform: none; }
 .product-card__img-wrap { position: relative; aspect-ratio: 1; overflow: hidden; background: #f1f5f9; }
 .product-card__img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s; }
 .product-card:hover .product-card__img { transform: scale(1.05); }

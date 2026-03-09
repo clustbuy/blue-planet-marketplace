@@ -165,15 +165,21 @@ input, select, textarea { font-family: inherit; }
 .nav-link:hover { color: var(--primary); background: var(--primary-light); }
 .nav-link--catalog { font-weight: 600; color: var(--primary); display: flex; align-items: center; gap: 6px; }
 
-/* ===== FOOTER ===== */
-.footer { background: var(--card); border-top: 1px solid var(--border); margin-top: auto; padding: 40px 0 24px; }
-.footer-grid { display: grid; grid-template-columns: 1.5fr repeat(3, 1fr); gap: 32px; margin-bottom: 32px; }
-.footer-brand p { font-size: 14px; color: var(--text-secondary); margin-top: 12px; }
-.footer-heading { font-weight: 600; margin-bottom: 12px; color: var(--text); }
-.footer-links li { margin-bottom: 8px; }
-.footer-links a { font-size: 14px; color: var(--text-secondary); transition: color 0.2s; }
-.footer-links a:hover { color: var(--primary); }
-.footer-bottom { border-top: 1px solid var(--border); padding-top: 20px; text-align: center; font-size: 13px; color: var(--text-secondary); }
+/* ===== FOOTER (WB-style) ===== */
+.footer { background: #2d2d2d; margin-top: auto; padding: 32px 0 0; border-top: none; }
+.footer-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 24px; padding: 0 0 24px; border-bottom: 1px solid rgba(255,255,255,0.1); }
+.footer-brand p { font-size: 14px; color: rgba(255,255,255,0.5); margin-top: 12px; }
+.footer-heading { font-weight: 600; margin-bottom: 12px; color: #fff; font-size: 14px; }
+.footer h4 { font-weight: 600; margin-bottom: 12px; color: #fff; font-size: 14px; }
+.footer-links li { margin-bottom: 6px; }
+.footer-links a { font-size: 13px; color: rgba(255,255,255,0.6); transition: color 0.2s; }
+.footer-links a:hover { color: #fff; }
+.footer ul:not(.footer-links) li { margin-bottom: 6px; }
+.footer ul:not(.footer-links) a { font-size: 13px; color: rgba(255,255,255,0.6); transition: color 0.2s; text-decoration: none; }
+.footer ul:not(.footer-links) a:hover { color: #fff; }
+.footer-bottom { padding: 16px 0; text-align: left; font-size: 12px; color: rgba(255,255,255,0.4); border-top: none; }
+.footer-bottom a { color: rgba(255,255,255,0.4); text-decoration: none; }
+.footer-bottom a:hover { color: rgba(255,255,255,0.6); }
 
 /* ===== BANNER / CAROUSEL ===== */
 .banner-carousel { position: relative; border-radius: var(--radius); overflow: hidden; height: 200px; margin-top: 16px; }

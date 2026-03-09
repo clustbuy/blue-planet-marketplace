@@ -269,7 +269,7 @@ input, select, textarea { font-family: inherit; }
 
 /* ===== CATALOG PAGE ===== */
 .catalog-layout { display: flex; gap: 24px; }
-.catalog-sidebar { width: 270px; flex-shrink: 0; }
+.catalog-sidebar { width: 220px; flex-shrink: 0; }
 .catalog-main { flex: 1; min-width: 0; }
 .filter-card {
   padding: 0;

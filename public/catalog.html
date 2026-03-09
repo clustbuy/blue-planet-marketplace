@@ -70,13 +70,8 @@
           <div class="filter-section">
             <div class="filter-title filter-title--main">Все категории</div>
             <div class="filter-category-list">
-              <a href="#" class="filter-cat-link">Фото и видеокамеры</a>
-              <a href="#" class="filter-cat-link">Телефоны и аксессуары</a>
               <a href="#" class="filter-cat-link">Портативная техника</a>
-              <a href="#" class="filter-cat-link">GPS-навигация</a>
-              <a href="#" class="filter-cat-link">Оптические приборы</a>
-              <a href="#" class="filter-cat-link">Игровые приставки и аксессуары</a>
-              <a href="#" class="filter-cat-link">Аудио и видеотехника</a>
+              <a href="#" class="filter-cat-link">Аудио- и видеотехника</a>
             </div>
           </div>
 
@@ -84,88 +79,109 @@
           <div class="filter-section">
             <div class="filter-title">Цена, ₽</div>
             <div class="filter-price-inputs">
-              <input type="text" class="filter-price-input" placeholder="от 1" value="">
-              <input type="text" class="filter-price-input" placeholder="до 355 000" value="">
+              <input type="text" class="filter-price-input" placeholder="от 9 789">
+              <input type="text" class="filter-price-input" placeholder="до 25 834">
             </div>
           </div>
 
           <!-- Срок доставки -->
           <div class="filter-section">
             <div class="filter-title">Срок доставки</div>
-            <label class="filter-option"><input type="checkbox"> <span class="filter-option-icon">⚡</span> Экспресс</label>
-            <label class="filter-option"><input type="checkbox"> Сегодня</label>
-            <label class="filter-option"><input type="checkbox"> Сегодня или завтра</label>
-            <label class="filter-option"><input type="checkbox"> До 2 дней</label>
-            <label class="filter-option"><input type="checkbox"> До 7 дней</label>
+            <label class="filter-option filter-option--disabled"><input type="radio" name="delivery_time" disabled><span class="filter-radio"></span> <span style="color:#b0b6be">Экспресс</span></label>
+            <label class="filter-option"><input type="radio" name="delivery_time"><span class="filter-radio"></span> Сегодня</label>
+            <label class="filter-option"><input type="radio" name="delivery_time"><span class="filter-radio"></span> Сегодня или завтра</label>
+            <label class="filter-option"><input type="radio" name="delivery_time"><span class="filter-radio"></span> До 3 дней</label>
+            <label class="filter-option"><input type="radio" name="delivery_time"><span class="filter-radio"></span> До 7 дней</label>
             <button class="filter-show-more">Ещё 1 ▾</button>
           </div>
 
-          <!-- Доставка по клику -->
+          <!-- Доставка по клику (toggle) -->
           <div class="filter-section">
-            <label class="filter-option"><input type="checkbox"> Доставка по клику</label>
+            <label class="filter-toggle-row">
+              <span class="filter-toggle-label">Доставка по клику</span>
+              <input type="checkbox">
+              <span class="filter-toggle"></span>
+            </label>
           </div>
 
-          <!-- Ниже рынка -->
+          <!-- Ниже рынка (toggle) -->
           <div class="filter-section">
-            <label class="filter-option"><input type="checkbox"> Ниже рынка</label>
+            <label class="filter-toggle-row">
+              <span class="filter-toggle-label">Ниже рынка</span>
+              <input type="checkbox">
+              <span class="filter-toggle"></span>
+            </label>
           </div>
 
-          <!-- ULTIMA -->
+          <!-- Оригинал (toggle) -->
           <div class="filter-section">
-            <label class="filter-option"><input type="checkbox"> <span class="filter-option-label--bold">ULTIMA</span></label>
+            <label class="filter-toggle-row">
+              <span class="filter-toggle-label">Оригинал <span class="filter-info-icon">ⓘ</span></span>
+              <input type="checkbox">
+              <span class="filter-toggle"></span>
+            </label>
           </div>
 
-          <!-- Оригинал -->
+          <!-- Сплит (toggle) -->
           <div class="filter-section">
-            <label class="filter-option"><input type="checkbox"> Оригинал</label>
-          </div>
-
-          <!-- Сплит -->
-          <div class="filter-section">
-            <label class="filter-option"><input type="checkbox"> Сплит 004, 006 и 0012</label>
+            <label class="filter-toggle-row">
+              <span class="filter-toggle-label">Сплит 004, 006 и 0012</span>
+              <input type="checkbox">
+              <span class="filter-toggle"></span>
+            </label>
           </div>
 
           <!-- Бренд -->
           <div class="filter-section">
             <div class="filter-title">Бренд</div>
-            <label class="filter-option"><input type="checkbox"> Microsoft</label>
-            <label class="filter-option"><input type="checkbox"> Adobe</label>
-            <label class="filter-option"><input type="checkbox"> Яндекс</label>
-            <label class="filter-option"><input type="checkbox"> Samsung</label>
-            <label class="filter-option"><input type="checkbox"> Apple</label>
+            <label class="filter-option"><input type="checkbox"><span class="filter-check"></span> Haier</label>
+            <label class="filter-option"><input type="checkbox"><span class="filter-check"></span> Tuvio</label>
+            <label class="filter-option"><input type="checkbox"><span class="filter-check"></span> SBER</label>
+            <label class="filter-option"><input type="checkbox"><span class="filter-check"></span> BQ</label>
+            <label class="filter-option"><input type="checkbox"><span class="filter-check"></span> DEXP</label>
             <button class="filter-show-more">Показать всё ▾</button>
+          </div>
+
+          <!-- Диагональ -->
+          <div class="filter-section">
+            <div class="filter-title">Диагональ <span class="filter-info-icon">ⓘ</span></div>
+            <label class="filter-option"><input type="checkbox" checked><span class="filter-check"></span> 32"-39"</label>
+            <label class="filter-option"><input type="checkbox"><span class="filter-check"></span> 10"-31"</label>
+          </div>
+
+          <!-- Разрешение HD -->
+          <div class="filter-section">
+            <div class="filter-title">Разрешение HD <span class="filter-info-icon">ⓘ</span></div>
+            <label class="filter-option"><input type="checkbox"><span class="filter-check"></span> Full HD</label>
+            <label class="filter-option"><input type="checkbox"><span class="filter-check"></span> 720p HD</label>
+            <label class="filter-option"><input type="checkbox" checked><span class="filter-check"></span> HD</label>
+            <label class="filter-option"><input type="checkbox"><span class="filter-check"></span> 1080i HD</label>
           </div>
 
           <!-- Конструкция -->
           <div class="filter-section">
             <div class="filter-title">Конструкция <span class="filter-info-icon">ⓘ</span></div>
-            <label class="filter-option"><input type="checkbox"> полноразмерные</label>
-            <label class="filter-option"><input type="checkbox"> внутриканальные</label>
-            <label class="filter-option"><input type="checkbox"> вкладыши</label>
+            <label class="filter-option"><input type="checkbox"><span class="filter-check"></span> полноразмерные</label>
+            <label class="filter-option"><input type="checkbox"><span class="filter-check"></span> внутриканальные</label>
+            <label class="filter-option"><input type="checkbox"><span class="filter-check"></span> вкладыши</label>
           </div>
 
           <!-- Система активного шумоподавления -->
           <div class="filter-section">
             <div class="filter-title">Система активного шумо­подавления (ANC)</div>
-            <label class="filter-option"><input type="radio" name="anc"> Да</label>
-            <label class="filter-option"><input type="radio" name="anc"> Нет</label>
-            <label class="filter-option"><input type="radio" name="anc" checked> Неважно</label>
+            <label class="filter-option"><input type="radio" name="anc"><span class="filter-radio"></span> Да</label>
+            <label class="filter-option"><input type="radio" name="anc"><span class="filter-radio"></span> Нет</label>
+            <label class="filter-option"><input type="radio" name="anc" checked><span class="filter-radio"></span> Неважно</label>
           </div>
 
           <!-- Особенности -->
           <div class="filter-section">
             <div class="filter-title">Особенности</div>
-            <label class="filter-option"><input type="checkbox"> шумоподавление</label>
-            <label class="filter-option"><input type="checkbox"> влагозащита</label>
-            <label class="filter-option"><input type="checkbox"> мягкие амбушюры</label>
-            <label class="filter-option"><input type="checkbox"> кнопка ответа</label>
-            <label class="filter-option"><input type="checkbox"> повтор последнего номера</label>
-          </div>
-
-          <!-- Тип крепления -->
-          <div class="filter-section">
-            <div class="filter-title">Тип крепления</div>
-            <label class="filter-option"><input type="checkbox"> без крепления</label>
+            <label class="filter-option"><input type="checkbox"><span class="filter-check"></span> шумоподавление</label>
+            <label class="filter-option"><input type="checkbox"><span class="filter-check"></span> влагозащита</label>
+            <label class="filter-option"><input type="checkbox"><span class="filter-check"></span> мягкие амбушюры</label>
+            <label class="filter-option"><input type="checkbox"><span class="filter-check"></span> кнопка ответа</label>
+            <label class="filter-option"><input type="checkbox"><span class="filter-check"></span> повтор последнего номера</label>
           </div>
 
           <!-- Версия Bluetooth -->
@@ -180,92 +196,67 @@
             </div>
           </div>
 
-          <!-- Разъем штекера -->
-          <div class="filter-section">
-            <div class="filter-title">Разъем штекера <span class="filter-info-icon">ⓘ</span></div>
-            <label class="filter-option"><input type="checkbox"> USB Type-C</label>
-            <label class="filter-option"><input type="checkbox"> Lightning</label>
-            <label class="filter-option"><input type="checkbox"> microUSB</label>
-          </div>
-
-          <!-- Тип акустического оформления -->
-          <div class="filter-section">
-            <div class="filter-title">Тип акустического оформления</div>
-            <label class="filter-option"><input type="checkbox"> закрытые</label>
-          </div>
-
-          <!-- Игровая гарнитура -->
-          <div class="filter-section">
-            <div class="filter-title">Игровая гарнитура</div>
-            <label class="filter-option"><input type="radio" name="gaming"> Да</label>
-            <label class="filter-option"><input type="radio" name="gaming"> Нет</label>
-            <label class="filter-option"><input type="radio" name="gaming" checked> Неважно</label>
-          </div>
-
-          <!-- Линейка -->
-          <div class="filter-section">
-            <div class="filter-title">Линейка</div>
-            <label class="filter-option"><input type="checkbox"> Galaxy S</label>
-            <label class="filter-option"><input type="checkbox"> Galaxy Z Fold</label>
-            <label class="filter-option"><input type="checkbox"> iPad 3a</label>
-            <label class="filter-option"><input type="checkbox"> Redmi Note</label>
-          </div>
-
           <!-- Цвет -->
           <div class="filter-section">
             <div class="filter-title">Цвет</div>
-            <label class="filter-option"><input type="checkbox"> <span class="filter-color-dot" style="background:#000"></span> чёрный</label>
-            <label class="filter-option"><input type="checkbox"> <span class="filter-color-dot" style="background:#fff;border:1px solid #ccc"></span> белый</label>
-            <label class="filter-option"><input type="checkbox"> <span class="filter-color-dot" style="background:#888"></span> серый</label>
-            <label class="filter-option"><input type="checkbox"> <span class="filter-color-dot" style="background:#c0c0c0"></span> серебристый</label>
-            <label class="filter-option"><input type="checkbox"> <span class="filter-color-dot" style="background:#005bff"></span> синий</label>
+            <label class="filter-option"><input type="checkbox"><span class="filter-check"></span> <span class="filter-color-dot" style="background:#000"></span> чёрный</label>
+            <label class="filter-option"><input type="checkbox"><span class="filter-check"></span> <span class="filter-color-dot" style="background:#fff;border:1px solid #ccc"></span> белый</label>
+            <label class="filter-option"><input type="checkbox"><span class="filter-check"></span> <span class="filter-color-dot" style="background:#888"></span> серый</label>
+            <label class="filter-option"><input type="checkbox"><span class="filter-check"></span> <span class="filter-color-dot" style="background:#c0c0c0"></span> серебристый</label>
+            <label class="filter-option"><input type="checkbox"><span class="filter-check"></span> <span class="filter-color-dot" style="background:#005bff"></span> синий</label>
             <button class="filter-show-more">Ещё 11 ▾</button>
           </div>
 
           <!-- Состояние товара -->
           <div class="filter-section">
             <div class="filter-title">Состояние товара <span class="filter-info-icon">ⓘ</span></div>
-            <label class="filter-option"><input type="checkbox"> Новый</label>
-            <label class="filter-option"><input type="checkbox"> Уценка</label>
+            <label class="filter-option"><input type="checkbox"><span class="filter-check"></span> Новый</label>
+            <label class="filter-option"><input type="checkbox"><span class="filter-check"></span> Уценка</label>
           </div>
 
-          <!-- Высокий рейтинг -->
+          <!-- Игровая гарнитура -->
           <div class="filter-section">
-            <label class="filter-option"><input type="checkbox"> Высокий рейтинг</label>
+            <div class="filter-title">Игровая гарнитура</div>
+            <label class="filter-option"><input type="radio" name="gaming"><span class="filter-radio"></span> Да</label>
+            <label class="filter-option"><input type="radio" name="gaming"><span class="filter-radio"></span> Нет</label>
+            <label class="filter-option"><input type="radio" name="gaming" checked><span class="filter-radio"></span> Неважно</label>
           </div>
 
           <!-- Способ доставки -->
           <div class="filter-section">
             <div class="filter-title">Способ доставки</div>
-            <label class="filter-option"><input type="checkbox"> Курьером</label>
-            <label class="filter-option"><input type="checkbox"> В пункт выдачи</label>
-            <label class="filter-option"><input type="checkbox"> Самовывозом</label>
-            <label class="filter-option"><input type="radio" name="delivery" checked> Неважно</label>
+            <label class="filter-option"><input type="checkbox"><span class="filter-check"></span> Курьером</label>
+            <label class="filter-option"><input type="checkbox"><span class="filter-check"></span> В пункт выдачи</label>
+            <label class="filter-option"><input type="checkbox"><span class="filter-check"></span> Самовывозом</label>
           </div>
 
           <!-- Способы оплаты -->
           <div class="filter-section">
             <div class="filter-title">Способы оплаты</div>
-            <label class="filter-option"><input type="checkbox"> Онлайн</label>
-            <label class="filter-option"><input type="checkbox"> Картой курьеру</label>
-            <label class="filter-option"><input type="checkbox"> Наличными курьеру</label>
-            <label class="filter-option"><input type="checkbox"> Постоплата в ПВЗ</label>
+            <label class="filter-option"><input type="checkbox"><span class="filter-check"></span> Онлайн</label>
+            <label class="filter-option"><input type="checkbox"><span class="filter-check"></span> Картой курьеру</label>
+            <label class="filter-option"><input type="checkbox"><span class="filter-check"></span> Наличными курьеру</label>
+            <label class="filter-option"><input type="checkbox"><span class="filter-check"></span> Постоплата в ПВЗ</label>
           </div>
 
           <!-- Магазин -->
           <div class="filter-section">
             <div class="filter-title">Магазин</div>
-            <label class="filter-option"><input type="checkbox"> 7745 ГлобалТех Россия</label>
-            <label class="filter-option"><input type="checkbox"> ADF digital</label>
-            <label class="filter-option"><input type="checkbox"> AE Dubai Freezone Official</label>
-            <label class="filter-option"><input type="checkbox"> Axis.Store</label>
-            <label class="filter-option"><input type="checkbox"> AMDJoy GLOBAL</label>
+            <label class="filter-option"><input type="checkbox"><span class="filter-check"></span> 7745 ГлобалТех Россия</label>
+            <label class="filter-option"><input type="checkbox"><span class="filter-check"></span> ADF digital</label>
+            <label class="filter-option"><input type="checkbox"><span class="filter-check"></span> AE Dubai Freezone Official</label>
+            <label class="filter-option"><input type="checkbox"><span class="filter-check"></span> Axis.Store</label>
+            <label class="filter-option"><input type="checkbox"><span class="filter-check"></span> AMDJoy GLOBAL</label>
             <button class="filter-show-more">Ещё 135 ▾</button>
           </div>
 
-          <!-- Со страховой -->
+          <!-- Высокий рейтинг (toggle) -->
           <div class="filter-section">
-            <label class="filter-option"><input type="checkbox"> Со страховой</label>
+            <label class="filter-toggle-row">
+              <span class="filter-toggle-label">Высокий рейтинг</span>
+              <input type="checkbox">
+              <span class="filter-toggle"></span>
+            </label>
           </div>
 
           <button class="filter-all-btn">Все фильтры</button>

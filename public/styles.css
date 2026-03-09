@@ -238,8 +238,8 @@ input, select, textarea { font-family: inherit; }
 .product-card:hover .product-card__title { color: var(--primary); }
 .product-card__seller { font-size: 12px; color: var(--text-secondary); }
 .product-card__footer { margin-top: auto; padding-top: 8px; display: flex; align-items: flex-end; justify-content: space-between; }
-.product-card__price { font-size: 17px; font-weight: 700; color: var(--text); }
-.product-card__old-price { font-size: 12px; color: var(--text-secondary); text-decoration: line-through; margin-left: 6px; }
+.product-card__price { font-size: 17px; font-weight: 700; color: var(--text); white-space: nowrap; }
+.product-card__old-price { font-size: 12px; color: var(--text-secondary); text-decoration: line-through; margin-left: 6px; white-space: nowrap; }
 .product-card__cart-btn { width: 32px; height: 32px; border-radius: var(--radius-sm); background: var(--primary); color: #fff; display: flex; align-items: center; justify-content: center; transition: background 0.2s; }
 .product-card__cart-btn:hover { background: var(--primary-dark); }
 

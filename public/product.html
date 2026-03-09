@@ -547,9 +547,114 @@
     </div>
   </nav>
 
+  <!-- Fullscreen Gallery Popup -->
+  <div class="gallery-popup" id="galleryPopup">
+    <div class="gallery-popup__overlay" onclick="closeGalleryPopup()"></div>
+    <div class="gallery-popup__content">
+      <button class="gallery-popup__close" onclick="closeGalleryPopup()" aria-label="Закрыть">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <div class="gallery-popup__counter"><span id="gpCurrent">1</span> / <span id="gpTotal">15</span></div>
+      <div class="gallery-popup__main">
+        <div class="swiper gallery-popup-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=1200&h=1200&fit=crop" alt="Фото 1"></div>
+            <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1583394838336-acd977736f90?w=1200&h=1200&fit=crop" alt="Фото 2"></div>
+            <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1484704849700-f032a568e944?w=1200&h=1200&fit=crop" alt="Фото 3"></div>
+            <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=1200&h=1200&fit=crop" alt="Фото 4"></div>
+            <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1524678606370-a47ad25cb82a?w=1200&h=1200&fit=crop" alt="Фото 5"></div>
+            <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1487215078519-e21cc028cb29?w=1200&h=1200&fit=crop" alt="Фото 6"></div>
+            <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1590658268037-6bf12f032f55?w=1200&h=1200&fit=crop" alt="Фото 7"></div>
+            <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1572536147248-ac59a8abfa4b?w=1200&h=1200&fit=crop" alt="Фото 8"></div>
+            <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1613040809024-b4ef7ba99bc3?w=1200&h=1200&fit=crop" alt="Фото 9"></div>
+            <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1606220588913-b3aacb4d2f46?w=1200&h=1200&fit=crop" alt="Фото 10"></div>
+            <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1618366712010-f4ae9c647dcb?w=1200&h=1200&fit=crop" alt="Фото 11"></div>
+            <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=1200&h=1200&fit=crop&sat=-100" alt="Фото 12"></div>
+            <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1585298723682-7115561c51b7?w=1200&h=1200&fit=crop" alt="Фото 13"></div>
+            <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1578319439584-104c94d37305?w=1200&h=1200&fit=crop" alt="Фото 14"></div>
+            <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1511367461989-f85a21fda167?w=1200&h=1200&fit=crop" alt="Фото 15"></div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </div>
+      <div class="gallery-popup__thumbs">
+        <div class="swiper gallery-popup-thumbs-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=100&h=100&fit=crop" alt=""></div>
+            <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1583394838336-acd977736f90?w=100&h=100&fit=crop" alt=""></div>
+            <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1484704849700-f032a568e944?w=100&h=100&fit=crop" alt=""></div>
+            <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=100&h=100&fit=crop" alt=""></div>
+            <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1524678606370-a47ad25cb82a?w=100&h=100&fit=crop" alt=""></div>
+            <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1487215078519-e21cc028cb29?w=100&h=100&fit=crop" alt=""></div>
+            <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1590658268037-6bf12f032f55?w=100&h=100&fit=crop" alt=""></div>
+            <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1572536147248-ac59a8abfa4b?w=100&h=100&fit=crop" alt=""></div>
+            <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1613040809024-b4ef7ba99bc3?w=100&h=100&fit=crop" alt=""></div>
+            <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1606220588913-b3aacb4d2f46?w=100&h=100&fit=crop" alt=""></div>
+            <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1618366712010-f4ae9c647dcb?w=100&h=100&fit=crop" alt=""></div>
+            <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=100&h=100&fit=crop&sat=-100" alt=""></div>
+            <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1585298723682-7115561c51b7?w=100&h=100&fit=crop" alt=""></div>
+            <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1578319439584-104c94d37305?w=100&h=100&fit=crop" alt=""></div>
+            <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1511367461989-f85a21fda167?w=100&h=100&fit=crop" alt=""></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="script.js"></script>
   <script>
+    // Gallery popup
+    var gpSwiper = null, gpThumbsSwiper = null;
+
+    function openGalleryPopup(startIndex) {
+      var popup = document.getElementById('galleryPopup');
+      popup.classList.add('active');
+      document.body.style.overflow = 'hidden';
+
+      if (!gpSwiper) {
+        gpThumbsSwiper = new Swiper('.gallery-popup-thumbs-swiper', {
+          slidesPerView: 'auto',
+          spaceBetween: 8,
+          watchSlidesProgress: true,
+        });
+        gpSwiper = new Swiper('.gallery-popup-swiper', {
+          spaceBetween: 20,
+          navigation: { nextEl: '.gallery-popup-swiper .swiper-button-next', prevEl: '.gallery-popup-swiper .swiper-button-prev' },
+          thumbs: { swiper: gpThumbsSwiper },
+          keyboard: { enabled: true, onlyInViewport: false },
+          on: {
+            slideChange: function() {
+              document.getElementById('gpCurrent').textContent = this.activeIndex + 1;
+            }
+          }
+        });
+      }
+      gpSwiper.slideTo(startIndex || 0, 0);
+      document.getElementById('gpCurrent').textContent = (startIndex || 0) + 1;
+    }
+
+    function closeGalleryPopup() {
+      document.getElementById('galleryPopup').classList.remove('active');
+      document.body.style.overflow = '';
+      // sync back to main gallery
+      if (gpSwiper && window.galleryMain) {
+        window.galleryMain.slideTo(gpSwiper.activeIndex);
+      }
+    }
+
+    // Close on Escape
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeGalleryPopup();
+    });
+
+    // Attach click on main gallery image
+    document.querySelector('.gallery-main-swiper').addEventListener('click', function(e) {
+      var idx = window.galleryMain ? window.galleryMain.activeIndex : 0;
+      openGalleryPopup(idx);
+    });
+
     var cartQty = 0;
     function toggleCart(btn) {
       cartQty = 1;

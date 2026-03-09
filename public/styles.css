@@ -1433,6 +1433,7 @@ input, select, textarea { font-family: inherit; }
   .products-grid { grid-template-columns: repeat(4, 1fr); }
   .categories-grid { grid-template-columns: repeat(4, 1fr); }
   .footer-grid { grid-template-columns: repeat(2, 1fr); }
+  .footer-bottom { flex-direction: column; gap: 12px; }
   .co-sidebar { width: 300px; }
   .catalog-dropdown__inner { min-height: 350px; }
 }

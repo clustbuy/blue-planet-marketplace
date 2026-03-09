@@ -2708,3 +2708,127 @@ input, select, textarea { font-family: inherit; }
     height: 60px;
   }
 }
+
+/* ===== FULLSCREEN GALLERY POPUP ===== */
+.gallery-popup {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .25s ease;
+}
+.gallery-popup.active {
+  opacity: 1;
+  pointer-events: all;
+}
+.gallery-popup__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,.92);
+}
+.gallery-popup__content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 16px;
+}
+.gallery-popup__close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 10;
+  background: rgba(255,255,255,.12);
+  border: none;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #fff;
+  transition: background .2s;
+}
+.gallery-popup__close:hover { background: rgba(255,255,255,.25); }
+.gallery-popup__counter {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: rgba(255,255,255,.7);
+  font-size: 14px;
+  font-weight: 500;
+  z-index: 10;
+}
+.gallery-popup__main {
+  flex: 1;
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.gallery-popup-swiper {
+  width: 100%;
+  height: 100%;
+}
+.gallery-popup-swiper .swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.gallery-popup-swiper .swiper-slide img {
+  max-width: 100%;
+  max-height: calc(100vh - 160px);
+  object-fit: contain;
+  border-radius: 12px;
+  user-select: none;
+}
+.gallery-popup-swiper .swiper-button-next,
+.gallery-popup-swiper .swiper-button-prev {
+  color: #fff;
+  width: 48px;
+  height: 48px;
+  background: rgba(255,255,255,.1);
+  border-radius: 50%;
+}
+.gallery-popup-swiper .swiper-button-next::after,
+.gallery-popup-swiper .swiper-button-prev::after {
+  font-size: 18px;
+}
+.gallery-popup__thumbs {
+  width: 100%;
+  max-width: 900px;
+  padding-top: 12px;
+}
+.gallery-popup-thumbs-swiper .swiper-slide {
+  width: 64px !important;
+  height: 64px !important;
+  border-radius: 8px;
+  overflow: hidden;
+  opacity: .5;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: opacity .2s, border-color .2s;
+}
+.gallery-popup-thumbs-swiper .swiper-slide-thumb-active {
+  opacity: 1;
+  border-color: #fff;
+}
+.gallery-popup-thumbs-swiper .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Cursor pointer on main gallery image */
+.gallery-main-swiper .swiper-slide { cursor: pointer; }

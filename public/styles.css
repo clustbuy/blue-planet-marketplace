@@ -269,15 +269,52 @@ input, select, textarea { font-family: inherit; }
 
 /* ===== CATALOG PAGE ===== */
 .catalog-layout { display: flex; gap: 24px; }
-.catalog-sidebar { width: 256px; flex-shrink: 0; }
+.catalog-sidebar { width: 270px; flex-shrink: 0; }
 .catalog-main { flex: 1; min-width: 0; }
-.filter-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; position: sticky; top: 120px; }
-.filter-section { margin-bottom: 20px; }
-.filter-section:last-child { margin-bottom: 0; }
-.filter-title { font-size: 14px; font-weight: 600; color: var(--text); margin-bottom: 12px; }
-.filter-option { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; cursor: pointer; font-size: 13px; color: var(--text); }
-.filter-option input[type="checkbox"] { accent-color: var(--primary); width: 16px; height: 16px; }
+.filter-card { background: var(--card); border-radius: var(--radius); padding: 0; position: sticky; top: 120px; max-height: calc(100vh - 140px); overflow-y: auto; scrollbar-width: thin; }
+.filter-card::-webkit-scrollbar { width: 4px; }
+.filter-card::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+.filter-section { padding: 14px 0; border-bottom: 1px solid var(--border); }
+.filter-section:first-child { padding-top: 0; }
+.filter-section:last-child { border-bottom: none; }
+.filter-title { font-size: 13px; font-weight: 600; color: var(--text); margin-bottom: 10px; line-height: 1.3; }
+.filter-title--main { font-size: 14px; font-weight: 700; margin-bottom: 8px; }
+.filter-info-icon { font-size: 12px; color: var(--text-secondary); cursor: help; vertical-align: middle; }
+.filter-option { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; cursor: pointer; font-size: 13px; color: var(--text); line-height: 1.3; }
+.filter-option:last-child { margin-bottom: 0; }
+.filter-option input[type="checkbox"],
+.filter-option input[type="radio"] { accent-color: var(--primary); width: 15px; height: 15px; flex-shrink: 0; margin: 0; }
+.filter-option-icon { font-size: 12px; }
+.filter-option-label--bold { font-weight: 700; letter-spacing: 0.5px; }
 .filter-count { margin-left: auto; font-size: 12px; color: var(--text-secondary); }
+
+/* Category links */
+.filter-category-list { display: flex; flex-direction: column; gap: 4px; }
+.filter-cat-link { font-size: 13px; color: var(--primary); text-decoration: none; line-height: 1.5; padding: 1px 0; }
+.filter-cat-link:hover { text-decoration: underline; }
+
+/* Price inputs */
+.filter-price-inputs { display: flex; gap: 8px; }
+.filter-price-input { width: 50%; padding: 6px 10px; border: 1px solid var(--border); border-radius: var(--radius-sm); font-size: 13px; color: var(--text); background: var(--card); outline: none; }
+.filter-price-input:focus { border-color: var(--primary); }
+
+/* Show more button */
+.filter-show-more { background: none; border: none; color: var(--primary); font-size: 12px; cursor: pointer; padding: 4px 0 0; display: block; }
+.filter-show-more:hover { text-decoration: underline; }
+
+/* Color dots */
+.filter-color-dot { width: 14px; height: 14px; border-radius: 50%; display: inline-block; flex-shrink: 0; }
+
+/* Chips (Bluetooth versions) */
+.filter-chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.filter-chip { padding: 4px 12px; border: 1px solid var(--border); border-radius: 16px; font-size: 12px; color: var(--text); background: var(--card); cursor: pointer; transition: border-color 0.15s, background 0.15s; }
+.filter-chip:hover { border-color: var(--primary); }
+.filter-chip.active { border-color: var(--primary); background: hsl(197 85% 92%); color: var(--primary); }
+
+/* All filters button */
+.filter-all-btn { width: 100%; padding: 10px; margin-top: 8px; background: none; border: 1px solid var(--border); border-radius: var(--radius-sm); font-size: 13px; font-weight: 600; color: var(--text); cursor: pointer; transition: border-color 0.15s; }
+.filter-all-btn:hover { border-color: var(--primary); color: var(--primary); }
+
 .price-range { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--text-secondary); }
 .price-range input[type="range"] { width: 100%; accent-color: var(--primary); }
 .sort-bar { display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; }

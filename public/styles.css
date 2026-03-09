@@ -369,6 +369,29 @@ input, select, textarea { font-family: inherit; }
 .product-seller-block { font-size: 14px; color: var(--text-secondary); }
 .product-seller-label { margin-right: 4px; }
 .product-seller-name { color: var(--primary); text-decoration: none; font-weight: 500; }
+
+/* Product variant selectors */
+.product-variants { display: flex; flex-direction: column; gap: 16px; }
+.product-variant-group {}
+.product-variant-label { display: block; font-size: 13px; color: var(--text-secondary); margin-bottom: 8px; }
+.product-variant-label strong { color: var(--text-primary); font-weight: 600; }
+.product-variant-options { display: flex; flex-wrap: wrap; gap: 8px; }
+
+.variant-chip {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-width: 40px; height: 40px; padding: 0 14px;
+  border: 1.5px solid #d6d6d6; border-radius: 8px;
+  background: #fff; font-size: 14px; color: var(--text-primary);
+  cursor: pointer; transition: border-color .15s, box-shadow .15s;
+  user-select: none;
+}
+.variant-chip:hover { border-color: #a0a0a0; }
+.variant-chip.active { border-color: var(--primary); box-shadow: 0 0 0 1px var(--primary); }
+
+.variant-chip--color { width: 40px; height: 40px; padding: 0; }
+.variant-color-swatch {
+  display: block; width: 24px; height: 24px; border-radius: 50%;
+}
 .product-seller-name:hover { text-decoration: underline; }
 
 .product-section-title { font-size: 16px; font-weight: 600; color: var(--text); margin-bottom: 12px; }

@@ -272,17 +272,8 @@ input, select, textarea { font-family: inherit; }
 .catalog-sidebar { width: 270px; flex-shrink: 0; }
 .catalog-main { flex: 1; min-width: 0; }
 .filter-card {
-  background: var(--card);
-  border-radius: var(--radius);
-  padding: 16px;
-  position: sticky;
-  top: 120px;
-  max-height: calc(100vh - 140px);
-  overflow-y: auto;
-  scrollbar-width: thin;
+  padding: 0;
 }
-.filter-card::-webkit-scrollbar { width: 4px; }
-.filter-card::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
 .filter-section { padding: 14px 0; border-bottom: 1px solid var(--border); }
 .filter-section:first-child { padding-top: 0; }
 .filter-section:last-child { border-bottom: none; }
